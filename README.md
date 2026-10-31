@@ -48,8 +48,3 @@ Complete analysis of `hen.iso`, a Blu-ray HEN demo ISO for PS4 firmware 14.00.
 - `tools/disasm_hen.py` — disassemble hen.bin (needs `pip install capstone`)
 - `tools/verify_hashes.ps1` — verify all files against known hashes
 - `tools/extract_iso.ps1` — extract ISO to folder (Windows)
-
-## ⚠️ Do not run on hardware
-
-The original ISO patches the kernel and fails at the hen.bin stage. Cold
-reboot required. Not a working HEN.
