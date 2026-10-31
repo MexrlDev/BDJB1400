@@ -1,6 +1,6 @@
 ﻿# BD-J HEN 14.00 — Reverse Engineering Notes
 
-Complete analysis of `hen.iso`, a Blu-ray HEN demo ISO for PS4 firmware 14.00.
+Complete analysis of `hen.iso`, a Blu-ray HEN ISO for PS4 firmware 14.00.
 
 ## Identity
 
