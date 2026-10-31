@@ -20,12 +20,8 @@ Complete analysis of `hen.iso`, a Blu-ray HEN demo ISO for PS4 firmware 14.00.
 3. Loads four classes from disc root: `J196rR`, `AXZXkk`, `EkIKZR`, `Hx1400`
 4. Sandbox escape via AWT OOB + Unsafe + JNI bridge
 5. Kernel exploit via `/dev/dce` kqueue UAF + ROP-over-kevent
-6. **Fails at hen.bin fetch** — `HENURL` points to sentinel
+6. hen.bin load — `HENURL` points to sentinel
    `__bonk___offline_missing__`
-
-**This is a demo build.** It intentionally cannot deliver the payload. The
-`NOTICE.txt` warnings ("may write unknown kernel objects on failed runs",
-"cold reboot after failure") are accurate.
 
 ## Where to start
 
