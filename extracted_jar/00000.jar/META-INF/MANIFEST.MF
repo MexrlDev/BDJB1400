@@ -1,0 +1,210 @@
+Manifest-Version: 1.0
+Created-By: 1.8.0_504 (Temurin)
+
+Name: org/bdj/Boot$L.class
+SHA1-Digest: DwC2Nk/fGiuw95tewiMO0uqSgus=
+
+Name: bonk/local/templates/cmd-0017.bin
+SHA1-Digest: 1rze3UDWIVd25kGbYZ4i7MfVGaw=
+
+Name: bonk/local/templates/cmd-0042.bin
+SHA1-Digest: M+zvAoD4+rMni3xPRgc0682wjoE=
+
+Name: bonk/local/marker-sites.bin
+SHA1-Digest: 853qtT1yyqgr+/9JcvcQSc2UClM=
+
+Name: bonk/local/templates/cmd-0025.bin
+SHA1-Digest: cSlrp9o7tecfqbuZOpqotxr0C2I=
+
+Name: org/bdj/LocalResultLedger.class
+SHA1-Digest: 1GZAV+70LKk+TmaH9qlQJ8nqalM=
+
+Name: bonk/local/templates/cmd-0009.bin
+SHA1-Digest: N+vg8D8/IIMnbt4JItxtcWz0Mz8=
+
+Name: bonk/local/templates/cmd-0034.bin
+SHA1-Digest: LLXIXAw9kaVF17fms3XCEbTFJ0E=
+
+Name: bonk/local/templates/cmd-0008.bin
+SHA1-Digest: Sw+wyO4fSqQzgkqUViATPIxFJAs=
+
+Name: bonk/local/schedule.bin
+SHA1-Digest: I4SqLc/Ue2UlUIPCmlphPDkKYZc=
+
+Name: bonk/local/templates/cmd-0026.bin
+SHA1-Digest: SI1BLAR1TAjLj6a/Z0st5ISsr/I=
+
+Name: bonk/local/write-sites.bin
+SHA1-Digest: rOGShP3VRHMmryt2U951vbGYBnA=
+
+Name: bonk/local/templates/cmd-0041.bin
+SHA1-Digest: 21svF4DIXCM22Ha5GTpoSviDsNk=
+
+Name: org/bdj/OfflineRenderer.class
+SHA1-Digest: OZyhHLU0x10hYw1HwRqiw1Rkpf4=
+
+Name: org/bdj/bluray.InitXlet.perm
+SHA1-Digest: e7MwixUj7D1Pg/FSaki7iKvfVyU=
+
+Name: org/bdj/InitXlet$Lines.class
+SHA1-Digest: AFLLYaarZtPw6rQvixH7Fmpb8OI=
+
+Name: bonk/local/templates/cmd-0018.bin
+SHA1-Digest: ZEtVdBzLA98b29FHhGwnEZ1Jz5s=
+
+Name: bonk/local/templates/cmd-0032.bin
+SHA1-Digest: q14JI/T7Ic9W2SnwsuPhttxmcCc=
+
+Name: bonk/local/templates/cmd-0035.bin
+SHA1-Digest: HP8/9S4vby3AIbwwYMASUroAWIY=
+
+Name: bonk/local/templates/cmd-0027.bin
+SHA1-Digest: FI3dxGcePc8I5Bw3eKkbxvjo8T4=
+
+Name: org/bdj/Boot.class
+SHA1-Digest: R5X9xpbapZJSocYXQd7PBdMbrdI=
+
+Name: org/bdj/InitXlet.class
+SHA1-Digest: V+PRqwuQNAwtMB8QyQRJLPr7hl8=
+
+Name: bonk/local/templates/cmd-0044.bin
+SHA1-Digest: OdYRiBlrqig2KaWkdj89ryxhCGI=
+
+Name: bonk/local/templates/cmd-0040.bin
+SHA1-Digest: hoCFgSDEE7RXLj8b9wI6iT6UORw=
+
+Name: bonk/local/templates/cmd-0036.bin
+SHA1-Digest: 1BfSmQqskrrk7Gs+JW/lystwSh0=
+
+Name: bonk/local/templates/cmd-0006.bin
+SHA1-Digest: q1UyYf0lpD3SCaTEubplfo1RhLc=
+
+Name: bonk/local/templates/cmd-0031.bin
+SHA1-Digest: kaASh/ZYKm9zhNKwx32xp7HGt/Y=
+
+Name: bonk/local/shapes.bin
+SHA1-Digest: BvXplYXMThuoo2+fPT2hVVFNdqI=
+
+Name: org/bdj/OfflineRenderer$Guards.class
+SHA1-Digest: JbfLZ0hTRin9Vkbi5NAZMVGBzy0=
+
+Name: bonk/local/templates/cmd-0019.bin
+SHA1-Digest: hB0p2FOmqWjhLFmyl3Ta6ah4iRQ=
+
+Name: org/bdj/Screen.class
+SHA1-Digest: kyCyU3m7tIWfhY0eB6/qyMqEs7M=
+
+Name: bonk/local/templates/cmd-0024.bin
+SHA1-Digest: 79c8eoktk7SQawxHzYaMwFbPu2U=
+
+Name: bonk/local/templates/cmd-0043.bin
+SHA1-Digest: 3xjg27bBqqt71h7MIeFiP6DQotA=
+
+Name: org/bdj/OfflineRenderer$ScheduleEntry.class
+SHA1-Digest: jfTtizLaa6/pTgph7cVaz2ysg20=
+
+Name: bonk/local/templates/cmd-0011.bin
+SHA1-Digest: 3LhCzyFmm0IBj57sHPICy/vDFTk=
+
+Name: bonk/local/templates/cmd-0030.bin
+SHA1-Digest: 3dYykgQFo5KtJmWvR8R0xXQ/bMc=
+
+Name: bonk/local/templates/cmd-0007.bin
+SHA1-Digest: l5hOBAeGi5pUyoTI7keetLsTMg8=
+
+Name: bonk/local/templates/cmd-0037.bin
+SHA1-Digest: pZtLnaTQ+IevatqPX2OgMmpf+jQ=
+
+Name: bonk/local/templates/cmd-0038.bin
+SHA1-Digest: n3zhDy6ByeqZBY3JBfnh8lnMJDM=
+
+Name: org/bdj/InitXlet$Attempt.class
+SHA1-Digest: 61oIK7kv+tUBF4/ddlx84I/TaNA=
+
+Name: bonk/local/templates/cmd-0012.bin
+SHA1-Digest: v/QWbrED8Rri6+pOQOF+N4fS5YY=
+
+Name: org/bdj/Cfg.class
+SHA1-Digest: mQexaKPzo/4keX2R3qgL1aYza8U=
+
+Name: org/bdj/OfflineRenderer$WriteSite.class
+SHA1-Digest: t6TARWooompa5qGbPSqv3xufmiA=
+
+Name: bonk/local/templates/cmd-0020.bin
+SHA1-Digest: mQn4DskiNPviZOlr8rkR85Up+7o=
+
+Name: org/bdj/Screen$2.class
+SHA1-Digest: ZIAv+ROlJPoRn4uqqHa1+4IBXXY=
+
+Name: bonk/local/guards.bin
+SHA1-Digest: EKkaW2nPUATtZde043Hzr2kbdLQ=
+
+Name: bonk/local/templates/cmd-0039.bin
+SHA1-Digest: gdddHI6zQLd6FC6ADTIMIBO/Zco=
+
+Name: bonk/local/templates/cmd-0004.bin
+SHA1-Digest: nP+HxF6Q8/1SmNVDl3GGnze/C2s=
+
+Name: bonk/local/rules.bin
+SHA1-Digest: o0hAOC6rj3hNgvDqro10lXIorMA=
+
+Name: bonk/local/templates/cmd-0005.bin
+SHA1-Digest: 1U+bi/VusLje1879KFihHpLKix8=
+
+Name: bonk/local/templates/cmd-0022.bin
+SHA1-Digest: icF0bgVCQv0/3vVqZ3sT8EgeKbY=
+
+Name: org/bdj/OfflineRenderer$Rule.class
+SHA1-Digest: zlVK8AYh4b3Mhf5ptfqXuPrx69o=
+
+Name: bonk/local/template-hashes.bin
+SHA1-Digest: qkOZKYxvTvPQyrfEN/Q7xo6x2wk=
+
+Name: bonk/local/templates/cmd-0010.bin
+SHA1-Digest: MzF11wJd4aVwGC4znFQ9cMRpOYw=
+
+Name: bonk/local/templates/cmd-0014.bin
+SHA1-Digest: stlwLUQCIlOVxSYxe2KCxGfohY0=
+
+Name: org/bdj/OfflineRenderer$MarkerPlan.class
+SHA1-Digest: iitmtaV603FoAstDwrJgF0KjuPc=
+
+Name: bonk/local/templates/cmd-0028.bin
+SHA1-Digest: YmQPtnUbMqBp/QDH45UGjU0m5vc=
+
+Name: org/bdj/OfflineRenderer$Frame.class
+SHA1-Digest: DftERw7SX98j+NRIIhgu9Gh3k80=
+
+Name: bonk/local/templates/cmd-0002.bin
+SHA1-Digest: 8aj4Y3Tz94V1LInUQlDsVrxK0Pg=
+
+Name: bonk/local/templates/cmd-0015.bin
+SHA1-Digest: DDKCHdLe4rgO/Ea/kYD0RlXKhwc=
+
+Name: bonk/hen.bin
+SHA1-Digest: R0svTQNva0/Sq/+0xjb2u4JqIa8=
+
+Name: org/bdj/Boot$1.class
+SHA1-Digest: q2Tc/jZ5N9GySW76dH9L8UVch4k=
+
+Name: org/bdj/OfflineRenderer$Shape.class
+SHA1-Digest: 9RDc3mHQJEehFw0FA9ODIJipJ5M=
+
+Name: org/bdj/OfflineRenderer$TemplatePin.class
+SHA1-Digest: ctpQ90wFTT3d8JJnnw4VS4KAvew=
+
+Name: bonk/local/templates/cmd-0021.bin
+SHA1-Digest: K+T7x0U3okhLRVWuy4BbWOmf/vk=
+
+Name: bonk/local/templates/cmd-0046.bin
+SHA1-Digest: BH0OR0mhwj3MtHesC893a3YEfAo=
+
+Name: bonk/local/templates/cmd-0016.bin
+SHA1-Digest: ZEtVdBzLA98b29FHhGwnEZ1Jz5s=
+
+Name: org/bdj/Screen$1.class
+SHA1-Digest: xuNsYf44BAVDJuQqryLlj/ReSx8=
+
+Name: bonk/local/templates/cmd-0029.bin
+SHA1-Digest: dlGW2wzUbTDedciSmwyKICd69SY=
+

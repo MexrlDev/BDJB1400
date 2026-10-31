@@ -1,0 +1,87 @@
+# extracted_jar contents
+
+Source JAR: assets\BDMV\JAR\00000.jar (192403 B)
+Source classes: assets\x\offline\ (4 .class files)
+
+## 00000.jar\ (full JAR contents)
+    562240  bonk\hen.bin
+       184  bonk\local\guards.bin
+        40  bonk\local\marker-sites.bin
+      5338  bonk\local\rules.bin
+       168  bonk\local\schedule.bin
+       794  bonk\local\shapes.bin
+      1528  bonk\local\template-hashes.bin
+       678  bonk\local\templates\cmd-0002.bin
+        54  bonk\local\templates\cmd-0004.bin
+        63  bonk\local\templates\cmd-0005.bin
+        72  bonk\local\templates\cmd-0006.bin
+        72  bonk\local\templates\cmd-0007.bin
+       142  bonk\local\templates\cmd-0008.bin
+       326  bonk\local\templates\cmd-0009.bin
+       922  bonk\local\templates\cmd-0010.bin
+      1484  bonk\local\templates\cmd-0011.bin
+       704  bonk\local\templates\cmd-0012.bin
+       326  bonk\local\templates\cmd-0014.bin
+       650  bonk\local\templates\cmd-0015.bin
+       326  bonk\local\templates\cmd-0016.bin
+       536  bonk\local\templates\cmd-0017.bin
+       326  bonk\local\templates\cmd-0018.bin
+      1622  bonk\local\templates\cmd-0019.bin
+       506  bonk\local\templates\cmd-0020.bin
+       648  bonk\local\templates\cmd-0021.bin
+      1889  bonk\local\templates\cmd-0022.bin
+       210  bonk\local\templates\cmd-0024.bin
+      1224  bonk\local\templates\cmd-0025.bin
+       212  bonk\local\templates\cmd-0026.bin
+        56  bonk\local\templates\cmd-0027.bin
+      3242  bonk\local\templates\cmd-0028.bin
+       250  bonk\local\templates\cmd-0029.bin
+       128  bonk\local\templates\cmd-0030.bin
+       170  bonk\local\templates\cmd-0031.bin
+       433  bonk\local\templates\cmd-0032.bin
+       193  bonk\local\templates\cmd-0034.bin
+       687  bonk\local\templates\cmd-0035.bin
+       664  bonk\local\templates\cmd-0036.bin
+       688  bonk\local\templates\cmd-0037.bin
+       740  bonk\local\templates\cmd-0038.bin
+       777  bonk\local\templates\cmd-0039.bin
+       695  bonk\local\templates\cmd-0040.bin
+       728  bonk\local\templates\cmd-0041.bin
+       579  bonk\local\templates\cmd-0042.bin
+       106  bonk\local\templates\cmd-0043.bin
+       192  bonk\local\templates\cmd-0044.bin
+        20  bonk\local\templates\cmd-0046.bin
+       656  bonk\local\write-sites.bin
+      5825  META-INF\MANIFEST.MF
+      1708  META-INF\SIG-BD00.RSA
+      5901  META-INF\SIG-BD00.SF
+       320  org\bdj\bluray.InitXlet.perm
+       721  org\bdj\Boot$1.class
+       910  org\bdj\Boot$L.class
+     14533  org\bdj\Boot.class
+       429  org\bdj\Cfg.class
+      4805  org\bdj\InitXlet$Attempt.class
+      1376  org\bdj\InitXlet$Lines.class
+     15668  org\bdj\InitXlet.class
+      4038  org\bdj\LocalResultLedger.class
+       475  org\bdj\OfflineRenderer$Frame.class
+       398  org\bdj\OfflineRenderer$Guards.class
+       342  org\bdj\OfflineRenderer$MarkerPlan.class
+       639  org\bdj\OfflineRenderer$Rule.class
+       402  org\bdj\OfflineRenderer$ScheduleEntry.class
+       516  org\bdj\OfflineRenderer$Shape.class
+       430  org\bdj\OfflineRenderer$TemplatePin.class
+       425  org\bdj\OfflineRenderer$WriteSite.class
+     16280  org\bdj\OfflineRenderer.class
+       609  org\bdj\Screen$1.class
+       486  org\bdj\Screen$2.class
+      5261  org\bdj\Screen.class
+
+## x_offline\ (raw .class files)
+      1626  AXZXkk.class
+       813  EkIKZR.class
+     56859  Hx1400.class
+      2931  J196rR.class
+
+## hen.bin
+    562240  hen.bin
