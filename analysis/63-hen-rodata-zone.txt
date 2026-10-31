@@ -1,0 +1,321 @@
+=== Printable strings in 0xA000..0xC000 ===
+0x00A00C  AUATUSH
+0x00A036  \$/H
+0x00A0B2  l$ 1
+0x00A194  []A\A]
+0x00A286  AWAVAUATUSH
+0x00A320  CLc;H
+0x00A390  []A\A]A^A_
+0x00A3E0  Invalid parameters for write_blob
+0x00A402  source/common.c
+0x00A412  [DEBUG] [%s (%s:%d)] 
+0x00A428  [NOTIFICATION]: %s
+0x00A43C  fd %s %d
+0x00A446  Partial write to %s: %zd/%zu bytes
+0x00A469  Failed to write %s!
+0x00A47D  File descriptor %d
+0x00A490  sent SIGKILL(%d) to %s(%d)
+0x00A4AC  /update/PS4UPDATE.PUP
+0x00A4C2  /update/PS4UPDATE.PUP.net.temp
+0x00A4E1  /update
+0x00A4E9  false
+0x00A4F1  true
+0x00A4F6  ERROR: Invalid %s:
+0x00A509      Must be 0 or 1 (false or true)
+0x00A52C  source/config.c
+0x00A53C  config_version
+0x00A54B  ERROR: Malformed %s
+0x00A55F  exploit_fixes
+0x00A56D  mmap_patches
+0x00A57A  block_updates
+0x00A588  unmount_update
+0x00A597  disable_aslr
+0x00A5A4  nobd_patches
+0x00A5B1  skip_patches
+0x00A5BE  genuine_cex
+0x00A5CA  np_patch_check
+0x00A5D9  np_regmgr_hook
+0x00A5E8  upload_prx
+0x00A5F3  enable_plugins
+0x00A602  target_id
+0x00A60C  ERROR: Malformed target_id:
+0x00A628      Must be %i bytes (e.g. 0x84)
+0x00A649  ERROR: Malformed target_id:
+0x00A665      Incorrect format, must be 0x?? (e.g. 0x84)
+0x00A697  ERROR: Failed to parse target_id:
+0x00A6B9      Unable to convert hex value
+0x00A6D9  ERROR: Unknown target_id:
+0x00A6F3      Only 0x80-0x8F and 0xA0 are valid
+0x00A719  /data/hen
+0x00A723  2.2.0 BETA
+0x00A72E  /data/hen/version.txt
+0x00A744  /mnt/usb0/hen.ini
+0x00A756  ERROR: Unable to load `/mnt/usb0/hen.ini`
+0x00A780  /data/hen/hen.ini
+0x00A792  ERROR: Unable to load `/data/hen/hen.ini`
+0x00A7BC  source/kpayloads.c
+0x00A7CF  Unsupported firmware
+0x00A7E4   out of date!
+0x00A7F2   not found!
+0x00A7FE   and USB
+0x00A807  SceShellUI
+0x00A812  Unsupported Firmware
+0x00A827  source/main.c
+0x00A835  /user/temp/hen.installed
+0x00A84E  HEN is already installed. Skipping...
+0x00A874  config version not match
+0x00A88E  config.config_version: %d
+0x00A8A9  found_version: %d
+0x00A8BC  Config version (%d/%d)%s
+0x00A8D5  Updating settings file on %s%s...
+0x00A8FB  Applying exploit fixes...
+0x00A916  Applying mmap patches...
+0x00A930  Blocking updates...
+0x00A945  Disabling ASLR...
+0x00A958  Installing NoBD patches...
+0x00A974  Setting new target ID...
+0x00A98E  Diagnostic
+0x00A999  Devkit
+0x00A9A0  Testkit
+0x00A9A8  Japan
+0x00A9B2  Europe
+0x00A9B9  Korea
+0x00A9BF  United Kingdom
+0x00A9CE  Mexico
+0x00A9D5  Australia & New Zealand
+0x00A9ED  South Asia
+0x00A9F8  Taiwan
+0x00A9FF  Russia
+0x00AA06  China
+0x00AA0C  Hong Kong
+0x00AA16  Brazil
+0x00AA1D  Kratos
+0x00AA24  Spoofing: UNKNOWN...
+0x00AA39  Check your `hen.ini` file
+0x00AA53  ERROR: Unable to spoof target ID
+0x00AA74  Writing plugin PRXs to disk...
+0x00AA94  Welcome to HEN %s
+0x00AAA6  HEN will restart %s
+0x00AABA  in %d seconds...
+0x00AACB  /data/hen/plugin_server.prx
+0x00AAE7  ScePartyDaemon
+0x00AAF6  source/patch.c
+0x00AB05  found data at 0x%lx 0x%lx chunk loc 0x%lx offset 0x%lx
+0x00AB3D  free mem
+0x00AB47  couldn't find pattern
+0x00AB60  pid %d
+0x00AB68  /user/temp/shellcore_appinfo.installed
+0x00AB8F  SceShellCore
+0x00AB9C  idx %d page_idx %d
+0x00ABB0  %d %lx %lx (%lu) %x
+0x00ABC5  ehframe_header %lx
+0x00ABD8  sc_update %lx
+0x00ABE7  14 00 00 00 00 00 00 00 01 7a 52 00 01 78 10 01 1b 0c 07 08 90 01 00 00
+0x00AC2F  e8 ? ? ? ? 48 89 df e8 ? ? ? ? 48 89 df e8 ? ? ? ? e8 ? ? ? ? 31 c0
+0x00AC73  /data/hen/plugin_bootloader.prx
+0x00AC93  /data/hen/plugin_loader.prx
+0x00ACAF  /data/hen/plugin_mono.prx
+0x00ACC9  /data/hen/plugin_shellcore.prx
+0x00ACE8  /data/hen/patches.ini
+0x00AD03  libkernel.sprx
+0x00AD12  libkernel_web.sprx
+0x00AD25  libkernel_sys.sprx
+0x00AD38  __stack_chk_guard
+0x00AD4A  __stack_chk_fail
+0x00AD5B  __error
+0x00AD63  sceKernelError
+0x00AD72  sceKernelLoadStartModule
+0x00AD8B  sceKernelAllocateDirectMemory
+0x00ADA9  sceKernelMapDirectMemory
+0x00ADC2  sceKernelGetDirectMemorySize
+0x00ADDF  sceKernelStat
+0x00ADED  sceKernelOpen
+0x00ADFB  sceKernelRead
+0x00AE09  sceKernelLseek
+0x00AE18  sceKernelClose
+0x00AE27  sceKernelLwfsAllocateBlock
+0x00AE42  sceKernelLwfsSetAttribute
+0x00AE5C  sceKernelLwfsTrimBlock
+0x00AE73  sceKernelLwfsLseek
+0x00AE86  sceKernelLwfsWrite
+0x00AE99  sceKernelSleep
+0x00AEA8  sceKernelUsleep
+0x00AEB8  usleep
+0x00AEBF  sceKernelGettimeofday
+0x00AED5  sceKernelGetProcessTime
+0x00AEED  sceKernelGetCurrentCpu
+0x00AF04  sysctl
+0x00AF0B  sysctlbyname
+0x00AF18  sysarch
+0x00AF20  execve
+0x00AF27  pthread_self
+0x00AF34  pthread_setaffinity_np
+0x00AF4B  sceKernelCreateEqueue
+0x00AF61  sceKernelDeleteEqueue
+0x00AF77  sceKernelAddUserEvent
+0x00AF8D  sceKernelAddReadEvent
+0x00AFA3  getuid
+0x00AFAA  getgid
+0x00AFB1  getpid
+0x00AFB8  setuid
+0x00AFBF  setgid
+0x00AFC6  setreuid
+0x00AFCF  setregid
+0x00AFD8  sceKernelSendNotificationRequest
+0x00AFF9  sceKernelGetFsSandboxRandomWord
+0x00B019  sceKernelGetSystemSwVersion
+0x00B035  sceKernelGetCpuTemperature
+0x00B050  sceKernelGetIdPs
+0x00B061  sceKernelGetOpenPsId
+0x00B076  sceKernelGetOpenPsIdForSystem
+0x00B094  libSceLibcInternal.sprx
+0x00B0AC  malloc
+0x00B0B3  free
+0x00B0B8  calloc
+0x00B0BF  realloc
+0x00B0C7  memalign
+0x00B0D0  memset
+0x00B0D7  memcpy
+0x00B0DE  memcmp
+0x00B0E5  memmove
+0x00B0ED  memmove_s
+0x00B0F7  strcpy
+0x00B0FE  strncpy
+0x00B106  strncpy_s
+0x00B110  strcat
+0x00B117  strncat
+0x00B11F  strlen
+0x00B126  strcmp
+0x00B12D  strcasecmp
+0x00B138  strncmp
+0x00B140  sprintf
+0x00B148  snprintf
+0x00B151  snprintf_s
+0x00B15C  sscanf
+0x00B163  strtol
+0x00B16A  strtok
+0x00B171  strchr
+0x00B178  strrchr
+0x00B180  strstr
+0x00B187  strdup
+0x00B18E  rindex
+0x00B195  isspace
+0x00B19D  isdigit
+0x00B1A5  isxdigit
+0x00B1AE  atoi
+0x00B1B3  atof
+0x00B1B8  strlcpy
+0x00B1C0  strerror
+0x00B1C9  _Getpctype
+0x00B1D4  _Stoul
+0x00B1DB  bcopy
+0x00B1E1  ceil
+0x00B1E6  tolower
+0x00B1EE  toupper
+0x00B1F6  srand
+0x00B1FC  asctime
+0x00B204  asctime_r
+0x00B20E  gmtime
+0x00B215  gmtime_s
+0x00B21E  localtime
+0x00B228  localtime_r
+0x00B234  mktime
+0x00B23B  opendir
+0x00B243  readdir
+0x00B24B  readdir_r
+0x00B255  telldir
+0x00B25D  seekdir
+0x00B265  rewinddir
+0x00B26F  closedir
+0x00B278  dirfd
+0x00B27E  getprogname
+0x00B28A  fopen
+0x00B290  fread
+0x00B296  fwrite
+0x00B29D  fseek
+0x00B2A3  ftell
+0x00B2A9  fclose
+0x00B2B0  fprintf
+0x00B2B8  fgets
+0x00B2BE  source/payload_utils.c
+0x00B2D5  /%s/common/lib/libc.sprx
+0x00B2EE  /system/common/lib/libc.sprx
+0x00B30B  %02lx%02lx
+0x00B318  kill_proc
+0x00B340  cxml://psnotification/tex_icon_system
+0x00B380  cxml://psnotification/tex_icon_system
+0x00B3A8  write_blob
+0x00B3C0  cxml://psnotification/tex_icon_system
+0x00B3F0  set_bool_config
+0x00B400  cxml://psnotification/tex_icon_system
+0x00B428  set_int_config
+0x00B440  cxml://psnotification/tex_icon_system
+0x00B480  cxml://psnotification/tex_icon_system
+0x00B4C0  cxml://psnotification/tex_icon_system
+0x00B500  cxml://psnotification/tex_icon_system
+0x00B528  config_handler
+0x00B540  cxml://psnotification/tex_icon_system
+0x00B580  cxml://psnotification/tex_icon_system
+0x00B5A8  init_config
+0x00B5C0  cxml://psnotification/tex_icon_system
+0x00B600  [HEN]
+0x00B606  ; Config version - Changing this value will trigger a settings file overwrite.
+0x00B655  ; If this field doesn't exist prior, this settings file will be written.
+0x00B69E  config_version = 3
+0x00B6B2  ; Enable exploit fixes - automatically reapplies any missing/failed/incorrect
+0x00B700  ; patches that should have been set by the exploit. This helps maintain system
+0x00B74F  ; stability after jailbreaking by ensuring the kernel is consistently patched
+0x00B79D  ; across different exploits and firmware versions.
+0x00B7D0  ; Values: 0 = disabled, 1 = enabled
+0x00B7F4  ; Default: 1
+0x00B801  exploit_fixes = 1
+0x00B814  ; Enable memory mapping patches for decrypting binary files. These patches
+0x00B85F  ; allow the system to properly handle encrypted executables and libraries.
+0x00B8AA  ; Values: 0 = disabled, 1 = enabled
+0x00B8CE  ; Default: 1
+0x00B8DB  mmap_patches = 1
+0x00B8ED  ; Block console firmware updates. A directory is created where the updater
+0x00B938  ; must write /update/PS4UPDATE.PUP, so the download cannot land. This is the
+0x00B985  ; protection, and it survives reboots.
+0x00B9AC  ; Values: 0 = allow updates, 1 = block updates
+0x00B9DB  ; Default: 1
+0x00B9E8  block_updates = 1
+0x00B9FB  ; Also UNMOUNT the /update partition (only when block_updates = 1).
+0x00BA41  ; This used to happen unconditionally. It is belt and braces on top of the
+0x00BA8C  ; directories above - and it takes /update away from the background transfer
+0x00BAD9  ; daemon too, which is what a half-installed game looks like: the title runs
+0x00BB26  ; in PlayGo "play while downloading", the download task stays alive with
+0x00BB6F  ; errorcode 0, and not one byte moves. GTA V sitting at 90% was 89.28%
+0x00BBB6  ; installed with 5.02 GB still to come.
+0x00BBE0  ; Turn it on only if you want the extra layer and do not need downloads.
+0x00BC29  ; Values: 0 = keep /update mounted, 1 = unmount it
+0x00BC5C  ; Default: 0
+0x00BC69  unmount_update = 0
+0x00BC7D  ; Disable userland ASLR (Address Space Layout Randomization)
+0x00BCBA  ; ASLR randomizes memory addresses to prevent exploitation. Disabling it
+0x00BD03  ; can improve compatibility with homebrew applications, debuggers, and cheats.
+0x00BD52  ; Values: 0 = keep ASLR enabled, 1 = disable ASLR
+0x00BD84  ; Default: 1
+0x00BD91  disable_aslr = 1
+0x00BDA3  ; NoBD (No Blu-ray Drive) patches - allows system updates without a working
+0x00BDEF  ; Blu-ray drive.
+0x00BE00  ; Values: 0 = skip NoBD patches, 1 = apply NoBD patches
+0x00BE38  ; Default: 0
+0x00BE45  nobd_patches = 0
+0x00BE57  ; Target ID spoofer - changes the console's reported Target ID for development
+0x00BEA6  ; or region-specific functionality.
+0x00BECC  ; Valid Target IDs:
+0x00BEE0  ;   0x80 = Diagnostic
+0x00BEF6  ;   0x81 = Devkit
+0x00BF08  ;   0x82 = Testkit
+0x00BF1B  ;   0x83 = Japan
+0x00BF2C  ;   0x84 = USA
+0x00BF3B  ;   0x85 = Europe
+0x00BF4D  ;   0x86 = Korea
+0x00BF5E  ;   0x87 = United Kingdom
+0x00BF78  ;   0x88 = Mexico
+0x00BF8A  ;   0x89 = Australia & New Zealand
+0x00BFAD  ;   0x8A = South Asia
+0x00BFC3  ;   0x8B = Taiwan
+0x00BFD5  ;   0x8C = Russia
+0x00BFE7  ;   0x8D = China

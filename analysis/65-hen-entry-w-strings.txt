@@ -1,0 +1,122 @@
+[entry-region disassembly with rodata lea resolution]
+
+  0x00004AAB  endbr64  
+  0x00004AAF  push     r15
+  0x00004AB1  push     r14
+  0x00004AB3  push     r13
+  0x00004AB5  push     r12
+  0x00004AB7  push     rbp
+  0x00004AB8  push     rbx
+  0x00004AB9  sub      rsp, 0xf98
+  0x00004AC0  xor      esi, esi
+  0x00004AC2  mov      dword ptr [rip + 0x84978], esi
+  0x00004AC8  lea      rbx, [rsp + 0x160]
+  0x00004AD0  call     0x6db1
+  0x00004AD5  call     0x71fa
+  0x00004ADA  xor      eax, eax
+  0x00004ADC  lea      r13, [rip + 0x5d44]    ; 0xA827 = "source/main.c"
+  0x00004AE3  call     0xa008
+  0x00004AE8  lea      r12, [rip + 0x5923]    ; 0xA412 = "[DEBUG] [%s (%s:%d)] "
+  0x00004AEF  lea      rbp, [rip + 0x5932]    ; 0xA428 = "[NOTIFICATION]: %s"
+  0x00004AF6  sub      ax, 0x1da
+  0x00004AFA  cmp      ax, 0x39e
+  0x00004AFE  lea      rax, [rsp + 0x360]
+  0x00004B06  mov      qword ptr [rsp], rax
+  0x00004B0A  lea      rax, [rsp + 0x78d]
+  0x00004B12  mov      qword ptr [rsp + 0x10], rax
+  0x00004B17  lea      rax, [rsp + 0x38d]
+  0x00004B1F  mov      qword ptr [rsp + 8], rax
+  0x00004B24  jbe      0x4c68
+  0x00004B2A  mov      rdi, qword ptr [rsp]
+  0x00004B2E  xor      eax, eax
+  0x00004B30  mov      ecx, 0x30c
+  0x00004B35  mov      edx, 0x26
+  0x00004B3A  lea      rsi, [rip + 0x119bf]
+  0x00004B41  rep stosd dword ptr [rdi], eax
+  0x00004B43  mov      rdi, qword ptr [rsp + 0x10]
+  0x00004B48  mov      byte ptr [rsp + 0x38c], 1
+  0x00004B50  mov      dword ptr [rsp + 0x370], 0xffffffff
+  0x00004B5B  call     qword ptr [rip + 0x84c7f]
+  0x00004B61  mov      rdi, qword ptr [rsp + 8]
+  0x00004B66  xor      eax, eax
+  0x00004B68  lea      rdx, [rip + 0x5ca3]    ; 0xA812 = "Unsupported Firmware"
+  0x00004B6F  mov      esi, 0x400
+  0x00004B74  call     qword ptr [rip + 0x84bee]
+  0x00004B7A  test     eax, eax
+  0x00004B7C  jle      0x4b94
+  0x00004B7E  dec      eax
+  0x00004B80  cdqe     
+  0x00004B82  cmp      byte ptr [rsp + rax + 0x38d], 0xa
+  0x00004B8A  jne      0x4b94
+  0x00004B8C  mov      byte ptr [rsp + rax + 0x38d], 0
+  0x00004B94  xor      eax, eax
+  0x00004B96  mov      ecx, 0x40
+  0x00004B9B  mov      rdi, rbx
+  0x00004B9E  lea      r14, [rsp + 0x160]
+  0x00004BA6  rep stosd dword ptr [rdi], eax
+  0x00004BA8  mov      rdx, r12
+  0x00004BAB  mov      r9d, 0x69
+  0x00004BB1  lea      r8, [rip + 0x1192e]
+  0x00004BB8  mov      rcx, r13
+  0x00004BBB  mov      esi, 0x100
+  0x00004BC0  mov      rdi, r14
+  0x00004BC3  call     qword ptr [rip + 0x84b9f]
+  0x00004BC9  xor      ecx, ecx
+  0x00004BCB  mov      edi, 0x259
+  0x00004BD0  mov      r12d, eax
+  0x00004BD3  mov      rdx, r14
+  0x00004BD6  xor      eax, eax
+  0x00004BD8  mov      esi, 7
+  0x00004BDD  call     0xa39b
+  0x00004BE2  mov      edi, dword ptr [rip + 0x84854]
+  0x00004BE8  test     edi, edi
+  0x00004BEA  js       0x4bf7
+  0x00004BEC  mov      edx, r12d
+  0x00004BEF  mov      rsi, r14
+  0x00004BF2  call     0x787d
+  0x00004BF7  xor      eax, eax
+  0x00004BF9  mov      rdi, rbx
+  0x00004BFC  mov      ecx, 0x80
+  0x00004C01  lea      rbx, [rsp + 0x160]
+  0x00004C09  rep stosd dword ptr [rdi], eax
+  0x00004C0B  mov      rcx, qword ptr [rsp + 8]
+  0x00004C10  mov      rdx, rbp
+  0x00004C13  mov      esi, 0x200
+  0x00004C18  mov      rdi, rbx
+  0x00004C1B  call     qword ptr [rip + 0x84b47]
+  0x00004C21  xor      ecx, ecx
+  0x00004C23  mov      edi, 0x259
+  0x00004C28  mov      ebp, eax
+  0x00004C2A  mov      rdx, rbx
+  0x00004C2D  xor      eax, eax
+  0x00004C2F  mov      esi, 7
+  0x00004C34  call     0xa39b
+  0x00004C39  mov      edi, dword ptr [rip + 0x847fd]
+  0x00004C3F  test     edi, edi
+  0x00004C41  js       0x4c4d
+  0x00004C43  mov      edx, ebp
+  0x00004C45  mov      rsi, rbx
+  0x00004C48  call     0x787d
+  0x00004C4D  mov      rsi, qword ptr [rsp]
+  0x00004C51  xor      ecx, ecx
+  0x00004C53  mov      edx, 0xc30
+  0x00004C58  xor      edi, edi
+  0x00004C5A  call     qword ptr [rip + 0x84818]
+  0x00004C60  or       eax, 0xffffffff
+  0x00004C63  jmp      0x5df8
+  0x00004C68  xor      eax, eax
+  0x00004C6A  call     0xa19b
+  0x00004C6F  lea      rdi, [rip + 0x5bbf]    ; 0xA835 = "/user/temp/hen.installed"
+  0x00004C76  call     0x6b0f
+  0x00004C7B  test     eax, eax
+  0x00004C7D  je       0x4dbe
+  0x00004C83  mov      rdi, qword ptr [rsp]
+  0x00004C87  xor      eax, eax
+  0x00004C89  mov      ecx, 0x30c
+  0x00004C8E  mov      edx, 0x26
+  0x00004C93  lea      rsi, [rip + 0x11826]
+  0x00004C9A  rep stosd dword ptr [rdi], eax
+  0x00004C9C  mov      rdi, qword ptr [rsp + 0x10]
+  0x00004CA1  mov      byte ptr [rsp + 0x38c], 1
+  0x00004CA9  mov      dword ptr [rsp + 0x370], 0xffffffff
+  0x00004CB4  call     qword ptr [rip + 0x84b26]

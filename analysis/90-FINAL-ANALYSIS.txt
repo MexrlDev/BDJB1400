@@ -1,0 +1,189 @@
+================================================================================
+  HEN.ISO — COMPLETE REVERSE-ENGINEERING ANALYSIS
+  Fork: Bonk HEN 14.00 (Kat, Slopp, Pigeon)
+  Payload: Scene-Collective HEN 2.2.0 BETA
+  Verdict: OFFLINE-ONLY BD-J HEN. No working network exfil.
+================================================================================
+
+1. ISO STRUCTURE
+----------------
+hen.iso (6,225,920 bytes, UDF filesystem, BEA01 @ 0x8001)
+├── BDMV/index.bdmv + BDJO/00000.bdjo  → auto-launch Xlet
+├── BDMV/JAR/00000.jar (192 KB)         → main BD-J Xlet
+│   ├── org/bdj/Boot.class              → BD-JB upstream Xlet
+│   ├── org/bdj/InitXlet.class          → fork's custom orchestrator
+│   ├── bonk/hen.bin (562,240 B)        → HEN payload (Scene-Collective 2.2.0)
+│   └── bonk/local/templates/cmd-*.bin  → 47 VM scripts (exploit sequence)
+├── CERTIFICATE/*.discroot.crt          → valid BD-J certs
+├── x/offline/J196rR.class              → AWT info leak primitive
+├── x/offline/AXZXkk.class              → JNI syscall bridge + race
+├── x/offline/EkIKZR.class              → Unsafe memory R/W wrapper
+├── x/offline/Hx1400.class              → FULL KERNEL EXPLOIT (56 KB)
+└── NOTICE.txt                          → credits + safety warning
+
+2. BD-J SANDBOX ESCAPE PRIMITIVES
+----------------------------------
+EkIKZR (Unsafe wrapper):
+  HF6fzp(addr, n, stride) → long[]     read arbitrary memory
+  JtAXmm(addr, arr, stride)            write arbitrary memory
+  OPitzi(addr, n) → byte[]             read byte array
+  R0Bep2(addr, arr)                    write byte array
+
+AXZXkk (JNI + TOCTOU race):
+  private native long vrzs27(long, int[]);   // the JNI bridge
+  DX9qSL(7 args)  → 2-iter race loop, opens/closes /dev/dce
+                   → classic kqueue UAF trigger on PS4 FreeBSD 11
+
+J196rR (AWT OOB leak):
+  ApYgGE()   → create BufferedImage, get GraphicsConfiguration
+  fFFjF2(m)  → getRGB(0,0,1,2,buf,0,-2) with NEGATIVE scansize
+               → reads OOB past image buffer → leaks heap pointers
+  TI8JyY     → scan leaked data for marker → find ASLR base
+
+3. Hx1400 — KERNEL EXPLOIT PHASES
+----------------------------------
+Phase B0-B1: fd grooming
+  - Spray many /dev/dce opens to fill fd slot pool
+  - Open /dev/dce as anchor, fstat it to leak st_ino, st_dev
+  - Find matching fds in the pool (by inode, not rdev)
+  - Close all matched fds to reclaim
+
+Phase C (6 rounds): cross-cache sweep
+  - For each round, open fresh fds then fire kevent on kqueue
+  - Plant marker 0x43434343/0x54545454 to detect UAF reuse
+  - Detect stale kqueue pointer via 248-byte response pattern
+
+Phase D: fake kqueue/kevent at mmap'd address 0x940900000
+  - Fill fake kqueue struct with kq_ops = NULL initially
+  - Leak fake kqueue address into a knlist membership vector
+  - Force knote traversal to observe the fake object
+
+Phase E: RBTREE gadget
+  - Build fake rb_node tree with known relative offsets
+  - Verify non-canonical tree walk (kptr check)
+
+Phase F: fakeOps hijack
+  - kq->kq_ops pointer → controlled mmap'd address
+  - f_touch field hijacked to ROP pivot gadget (R_POPRSP)
+  - Fire kevent(-23, EV_ADD) → ROP chain executes in kernel stack
+
+Phase F1: ROP chain (built in gSTACK via w8())
+  Gadgets resolved:
+    R_POPRSP    → pop rsp; ret         (ROP pivot)
+    R_PRAX      → pop rax; ret
+    R_LDRAX     → mov rax, [rax]; ret  (load qword)
+    R_PRDI      → pop rdi; ret
+    R_STRDIRAX  → mov [rax], rdi; ret  (KERNEL WRITE)
+    R_PRDX      → pop rdx; ret
+    R_ADDRAX    → add rax, rdx; ret
+    R_CONT      → continuation gadget
+    R_REST      → register restore
+    R_TOUCH     → touch page marker
+    R_UCRED     → get current thread's ucred
+    R_UIDPAIR   → write to ucred->cr_uid / cr_ruid
+    R_SAVE      → save registers
+    R_STRAXRDX  → mov [rax], rdx; ret  (KERNEL WRITE)
+    R_RAXRCX    → mov rax, rcx; ret
+    R_RET0      → xor eax, eax; ret
+  Magic marker: 0x4D5F48454E5F4D4D = "MM_HEN_M" (5570198814713989681)
+  UID pair magic: 0x47FBC4BD07B04D53 (5188428245707522067)
+
+Phase H (PATCH): uid → 0
+  - ROP writes 0 to ucred->cr_uid, cr_ruid, cr_svuid
+  - Verify via kread that uid is now 0
+
+Phase H (PATCH): sysent[11] → kexec
+  - jitshm syscall (533) → map 1400-byte payload at RWX page
+  - Overwrite sysent[11].sy_call with kexec, .sy_narg = 2
+  - Verify by reading sysent[11] kernel address
+
+Phase H3-H5: load hen.bin
+  - jitshm(589824, PROT_RWX) → fd for RWX memory
+  - mmap(0x950000000, 589824, PROT_RWX, MAP_FIXED, jitshm_fd)
+  - Copy hen.bin bytes from /mnt/usb0 or /data/hen/ into the mapping
+  - Verify head=E9, entry=0x4AAB, bss_nonzero
+
+Phase H6-H7: launch
+  - Resolve pthread_create from libkernel via nativeCall
+  - Verify prologue bytes (48 89 ...)
+  - pthread_create(pthread_t*, NULL, entry_point, NULL)
+  - HEN takes over from here (writes own logs, own sockets)
+
+Phase H8: teardown
+  - Release spray fds (victims stay pinned by refcount)
+  - Keep hen.bin mapping + jitshm fd + fake page
+  - Exit Xlet cleanly
+
+4. BOOT.EXEC VM — 30 OPCODES
+-----------------------------
+1:  HALT(value)
+2:  PRINT_HEX(value)
+3:  SLEEP(ms)                    // race-window timing
+4:  SPIN(iterations)              // race-window timing
+5:  setString(S[dst], utf8_bytes)
+6:  setBytes(Z[dst], bytes)
+7:  loadClass(O[dst], S[name_idx])
+8:  loadClassViaL(O[dst], Z[loader_idx], S[name_idx], fallback)
+9:  newInstance(O[dst], class_ref, ctor_argtypes[], ctor_args[])
+10: getMethod(M[dst], class_ref, S[name_idx], argtypes[])
+11: getField(M[dst], class_ref, S[name_idx])
+12: getFieldValue(dst_obj, field_idx, src_obj)
+13: setFieldValue(field_idx, obj, value)
+14: invokeMethod(M[method_idx], obj, args[])    // REFLECTION INVOKE
+15: newArray(O[dst], class_ref, size)
+16: arrayGet(dst, arr_idx, element_idx)
+17: arraySet(arr_idx, element_idx, value)
+18: arrayLength(R[dst], arr_idx)
+19: numFromArg(R[dst], arg)
+20: arithmetic(dst, op, a, b)     // 12 ops: +, -, &, |, ^, <<, >>>, *, /, ==, <, >
+21: outputByte(value)              // response buffer
+22: appendObject(obj_idx, type)    // byte[]/int[]/long[] to response
+23: appendBytes(Z[idx])
+24: skipIfZero(R[check], count)    // conditional skip
+25: System.gc()                    // force heap layout
+26: alias(O[dst], O[src])
+27: setObj(O[dst], arg)
+28: wrap(O[dst], O[src])           // Object[]{O[src]}
+29: spawnThread(M[method_idx], obj, args[])   // BACKGROUND INVOKE
+30: getMethodRef(O[dst], M[src])
+
+5. PHONE-HOME VERDICT
+---------------------
+Code exists but is BLOCKED at three layers:
+
+Layer 1 — Unreachable from Xlet:
+  - InitXlet only calls Boot.exec() (lines 599, 615)
+  - Boot.run() has ZERO direct callers in the JAR
+  - Boot.io() is only called from Boot.run() itself
+
+Layer 2 — Malformed if reached:
+  - InitXlet:560 sets Boot.EP = this.discRoot (a file:/ or bd:/ URL)
+  - Boot.io() casts openConnection() result to HttpURLConnection
+  - FileURLConnection is NOT an HttpURLConnection → ClassCastException
+
+Layer 3 — BD-J permission denies:
+  - bluray.InitXlet.perm grants: applifecyclecontrol, bd-bindingunitarea,
+    bd-vfs, file, servicesel, userpreferences
+  - NOT granted: Connector.http, Connector.socket, Connector.ssl
+  - Any http:// openConnection() throws SecurityException
+
+Residual risk: cmd-0043.bin DOES attempt Boot.run() via reflection
+  (op 10 getMethod + op 29 Thread). Even if it fires, Layers 2 & 3 block it.
+
+CONCLUSION: tester.f5rvoice.com:1992 is dead code from upstream BD-JB.
+This ISO is OFFLINE-ONLY.
+
+6. SAFETY
+---------
+- No network traffic occurs during normal use
+- ISO can be analyzed safely on any PC
+- Running on PS4 14.00: standard HEN caveats apply (exploit reliability,
+  kernel object corruption on failed attempts — see NOTICE.txt)
+- Cold reboot after any failed attempt, per NOTICE.txt
+- hen.bin (Scene-Collective HEN 2.2.0) is the standard open-source payload
+
+7. SCOPE EXCLUSIONS (per user)
+------------------------------
+- hen.bin analysis excluded — it is Scene-Collective HEN 2.2.0
+- Focus was strictly BD-J delivery chain + Java exploit primitives
+================================================================================

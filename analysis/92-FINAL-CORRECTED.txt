@@ -1,0 +1,135 @@
+================================================================================
+  HEN.ISO — CORRECTED REVERSE-ENGINEERING ANALYSIS
+  Fork: Bonk HEN 14.00 (Kat, Slopp, Pigeon)
+  Payload: Scene-Collective HEN 2.2.0 BETA (in hen.bin, out of scope)
+  Target:  PS4 firmware 14.00 (verified via HEN_ENTRY / target_id 0x84)
+================================================================================
+
+1. REAL EXPLOIT CHAIN (corrected)
+---------------------------------
+EkIKZR          = userspace Unsafe wrapper (JVM heap R/W, NOT kernel)
+J196rR          = AWT OOB info leak (negative scansize in getRGB)
+AXZXkk          = JNI bridge vrzs27 + TOCTOU race on /dev/dce fd
+Hx1400          = kernel exploit orchestrator (does everything else)
+Boot.exec VM    = reflective bridge that populates Hx1400.P[] from template files
+hen.bin         = payload launched AFTER kernel exploit succeeds
+
+KERNEL R/W PRIMITIVE (corrected):
+  NOT EkIKZR. NOT JNI. Instead:
+  Hx1400.kread()/kwrite() build ROP chains in gSTACK, then fire kevent()
+  on the hijacked kqueue. The ROP executes in kernel context and performs
+  the actual kernel memory access. Each kread/kwrite = one kevent round-trip.
+
+2. THE P[] TABLE — 31 HARDCODED FW-14.00 VALUES
+-----------------------------------------------
+P[0]  SE11         kernel address of sysent[11]
+P[1]  KEXECG       kernel address of kexec gadget
+P[2]  HEN_SIZE     size of hen.bin to copy (must match /x/offline/hen.bin)
+P[3]  HEN_ENTRY    entry offset in hen.bin (0x4AAB)
+P[4]  OFF_FIXES    exploit_fixes config offset
+P[5]  OFF_MMAP     mmap_patches config offset
+P[6]  OFF_BLOCKUPD block_updates config offset
+P[7]  OFF_ASLR     disable_aslr config offset
+P[8]  OFF_NOBD     nobd_patches config offset
+P[9]  OFF_SKIP     skip_patches config offset
+P[10] CFG_UPLOAD   upload_prx config
+P[11] CFG_PLUGINS  enable_plugins config
+P[12] ANCHOR       anchor fd marker
+P[13] R_SLOT       sysfilt_ops registry slot
+P[14] R_OPS        sysfilt_ops value
+P[15] R_RET0       xor eax, eax; ret
+P[16] R_TOUCH      page-touch gadget
+P[17] R_POPRSP     pop rsp; ret (ROP pivot)
+P[18] R_SAVE       register save
+P[19] R_REST       register restore
+P[20] R_CONT       continuation gadget
+P[21] R_PRAX       pop rax; ret
+P[22] R_PRDX       pop rdx; ret
+P[23] R_PRDI       pop rdi; ret
+P[24] R_UCRED      get current thread's ucred
+P[25] R_RAXRCX     mov rax, rcx; ret
+P[26] R_LDRAX      mov rax, [rax]; ret
+P[27] R_ADDRAX     add rax, rdx; ret
+P[28] R_STRAXRDX   mov [rax], rdx; ret (kernel write)
+P[29] R_STRDIRAX   mov [rax], rdi; ret (kernel write)
+P[30] R_UIDPAIR    write ucred uid pair
+
+WHERE DOES P[] COME FROM?
+  - P[] is set EXTERNALLY by InitXlet via Boot.exec VM opcode 13 (setFieldValue)
+  - The data comes from bonk/local/*.bin template files (rules.bin, shapes.bin,
+    guards.bin, schedule.bin, template-hashes.bin, marker-sites.bin, write-sites.bin)
+  - Hx1400.class is SHA-256 frozen in InitXlet.CLASSES[][] so it cannot be
+    modified — but P[] lives outside the hash-check, so FW 14.00 values can be
+    swapped in at runtime via reflection
+  - tableFault() defensively returns "P missing or wrong length" if the caller
+    didn't populate P[] first
+
+GRVA/GLEN/GNOW/GNEW (guard tables):
+  GRVA[] = kernel addresses of guard sites (patched kernel functions)
+  GLEN[] = byte length at each site
+  GNOW[] = current bytes (stock firmware)
+  GNEW[] = patched bytes (HEN-modified)
+  Before applying 1400.bin, phase H checks all sites:
+    if ALL stock    → apply 1400.bin
+    if ALL patched  → skip (already HENed)
+    if MIXED        → refuse, demand cold reboot (per NOTICE.txt)
+
+3. ROP CHAINS (verified from kread/kwrite)
+------------------------------------------
+kread(addr) ROP:
+  [R_PRAX][addr][R_LDRAX][0][R_PRDI][gRES][R_STRDIRAX][0]
+  → mov rax, [addr] ; mov [gRES], rax
+
+kwrite(addr, val) ROP:
+  [R_PRAX][addr][R_PRDX][val][R_STRAXRDX][0]
+  → mov [addr], val
+
+ROP verification marker: 0x4D4D524F4F544A31 = "MMROOTJ1"
+
+UID-PAIR gadget (R_UIDPAIR) writes structured constant 0x4801000000000013
+  into ucred fields — this is NOT a string, it's a magic-verified pair value
+
+4. EXPLOIT FLOW (end to end)
+----------------------------
+A. InitXlet.startXlet() runs on X press
+B. InitXlet constructs P[] from template files, sets Hx1400.P, Hx1400.PG, etc.
+C. InitXlet invokes Hx1400.run() via Boot.exec VM opcode 14 (invokeMethod)
+D. Hx1400.run() orchestrates phases B → N:
+   B  fd grooming via /dev/dce opens (fstat leaks inode/rdev)
+   C  6-round cross-cache sweep (open/close kqueues + kevent)
+   D  fake kqueue at mmap 0x940900000, leak into knlist vector
+   E  fake rb_node tree, verify non-canonical traversal
+   F  rotate kq->kq_ops → fake filterops; f_touch = R_POPRSP pivot
+   F1 build ROP chain in gSTACK via w8() — R_UCRED, R_PRAX, R_UIDPAIR
+   G  safeDown() sets up teardown tracking
+   H  fire kevent(-23, EV_ADD) → ROP executes → uid = 0
+   H  patch sysent[11].sy_call with decoded BLOB1400 (kexec stub)
+   H3 jitshm(589824, PROT_RWX) → fd for RWX page
+   H4 fetch hen.bin from HENURL (must not be the sentinel)
+   H5 verify: head=0xE9, entry=HEN_ENTRY (0x4AAB), bss=0
+   H6 resolve pthread_create from libkernel
+   H7 pthread_create(hen.bin entry) → HEN runs from RWX page
+   H8 release spray fds, keep mappings alive, Xlet exits
+E. HEN (hen.bin) takes over the console
+
+5. VM OPCODES — 30 TOTAL
+-------------------------
+Same table as previous analysis. Confirmed from full switch bodies.
+
+6. PHONE-HOME VERDICT (unchanged)
+---------------------------------
+Three independent blocks:
+  1. Boot.run() unreachable from InitXlet (only Boot.exec is called)
+  2. Boot.io() casts EP=discRoot to HttpURLConnection → ClassCastException
+  3. bluray.InitXlet.perm lacks Connector.http → SecurityException
+
+cmd-0043.bin DOES attempt Boot.run() via reflection (op 10 + op 29) but is
+blocked at all three layers.
+
+VERDICT: tester.f5rvoice.com:1992 is DEAD CODE.
+
+7. SCOPE
+--------
+- hen.bin excluded (Scene-Collective HEN 2.2.0, standard open-source payload)
+- Focus: BD-J delivery chain + Java exploit primitives + kernel exploit in Hx1400
+================================================================================

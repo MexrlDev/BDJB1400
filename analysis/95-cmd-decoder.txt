@@ -1,0 +1,343 @@
+==============================================================================
+  cmd-NNNN.bin decoder — find which script touches Hx1400.P
+==============================================================================
+
+
+======================================================================
+  cmd-0002.bin  (678 bytes)
+======================================================================
+  ops: [6, 5, 8]
+  strings: ['J196rR']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0004.bin  (54 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0005.bin  (63 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0006.bin  (72 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0007.bin  (72 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0008.bin  (142 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0009.bin  (326 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0010.bin  (922 bytes)
+======================================================================
+  ops: [5, 7, 5, 11]
+  strings: ['sun.misc.Unsafe', 'theUnsafe']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): True  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0011.bin  (1484 bytes)
+======================================================================
+  ops: [5, 7, 5, 10, 5, 11, 5, 7, 5]
+  strings: ['java.lang.ClassLoader$NativeLibrary', 'find', 'handle', 'org.bdj.Boot', 'x']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): True  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0012.bin  (704 bytes)
+======================================================================
+  ops: [6, 5, 8]
+  strings: ['AXZXkk']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0014.bin  (326 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0015.bin  (650 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0016.bin  (326 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0017.bin  (536 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0018.bin  (326 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0019.bin  (1622 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0020.bin  (506 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0021.bin  (648 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0022.bin  (1889 bytes)
+======================================================================
+  ops: [6, 5, 8]
+  strings: ['EkIKZR']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0024.bin  (210 bytes)
+======================================================================
+  ops: [5]
+  strings: ['sysctlbyname']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0025.bin  (1224 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0026.bin  (212 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0027.bin  (56 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0028.bin  (3242 bytes)
+======================================================================
+  ops: []
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0029.bin  (250 bytes)
+======================================================================
+  ops: [5, 7, 5, 11, 6, 13, 5, 11, 6, 13, 6]
+  strings: ['org.bdj.Boot', 'CKB', 'SK']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): True  setfield(13): True  newarray(15): False
+
+  --- DETAILED OPS ---
+    {'i': 0, 'op': 5, 'pos': 2, 'idx': 38, 'len': 12, 'str': 'org.bdj.Boot'}
+    {'i': 1, 'op': 7, 'pos': 27, 'dst': 23, 'str_idx': 38}
+    {'i': 2, 'op': 5, 'pos': 44, 'idx': 38, 'len': 3, 'str': 'CKB'}
+    {'i': 3, 'op': 11, 'pos': 60, 'dst': 30, 'cls': 23, 'str_idx': 38}
+    {'i': 4, 'op': 6, 'pos': 85, 'idx': 3, 'len': 16, 'bytes': '00000000000000000000000000000000'}
+    {'i': 5, 'op': 13, 'pos': 114, 'field_idx': 30, 'arg1_type': 4, 'arg1_val': 0, 'arg2_type': 10, 'arg2_val': 3}
+    {'i': 6, 'op': 5, 'pos': 141, 'idx': 38, 'len': 2, 'str': 'SK'}
+    {'i': 7, 'op': 11, 'pos': 156, 'dst': 30, 'cls': 23, 'str_idx': 38}
+    {'i': 8, 'op': 6, 'pos': 181, 'idx': 3, 'len': 16, 'bytes': '00000000000000000000000000000000'}
+    {'i': 9, 'op': 13, 'pos': 210, 'field_idx': 30, 'arg1_type': 4, 'arg1_val': 0, 'arg2_type': 10, 'arg2_val': 3}
+    {'i': 10, 'op': 6, 'pos': 237, 'idx': 3, 'len': 0, 'bytes': ''}
+
+======================================================================
+  cmd-0030.bin  (128 bytes)
+======================================================================
+  ops: [5, 7, 5, 11]
+  strings: ['org.bdj.Boot', 'KSB']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): True  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0031.bin  (170 bytes)
+======================================================================
+  ops: [5, 7, 5, 11, 6, 13, 6]
+  strings: ['org.bdj.Boot', 'KSB']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): True  setfield(13): True  newarray(15): False
+
+  --- DETAILED OPS ---
+    {'i': 0, 'op': 5, 'pos': 2, 'idx': 38, 'len': 12, 'str': 'org.bdj.Boot'}
+    {'i': 1, 'op': 7, 'pos': 27, 'dst': 23, 'str_idx': 38}
+    {'i': 2, 'op': 5, 'pos': 44, 'idx': 38, 'len': 3, 'str': 'KSB'}
+    {'i': 3, 'op': 11, 'pos': 60, 'dst': 30, 'cls': 23, 'str_idx': 38}
+    {'i': 4, 'op': 6, 'pos': 85, 'idx': 3, 'len': 32, 'bytes': '00000000000000000000000000000000'}
+    {'i': 5, 'op': 13, 'pos': 130, 'field_idx': 30, 'arg1_type': 4, 'arg1_val': 0, 'arg2_type': 10, 'arg2_val': 3}
+    {'i': 6, 'op': 6, 'pos': 157, 'idx': 3, 'len': 0, 'bytes': ''}
+
+======================================================================
+  cmd-0032.bin  (433 bytes)
+======================================================================
+  ops: [5, 6, 8]
+  strings: ['Hx1400']
+  Hx1400 ref: True  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+  --- DETAILED OPS ---
+    {'i': 0, 'op': 5, 'pos': 2, 'idx': 43, 'len': 6, 'str': 'Hx1400'}
+    {'i': 1, 'op': 6, 'pos': 21, 'idx': 10, 'len': 0, 'bytes': ''}
+    {'i': 2, 'op': 8, 'pos': 34, 'dst': 30, 'load_idx': 10, 'str_idx': 43, 'fallback': 1}
+    {'i': 3, 'op': 9, 'pos': 67, 'unknown': True}
+
+======================================================================
+  cmd-0034.bin  (193 bytes)
+======================================================================
+  ops: [15, 15, 15, 15, 15, 5, 10, 5]
+  strings: ['concat', '']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): True
+
+======================================================================
+  cmd-0035.bin  (687 bytes)
+======================================================================
+  ops: [17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 5]
+  strings: ['b9820000c00f3248c1e22089c04809c2488d8a40feffff0f20c04825fffffeff0f22c0b8eb040000beeb040000bf90e9ffff41b8eb000000668981437a1b00b8eb04000041b9eb00000041baeb0000006689815ccb2f0041bbeb000000b890e9ffff4881c2fe4e020066']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0036.bin  (664 bytes)
+======================================================================
+  ops: [17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 5]
+  strings: ['89b1537a1b006689b9737a1b006644898184866200c681cd0a0000ebc6819dd72b00ebc681e1d72b00ebc6815dd82b00ebc681a1d82b00ebc6814dda2b00ebc681fdde2b00ebc681cddf2b00eb664489896f8f6200c781900400000000000']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0037.bin  (688 bytes)
+======================================================================
+  ops: [17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 5]
+  strings: ['0c681c2040000eb66448991b904000066448999b5040000c681c61f3900eb66898104751b00c781b87a1b0090e93c01c781c0e33b004831c0c3c681daaa1f0037c681dd']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0038.bin  (740 bytes)
+======================================================================
+  ops: [17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 5]
+  strings: ['aa1f0037c781802d100102000000488991882d1001c781ac2d1001010000000f20c0480d000001000f22c00f20c04825fffffeff0f22c0b8eb480000ba040000004531c04531c9be05000000668981915']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0039.bin  (777 bytes)
+======================================================================
+  ops: [17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 5]
+  strings: ['71200b8eb060000bf05000000668981d357120041ba0100000048b84183bfa00400000041bb01000000488981db571200b804000000668981ed571200b8498bffffc781e9571200498b87d0c681ef57120000c781f65']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0040.bin  (695 bytes)
+======================================================================
+  ops: [17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 5]
+  strings: ['71200498bb7b0668991fa571200c681fc57120000c7810e581200498b87406689b112581200c6811458120000c7811b581200498bb7206689b91f581200c6812158120000c78133581200498dbfc06644898137581200c6813958120000c7813f5']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0041.bin  (728 bytes)
+======================================================================
+  ops: [17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 5]
+  strings: ['81200498dbfe06644898943581200c6814558120000c78152581200498dbf006644899156581200c6815858120000c7815e581200498dbf206644899962581200c68164581200006689816f581200c68171581200ff0f20c0480d000001000f22c031c0c3']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0042.bin  (579 bytes)
+======================================================================
+  ops: [5, 11, 13, 5, 11, 13, 5, 11, 13, 5, 11, 13, 5, 11, 13, 5, 11, 13]
+  strings: ['P', 'PG', 'PGL', 'PGN', 'PGW', 'PKB']
+  Hx1400 ref: False  |  'P' string: True  |  getfield(11): True  setfield(13): True  newarray(15): False
+
+  --- DETAILED OPS ---
+    {'i': 0, 'op': 5, 'pos': 2, 'idx': 38, 'len': 1, 'str': 'P'}
+    {'i': 1, 'op': 11, 'pos': 16, 'dst': 50, 'cls': 30, 'str_idx': 38}
+    {'i': 2, 'op': 13, 'pos': 41, 'field_idx': 50, 'arg1_type': 4, 'arg1_val': 0, 'arg2_type': 2, 'arg2_val': 40}
+    {'i': 3, 'op': 5, 'pos': 68, 'idx': 38, 'len': 2, 'str': 'PG'}
+    {'i': 4, 'op': 11, 'pos': 83, 'dst': 51, 'cls': 30, 'str_idx': 38}
+    {'i': 5, 'op': 13, 'pos': 108, 'field_idx': 51, 'arg1_type': 4, 'arg1_val': 0, 'arg2_type': 2, 'arg2_val': 41}
+    {'i': 6, 'op': 5, 'pos': 135, 'idx': 38, 'len': 3, 'str': 'PGL'}
+    {'i': 7, 'op': 11, 'pos': 151, 'dst': 52, 'cls': 30, 'str_idx': 38}
+    {'i': 8, 'op': 13, 'pos': 176, 'field_idx': 52, 'arg1_type': 4, 'arg1_val': 0, 'arg2_type': 2, 'arg2_val': 42}
+    {'i': 9, 'op': 5, 'pos': 203, 'idx': 38, 'len': 3, 'str': 'PGN'}
+    {'i': 10, 'op': 11, 'pos': 219, 'dst': 53, 'cls': 30, 'str_idx': 38}
+    {'i': 11, 'op': 13, 'pos': 244, 'field_idx': 53, 'arg1_type': 4, 'arg1_val': 0, 'arg2_type': 2, 'arg2_val': 43}
+    {'i': 12, 'op': 5, 'pos': 271, 'idx': 38, 'len': 3, 'str': 'PGW'}
+    {'i': 13, 'op': 11, 'pos': 287, 'dst': 54, 'cls': 30, 'str_idx': 38}
+    {'i': 14, 'op': 13, 'pos': 312, 'field_idx': 54, 'arg1_type': 4, 'arg1_val': 0, 'arg2_type': 2, 'arg2_val': 44}
+    {'i': 15, 'op': 5, 'pos': 339, 'idx': 38, 'len': 3, 'str': 'PKB'}
+    {'i': 16, 'op': 11, 'pos': 355, 'dst': 55, 'cls': 30, 'str_idx': 38}
+    {'i': 17, 'op': 13, 'pos': 380, 'field_idx': 55, 'arg1_type': 4, 'arg1_val': 0, 'arg2_type': 3, 'arg2_val': 39}
+    {'i': 18, 'op': 12, 'pos': 407, 'unknown': True}
+
+======================================================================
+  cmd-0043.bin  (106 bytes)
+======================================================================
+  ops: [5, 10, 5, 10, 29]
+  strings: ['run', 'LOGS']
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0044.bin  (192 bytes)
+======================================================================
+  ops: [3]
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+======================================================================
+  cmd-0046.bin  (20 bytes)
+======================================================================
+  ops: [2, 1]
+  strings: []
+  Hx1400 ref: False  |  'P' string: False  |  getfield(11): False  setfield(13): False  newarray(15): False
+
+
+==============================================================================
+  P[] SETTER CANDIDATES
+==============================================================================
+
+  None found by heuristic. P[] is set by another mechanism:
+  - possibly InitXlet.java directly (not yet grepped)
+  - possibly via Java reflection on Hx1400.P (op 11 + op 13 with a
+    Field object obtained from a Hx1400 class reference)

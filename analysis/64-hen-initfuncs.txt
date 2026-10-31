@@ -1,0 +1,195 @@
+
+============================================
+  Init function at 0x6DB1 (first 60 instructions)
+============================================
+
+  0x00006DB1  f30f1efa                  endbr64  
+  0x00006DB5  53                        push     rbx
+  0x00006DB6  488d1d0b280800            lea      rbx, [rip + 0x8280b]
+  0x00006DBD  833b00                    cmp      dword ptr [rbx], 0
+  0x00006DC0  0f8532040000              jne      0x71f8
+  0x00006DC6  488d05e3270800            lea      rax, [rip + 0x827e3]
+  0x00006DCD  31d2                      xor      edx, edx
+  0x00006DCF  4889de                    mov      rsi, rbx
+  0x00006DD2  488d3d2a3f0000            lea      rdi, [rip + 0x3f2a]
+  0x00006DD9  488910                    mov      qword ptr [rax], rdx
+  0x00006DDC  e87e0a0000                call     0x785f
+  0x00006DE1  85c0                      test     eax, eax
+  0x00006DE3  7422                      je       0x6e07
+  0x00006DE5  4889de                    mov      rsi, rbx
+  0x00006DE8  488d3d233f0000            lea      rdi, [rip + 0x3f23]
+  0x00006DEF  e86b0a0000                call     0x785f
+  0x00006DF4  85c0                      test     eax, eax
+  0x00006DF6  740f                      je       0x6e07
+  0x00006DF8  4889de                    mov      rsi, rbx
+  0x00006DFB  488d3d233f0000            lea      rdi, [rip + 0x3f23]
+  0x00006E02  e8580a0000                call     0x785f
+  0x00006E07  8b3b                      mov      edi, dword ptr [rbx]
+  0x00006E09  488d35283f0000            lea      rsi, [rip + 0x3f28]
+  0x00006E10  488d15a9270800            lea      rdx, [rip + 0x827a9]
+  0x00006E17  e82b0a0000                call     0x7847
+  0x00006E1C  8b3b                      mov      edi, dword ptr [rbx]
+  0x00006E1E  488d35253f0000            lea      rsi, [rip + 0x3f25]
+  0x00006E25  488d158c270800            lea      rdx, [rip + 0x8278c]
+  0x00006E2C  e8160a0000                call     0x7847
+  0x00006E31  8b3b                      mov      edi, dword ptr [rbx]
+  0x00006E33  488d35213f0000            lea      rsi, [rip + 0x3f21]
+  0x00006E3A  488d156f270800            lea      rdx, [rip + 0x8276f]
+  0x00006E41  e8010a0000                call     0x7847
+  0x00006E46  8b3b                      mov      edi, dword ptr [rbx]
+  0x00006E48  488d35143f0000            lea      rsi, [rip + 0x3f14]
+  0x00006E4F  488d1552270800            lea      rdx, [rip + 0x82752]
+  0x00006E56  e8ec090000                call     0x7847
+  0x00006E5B  8b3b                      mov      edi, dword ptr [rbx]
+  0x00006E5D  488d350e3f0000            lea      rsi, [rip + 0x3f0e]
+  0x00006E64  488d1535270800            lea      rdx, [rip + 0x82735]
+  0x00006E6B  e8d7090000                call     0x7847
+  0x00006E70  8b3b                      mov      edi, dword ptr [rbx]
+  0x00006E72  488d35123f0000            lea      rsi, [rip + 0x3f12]
+  0x00006E79  488d1518270800            lea      rdx, [rip + 0x82718]
+  0x00006E80  e8c2090000                call     0x7847
+  0x00006E85  8b3b                      mov      edi, dword ptr [rbx]
+  0x00006E87  488d351b3f0000            lea      rsi, [rip + 0x3f1b]
+  0x00006E8E  488d15fb260800            lea      rdx, [rip + 0x826fb]
+  0x00006E95  e8ad090000                call     0x7847
+  0x00006E9A  8b3b                      mov      edi, dword ptr [rbx]
+  0x00006E9C  488d351f3f0000            lea      rsi, [rip + 0x3f1f]
+  0x00006EA3  488d15de260800            lea      rdx, [rip + 0x826de]
+  0x00006EAA  e898090000                call     0x7847
+  0x00006EAF  8b3b                      mov      edi, dword ptr [rbx]
+  0x00006EB1  488d35273f0000            lea      rsi, [rip + 0x3f27]
+  0x00006EB8  488d15c1260800            lea      rdx, [rip + 0x826c1]
+  0x00006EBF  e883090000                call     0x7847
+  0x00006EC4  8b3b                      mov      edi, dword ptr [rbx]
+  0x00006EC6  488d35203f0000            lea      rsi, [rip + 0x3f20]
+  0x00006ECD  488d15a4260800            lea      rdx, [rip + 0x826a4]
+
+============================================
+  Init function at 0x71FA (first 60 instructions)
+============================================
+
+  0x000071FA  f30f1efa                  endbr64  
+  0x000071FE  55                        push     rbp
+  0x000071FF  53                        push     rbx
+  0x00007200  56                        push     rsi
+  0x00007201  488d1d10260800            lea      rbx, [rip + 0x82610]
+  0x00007208  833b00                    cmp      dword ptr [rbx], 0
+  0x0000720B  0f8532060000              jne      0x7843
+  0x00007211  488d0588230800            lea      rax, [rip + 0x82388]
+  0x00007218  4531c9                    xor      r9d, r9d
+  0x0000721B  4531c0                    xor      r8d, r8d
+  0x0000721E  31c9                      xor      ecx, ecx
+  0x00007220  31d2                      xor      edx, edx
+  0x00007222  31f6                      xor      esi, esi
+  0x00007224  488d3d693e0000            lea      rdi, [rip + 0x3e69]
+  0x0000722B  ff10                      call     qword ptr [rax]
+  0x0000722D  488d15dc250800            lea      rdx, [rip + 0x825dc]
+  0x00007234  488d35713e0000            lea      rsi, [rip + 0x3e71]
+  0x0000723B  89c7                      mov      edi, eax
+  0x0000723D  8903                      mov      dword ptr [rbx], eax
+  0x0000723F  488d2d243f0000            lea      rbp, [rip + 0x3f24]
+  0x00007246  e8fc050000                call     0x7847
+  0x0000724B  8b3b                      mov      edi, dword ptr [rbx]
+  0x0000724D  488d355f3e0000            lea      rsi, [rip + 0x3e5f]
+  0x00007254  488d15ad250800            lea      rdx, [rip + 0x825ad]
+  0x0000725B  e8e7050000                call     0x7847
+  0x00007260  8b3b                      mov      edi, dword ptr [rbx]
+  0x00007262  488d354f3e0000            lea      rsi, [rip + 0x3e4f]
+  0x00007269  488d1590250800            lea      rdx, [rip + 0x82590]
+  0x00007270  e8d2050000                call     0x7847
+  0x00007275  8b3b                      mov      edi, dword ptr [rbx]
+  0x00007277  488d35413e0000            lea      rsi, [rip + 0x3e41]
+  0x0000727E  488d1573250800            lea      rdx, [rip + 0x82573]
+  0x00007285  e8bd050000                call     0x7847
+  0x0000728A  8b3b                      mov      edi, dword ptr [rbx]
+  0x0000728C  488d35343e0000            lea      rsi, [rip + 0x3e34]
+  0x00007293  488d1556250800            lea      rdx, [rip + 0x82556]
+  0x0000729A  e8a8050000                call     0x7847
+  0x0000729F  8b3b                      mov      edi, dword ptr [rbx]
+  0x000072A1  488d35283e0000            lea      rsi, [rip + 0x3e28]
+  0x000072A8  488d1539250800            lea      rdx, [rip + 0x82539]
+  0x000072AF  e893050000                call     0x7847
+  0x000072B4  8b3b                      mov      edi, dword ptr [rbx]
+  0x000072B6  488d351a3e0000            lea      rsi, [rip + 0x3e1a]
+  0x000072BD  488d151c250800            lea      rdx, [rip + 0x8251c]
+  0x000072C4  e87e050000                call     0x7847
+  0x000072C9  8b3b                      mov      edi, dword ptr [rbx]
+  0x000072CB  488d350c3e0000            lea      rsi, [rip + 0x3e0c]
+  0x000072D2  488d15ff240800            lea      rdx, [rip + 0x824ff]
+  0x000072D9  e869050000                call     0x7847
+  0x000072DE  8b3b                      mov      edi, dword ptr [rbx]
+  0x000072E0  488d35fe3d0000            lea      rsi, [rip + 0x3dfe]
+  0x000072E7  488d15e2240800            lea      rdx, [rip + 0x824e2]
+  0x000072EE  e854050000                call     0x7847
+  0x000072F3  8b3b                      mov      edi, dword ptr [rbx]
+  0x000072F5  488d35f13d0000            lea      rsi, [rip + 0x3df1]
+  0x000072FC  488d15c5240800            lea      rdx, [rip + 0x824c5]
+  0x00007303  e83f050000                call     0x7847
+  0x00007308  8b3b                      mov      edi, dword ptr [rbx]
+  0x0000730A  488d35e63d0000            lea      rsi, [rip + 0x3de6]
+  0x00007311  488d15a8240800            lea      rdx, [rip + 0x824a8]
+
+============================================
+  Init function at 0xA008 (first 60 instructions)
+============================================
+
+  0x0000A008  f30f1efa                  endbr64  
+  0x0000A00C  4155                      push     r13
+  0x0000A00E  4154                      push     r12
+  0x0000A010  55                        push     rbp
+  0x0000A011  53                        push     rbx
+  0x0000A012  4881ecd8000000            sub      rsp, 0xd8
+  0x0000A019  488d2d08f80700            lea      rbp, [rip + 0x7f808]
+  0x0000A020  668b4500                  mov      ax, word ptr [rbp]
+  0x0000A024  6685c0                    test     ax, ax
+  0x0000A027  0f8560010000              jne      0xa18d
+  0x0000A02D  4c8d2534f70700            lea      r12, [rip + 0x7f734]
+  0x0000A034  488d5c242f                lea      rbx, [rsp + 0x2f]
+  0x0000A039  488d1530f40700            lea      rdx, [rip + 0x7f430]
+  0x0000A040  4d8b2c24                  mov      r13, qword ptr [r12]
+  0x0000A044  ff12                      call     qword ptr [rdx]
+  0x0000A046  4889df                    mov      rdi, rbx
+  0x0000A049  488d1585120000            lea      rdx, [rip + 0x1285]
+  0x0000A050  4889c1                    mov      rcx, rax
+  0x0000A053  be21000000                mov      esi, 0x21
+  0x0000A058  31c0                      xor      eax, eax
+  0x0000A05A  41ffd5                    call     r13
+  0x0000A05D  31d2                      xor      edx, edx
+  0x0000A05F  31f6                      xor      esi, esi
+  0x0000A061  4889df                    mov      rdi, rbx
+  0x0000A064  e8b6c9ffff                call     0x6a1f
+  0x0000A069  85c0                      test     eax, eax
+  0x0000A06B  89c3                      mov      ebx, eax
+  0x0000A06D  791e                      jns      0xa08d
+  0x0000A06F  31d2                      xor      edx, edx
+  0x0000A071  31f6                      xor      esi, esi
+  0x0000A073  488d3d74120000            lea      rdi, [rip + 0x1274]
+  0x0000A07A  e8a0c9ffff                call     0x6a1f
+  0x0000A07F  85c0                      test     eax, eax
+  0x0000A081  89c3                      mov      ebx, eax
+  0x0000A083  7908                      jns      0xa08d
+  0x0000A085  83c8ff                    or       eax, 0xffffffff
+  0x0000A088  e900010000                jmp      0xa18d
+  0x0000A08D  31d2                      xor      edx, edx
+  0x0000A08F  31f6                      xor      esi, esi
+  0x0000A091  89df                      mov      edi, ebx
+  0x0000A093  e85fcaffff                call     0x6af7
+  0x0000A098  488d742408                lea      rsi, [rsp + 8]
+  0x0000A09D  ba20000000                mov      edx, 0x20
+  0x0000A0A2  89df                      mov      edi, ebx
+  0x0000A0A4  e85ec9ffff                call     0x6a07
+  0x0000A0A9  4883f820                  cmp      rax, 0x20
+  0x0000A0AD  75d6                      jne      0xa085
+  0x0000A0AF  440fb76c2420              movzx    r13d, word ptr [rsp + 0x20]
+  0x0000A0B5  31d2                      xor      edx, edx
+  0x0000A0B7  89df                      mov      edi, ebx
+  0x0000A0B9  49ffc5                    inc      r13
+  0x0000A0BC  49c1e505                  shl      r13, 5
+  0x0000A0C0  4c89ee                    mov      rsi, r13
+  0x0000A0C3  e82fcaffff                call     0x6af7
+  0x0000A0C8  488d742450                lea      rsi, [rsp + 0x50]
+  0x0000A0CD  ba40000000                mov      edx, 0x40
+  0x0000A0D2  89df                      mov      edi, ebx
+  0x0000A0D4  e82ec9ffff                call     0x6a07
+  0x0000A0D9  4883f840                  cmp      rax, 0x40
+  0x0000A0DD  75a6                      jne      0xa085

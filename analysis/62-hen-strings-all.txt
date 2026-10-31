@@ -1,0 +1,1831 @@
+000009  AWAVAUATUSH
+0003EB  []A\A]A^A_
+00054A  []A\A]A^A_
+000562  AWAVAUATUSH
+000731  []A\A]A^A_
+0007F9  AVAUATI
+0009D0  ]A\A]A^
+000D13  ]A\A]A^
+001119  []A\A]A^
+00113B  AUATUH
+001417  []A\A]
+001433  AWAVAUATUSH
+00290C  []A\A]A^A_
+003EAD  AWAVAUATARSH
+004930  XDAOLYAPI9
+0049EF  [AZA\A]A^A_]
+004AAF  AWAVAUATUSH
+005DFF  []A\A]A^A_
+005E0A  AWAVAUATUSH
+0061FF  []A\A]A^A_
+00620E  AWAVAUATUSH
+006306  D$8L9d$8D
+0066D1  []A\A]A^A_
+0066E7  []A\A]A^A_
+00685D  []A\A]
+006868  AWAVAUATUSH
+006988  []A\A]A^A_
+006C18  AVAUATUSH
+006D76  []A\A]A^A_
+007896  AUATUSH
+008063  []A\A]
+0088DA  AUATUSH
+0089AB  []A\A]
+009078  AUATUSH
+009149  []A\A]
+009740  AUATUSH
+009811  []A\A]
+009EDC  AUATUSH
+009FAD  []A\A]
+00A00C  AUATUSH
+00A194  []A\A]
+00A286  AWAVAUATUSH
+00A390  []A\A]A^A_
+00A3E0  Invalid parameters for write_blob
+00A402  source/common.c
+00A412  [DEBUG] [%s (%s:%d)] 
+00A428  [NOTIFICATION]: %s
+00A43C  fd %s %d
+00A446  Partial write to %s: %zd/%zu bytes
+00A469  Failed to write %s!
+00A47D  File descriptor %d
+00A490  sent SIGKILL(%d) to %s(%d)
+00A4AC  /update/PS4UPDATE.PUP
+00A4C2  /update/PS4UPDATE.PUP.net.temp
+00A4E1  /update
+00A4F6  ERROR: Invalid %s:
+00A509      Must be 0 or 1 (false or true)
+00A52C  source/config.c
+00A53C  config_version
+00A54B  ERROR: Malformed %s
+00A55F  exploit_fixes
+00A56D  mmap_patches
+00A57A  block_updates
+00A588  unmount_update
+00A597  disable_aslr
+00A5A4  nobd_patches
+00A5B1  skip_patches
+00A5BE  genuine_cex
+00A5CA  np_patch_check
+00A5D9  np_regmgr_hook
+00A5E8  upload_prx
+00A5F3  enable_plugins
+00A602  target_id
+00A60C  ERROR: Malformed target_id:
+00A628      Must be %i bytes (e.g. 0x84)
+00A649  ERROR: Malformed target_id:
+00A665      Incorrect format, must be 0x?? (e.g. 0x84)
+00A697  ERROR: Failed to parse target_id:
+00A6B9      Unable to convert hex value
+00A6D9  ERROR: Unknown target_id:
+00A6F3      Only 0x80-0x8F and 0xA0 are valid
+00A719  /data/hen
+00A723  2.2.0 BETA
+00A72E  /data/hen/version.txt
+00A744  /mnt/usb0/hen.ini
+00A756  ERROR: Unable to load `/mnt/usb0/hen.ini`
+00A780  /data/hen/hen.ini
+00A792  ERROR: Unable to load `/data/hen/hen.ini`
+00A7BC  source/kpayloads.c
+00A7CF  Unsupported firmware
+00A7E4   out of date!
+00A7F2   not found!
+00A7FE   and USB
+00A807  SceShellUI
+00A812  Unsupported Firmware
+00A827  source/main.c
+00A835  /user/temp/hen.installed
+00A84E  HEN is already installed. Skipping...
+00A874  config version not match
+00A88E  config.config_version: %d
+00A8A9  found_version: %d
+00A8BC  Config version (%d/%d)%s
+00A8D5  Updating settings file on %s%s...
+00A8FB  Applying exploit fixes...
+00A916  Applying mmap patches...
+00A930  Blocking updates...
+00A945  Disabling ASLR...
+00A958  Installing NoBD patches...
+00A974  Setting new target ID...
+00A98E  Diagnostic
+00A999  Devkit
+00A9A0  Testkit
+00A9B2  Europe
+00A9BF  United Kingdom
+00A9CE  Mexico
+00A9D5  Australia & New Zealand
+00A9ED  South Asia
+00A9F8  Taiwan
+00A9FF  Russia
+00AA0C  Hong Kong
+00AA16  Brazil
+00AA1D  Kratos
+00AA24  Spoofing: UNKNOWN...
+00AA39  Check your `hen.ini` file
+00AA53  ERROR: Unable to spoof target ID
+00AA74  Writing plugin PRXs to disk...
+00AA94  Welcome to HEN %s
+00AAA6  HEN will restart %s
+00AABA  in %d seconds...
+00AACB  /data/hen/plugin_server.prx
+00AAE7  ScePartyDaemon
+00AAF6  source/patch.c
+00AB05  found data at 0x%lx 0x%lx chunk loc 0x%lx offset 0x%lx
+00AB3D  free mem
+00AB47  couldn't find pattern
+00AB60  pid %d
+00AB68  /user/temp/shellcore_appinfo.installed
+00AB8F  SceShellCore
+00AB9C  idx %d page_idx %d
+00ABB0  %d %lx %lx (%lu) %x
+00ABC5  ehframe_header %lx
+00ABD8  sc_update %lx
+00ABE7  14 00 00 00 00 00 00 00 01 7a 52 00 01 78 10 01 1b 0c 07 08 90 01 00 00
+00AC2F  e8 ? ? ? ? 48 89 df e8 ? ? ? ? 48 89 df e8 ? ? ? ? e8 ? ? ? ? 31 c0
+00AC73  /data/hen/plugin_bootloader.prx
+00AC93  /data/hen/plugin_loader.prx
+00ACAF  /data/hen/plugin_mono.prx
+00ACC9  /data/hen/plugin_shellcore.prx
+00ACE8  /data/hen/patches.ini
+00AD03  libkernel.sprx
+00AD12  libkernel_web.sprx
+00AD25  libkernel_sys.sprx
+00AD38  __stack_chk_guard
+00AD4A  __stack_chk_fail
+00AD5B  __error
+00AD63  sceKernelError
+00AD72  sceKernelLoadStartModule
+00AD8B  sceKernelAllocateDirectMemory
+00ADA9  sceKernelMapDirectMemory
+00ADC2  sceKernelGetDirectMemorySize
+00ADDF  sceKernelStat
+00ADED  sceKernelOpen
+00ADFB  sceKernelRead
+00AE09  sceKernelLseek
+00AE18  sceKernelClose
+00AE27  sceKernelLwfsAllocateBlock
+00AE42  sceKernelLwfsSetAttribute
+00AE5C  sceKernelLwfsTrimBlock
+00AE73  sceKernelLwfsLseek
+00AE86  sceKernelLwfsWrite
+00AE99  sceKernelSleep
+00AEA8  sceKernelUsleep
+00AEB8  usleep
+00AEBF  sceKernelGettimeofday
+00AED5  sceKernelGetProcessTime
+00AEED  sceKernelGetCurrentCpu
+00AF04  sysctl
+00AF0B  sysctlbyname
+00AF18  sysarch
+00AF20  execve
+00AF27  pthread_self
+00AF34  pthread_setaffinity_np
+00AF4B  sceKernelCreateEqueue
+00AF61  sceKernelDeleteEqueue
+00AF77  sceKernelAddUserEvent
+00AF8D  sceKernelAddReadEvent
+00AFA3  getuid
+00AFAA  getgid
+00AFB1  getpid
+00AFB8  setuid
+00AFBF  setgid
+00AFC6  setreuid
+00AFCF  setregid
+00AFD8  sceKernelSendNotificationRequest
+00AFF9  sceKernelGetFsSandboxRandomWord
+00B019  sceKernelGetSystemSwVersion
+00B035  sceKernelGetCpuTemperature
+00B050  sceKernelGetIdPs
+00B061  sceKernelGetOpenPsId
+00B076  sceKernelGetOpenPsIdForSystem
+00B094  libSceLibcInternal.sprx
+00B0AC  malloc
+00B0B8  calloc
+00B0BF  realloc
+00B0C7  memalign
+00B0D0  memset
+00B0D7  memcpy
+00B0DE  memcmp
+00B0E5  memmove
+00B0ED  memmove_s
+00B0F7  strcpy
+00B0FE  strncpy
+00B106  strncpy_s
+00B110  strcat
+00B117  strncat
+00B11F  strlen
+00B126  strcmp
+00B12D  strcasecmp
+00B138  strncmp
+00B140  sprintf
+00B148  snprintf
+00B151  snprintf_s
+00B15C  sscanf
+00B163  strtol
+00B16A  strtok
+00B171  strchr
+00B178  strrchr
+00B180  strstr
+00B187  strdup
+00B18E  rindex
+00B195  isspace
+00B19D  isdigit
+00B1A5  isxdigit
+00B1B8  strlcpy
+00B1C0  strerror
+00B1C9  _Getpctype
+00B1D4  _Stoul
+00B1E6  tolower
+00B1EE  toupper
+00B1FC  asctime
+00B204  asctime_r
+00B20E  gmtime
+00B215  gmtime_s
+00B21E  localtime
+00B228  localtime_r
+00B234  mktime
+00B23B  opendir
+00B243  readdir
+00B24B  readdir_r
+00B255  telldir
+00B25D  seekdir
+00B265  rewinddir
+00B26F  closedir
+00B27E  getprogname
+00B296  fwrite
+00B2A9  fclose
+00B2B0  fprintf
+00B2BE  source/payload_utils.c
+00B2D5  /%s/common/lib/libc.sprx
+00B2EE  /system/common/lib/libc.sprx
+00B30B  %02lx%02lx
+00B318  kill_proc
+00B340  cxml://psnotification/tex_icon_system
+00B380  cxml://psnotification/tex_icon_system
+00B3A8  write_blob
+00B3C0  cxml://psnotification/tex_icon_system
+00B3F0  set_bool_config
+00B400  cxml://psnotification/tex_icon_system
+00B428  set_int_config
+00B440  cxml://psnotification/tex_icon_system
+00B480  cxml://psnotification/tex_icon_system
+00B4C0  cxml://psnotification/tex_icon_system
+00B500  cxml://psnotification/tex_icon_system
+00B528  config_handler
+00B540  cxml://psnotification/tex_icon_system
+00B580  cxml://psnotification/tex_icon_system
+00B5A8  init_config
+00B5C0  cxml://psnotification/tex_icon_system
+00B606  ; Config version - Changing this value will trigger a settings file overwrite.
+00B655  ; If this field doesn't exist prior, this settings file will be written.
+00B69E  config_version = 3
+00B6B2  ; Enable exploit fixes - automatically reapplies any missing/failed/incorrect
+00B700  ; patches that should have been set by the exploit. This helps maintain system
+00B74F  ; stability after jailbreaking by ensuring the kernel is consistently patched
+00B79D  ; across different exploits and firmware versions.
+00B7D0  ; Values: 0 = disabled, 1 = enabled
+00B7F4  ; Default: 1
+00B801  exploit_fixes = 1
+00B814  ; Enable memory mapping patches for decrypting binary files. These patches
+00B85F  ; allow the system to properly handle encrypted executables and libraries.
+00B8AA  ; Values: 0 = disabled, 1 = enabled
+00B8CE  ; Default: 1
+00B8DB  mmap_patches = 1
+00B8ED  ; Block console firmware updates. A directory is created where the updater
+00B938  ; must write /update/PS4UPDATE.PUP, so the download cannot land. This is the
+00B985  ; protection, and it survives reboots.
+00B9AC  ; Values: 0 = allow updates, 1 = block updates
+00B9DB  ; Default: 1
+00B9E8  block_updates = 1
+00B9FB  ; Also UNMOUNT the /update partition (only when block_updates = 1).
+00BA41  ; This used to happen unconditionally. It is belt and braces on top of the
+00BA8C  ; directories above - and it takes /update away from the background transfer
+00BAD9  ; daemon too, which is what a half-installed game looks like: the title runs
+00BB26  ; in PlayGo "play while downloading", the download task stays alive with
+00BB6F  ; errorcode 0, and not one byte moves. GTA V sitting at 90% was 89.28%
+00BBB6  ; installed with 5.02 GB still to come.
+00BBE0  ; Turn it on only if you want the extra layer and do not need downloads.
+00BC29  ; Values: 0 = keep /update mounted, 1 = unmount it
+00BC5C  ; Default: 0
+00BC69  unmount_update = 0
+00BC7D  ; Disable userland ASLR (Address Space Layout Randomization)
+00BCBA  ; ASLR randomizes memory addresses to prevent exploitation. Disabling it
+00BD03  ; can improve compatibility with homebrew applications, debuggers, and cheats.
+00BD52  ; Values: 0 = keep ASLR enabled, 1 = disable ASLR
+00BD84  ; Default: 1
+00BD91  disable_aslr = 1
+00BDA3  ; NoBD (No Blu-ray Drive) patches - allows system updates without a working
+00BDEF  ; Blu-ray drive.
+00BE00  ; Values: 0 = skip NoBD patches, 1 = apply NoBD patches
+00BE38  ; Default: 0
+00BE45  nobd_patches = 0
+00BE57  ; Target ID spoofer - changes the console's reported Target ID for development
+00BEA6  ; or region-specific functionality.
+00BECC  ; Valid Target IDs:
+00BEE0  ;   0x80 = Diagnostic
+00BEF6  ;   0x81 = Devkit
+00BF08  ;   0x82 = Testkit
+00BF1B  ;   0x83 = Japan
+00BF2C  ;   0x84 = USA
+00BF3B  ;   0x85 = Europe
+00BF4D  ;   0x86 = Korea
+00BF5E  ;   0x87 = United Kingdom
+00BF78  ;   0x88 = Mexico
+00BF8A  ;   0x89 = Australia & New Zealand
+00BFAD  ;   0x8A = South Asia
+00BFC3  ;   0x8B = Taiwan
+00BFD5  ;   0x8C = Russia
+00BFE7  ;   0x8D = China
+00BFF8  ;   0x8E = Hong Kong
+00C00D  ;   0x8F = Brazil
+00C01F  ;   0xA0 = Kratos (Arcade Cabinet)
+00C044  ; Values: 0 = no spoofing, or valid hex Target ID (e.g., 0x84)
+00C083  ; Default: 0
+00C090  target_id = 0
+00C09F  ; Report this console honestly to SceShellCore.
+00C0D1  ; HEN normally writes `xor eax,eax ; jmp +1` over eight call sites so that
+00C11C  ; sceKernelIsGenuineCEX and the nidf_libSceDipsw check both answer 0 - i.e. so
+00C16B  ; ShellCore believes this is not a genuine retail console. That is what allows
+00C1BA  ; a debug/fake package to be INSTALLED, and it was unconditional.
+00C1FE  ; Measured on this console: with those eight left alone, titles that would not
+00C24D  ; start under HEN do start. The cost is that installing a fake PKG may be
+00C297  ; refused; an already-installed title still launches.
+00C2CF  ; Values: 0 = HEN's old behaviour (force not-genuine), 1 = report genuine
+00C319  ; Default: 1
+00C326  genuine_cex = 0
+00C337  ; Force PlayStation Network "Patch Check = Manual".
+00C36D  ; This switch covers all THREE mechanisms at once:
+00C3A0  ;   - the kernel replacement of sceRegMgrGetInt (push imm32; ret into a
+00C3E8  ;     re-implementation). This is NOT NP-only: that function is how every
+00C432  ;     component in the system reads every integer registry value, and the
+00C47C  ;     re-implementation drops the original's registry-not-ready (0x800D0201)
+00C4C9  ;     and update-mode (0x800D020D) guards.
+00C4F4  ;   - the kernel registry WRITE sceRegMgrSetInt(0x198F0000, 1), run at boot.
+00C541  ;   - the two SceShellCore patch_check byte patches.
+00C578  ; This key now covers TWO of them - the ones whose reach is ShellCore's
+00C5C0  ; patch-check path:
+00C5D4  ;   - the kernel registry WRITE sceRegMgrSetInt(0x198F0000, 1), run at boot
+00C620  ;   - the two SceShellCore patch_check byte patches
+00C656  ; Values: 0 = install neither, 1 = Patch Check = Manual
+00C68E  ; Default: 1
+00C69B  np_patch_check = 1
+00C6AF  ; Replace sceRegMgrGetInt in the kernel (the third mechanism, on its own key).
+00C700  ; This is the widest thing HEN does to the system: that function is how EVERY
+00C74E  ; component reads EVERY integer registry value, and HEN overwrites it with
+00C799  ; `push imm32; ret` into its own re-implementation. The re-implementation
+00C7E3  ; answers /NP/patch_check as Manual and redoes the common path correctly, but it
+00C834  ; DROPS the original's registry-not-ready (0x800D0201) and update-mode
+00C87B  ; (0x800D020D) guards, its id|0x8000 == 0x78028100 special case, and two
+00C8C4  ; side-effect calls on failure - so a caller that would have received an error
+00C913  ; receives a success with uninitialised data instead.
+00C94B  ; It is also the only mechanism that can make the SETTINGS MENU read "Manual",
+00C99A  ; because /NP/patch_check does not exist in this console's registry table, so
+00C9E8  ; the setter above has nothing to write to and ShellUI falls back to Automatic.
+00CA3A  ; It is ON by default because without it the menu reads Automatic no matter
+00CA86  ; what np_patch_check does - the registry entry does not exist, so there is
+00CAD2  ; nothing for the setter to write and nothing for ShellUI to read.
+00CB17  ; If titles that used to start stop starting, set this to 0 first: that single
+00CB66  ; change also settles which of this and genuine_cex was the real fix, since the
+00CBB6  ; two were turned off together and never separated.
+00CBEC  ; Values: 0 = leave sceRegMgrGetInt alone, 1 = install the replacement
+00CC33  ; Default: 1
+00CC40  np_regmgr_hook = 1
+00CC54  ; Skip applying SceShellCore, SceShellUI, and RemotePlay patches
+00CC95  ; Useful for testkit users
+00CCB0  ; Values: 0 = apply patches, 1 = skip patches
+00CCDE  ; Default: 0
+00CCEB  skip_patches = 0
+00CCFD  ; Write the default HEN plugin PRX files to the console's hard drive.
+00CD43  ; This option controls whether the built-in HEN plugin files (PRX modules) are
+00CD92  ; automatically written to the system's internal storage during initialization.
+00CDE2  ; Enabling this is recommended for first-time setup.
+00CE17  ; Values: 0 = don't write plugins, 1 = write plugins to HDD
+00CE53  ; Default: 0
+00CE60  upload_prx = 1
+00CE70  ; Enable HEN plugin file loading and execution system
+00CEA6  ; This feature activates the plugin subsystem that allows loading of additional
+00CEF6  ; PRX modules to extend HEN's capabilities. Plugins can provide homebrew support,
+00CF48  ; game patching, system modifications, and other advanced features. When enabled,
+00CF9A  ; HEN will scan for and load compatible plugin files from the system storage.
+00CFE8  ; Values: 0 = do not enable plugins, 1 = enable plugins
+00D020  ; Default: 0
+00D02D  enable_plugins = 1
+00D130  kpayload_exploit_fixes
+00D150  kpayload_install_payload
+00D170  kpayload_patches
+00D1A0  XDAOLYAP
+00D2DF  AWAVAUATUSQH
+00D37D  Z[]A\A]A^A_
+00D3AC  AWAVAUATUSH
+00D481  H+\$8H
+00D48D  X[]A\A]A^A_
+00D4E0  AWAVAUATUH
+00D75E  []A\A]A^A_
+00D7BD  ATUSE1
+00DB0E  AWAVAUATUSH
+00DC6D  8[]A\A]A^A_
+00DC80  t>ATUH
+00DEE3  AWAVAUATSH
+00DF68  [A\A]A^A_]
+00DFF0  A\A]A^A_]
+00E12C  AWAVAUATUSH
+00E1BB  ([]A\A]A^A_
+00E1CB  AWAVAUATUSH
+00E4F7  []A\A]A^A_
+00E63F  AUATUH
+00E6C3  []A\A]
+00E805  AUATUSQH
+00E878  []A\A]
+00E87F  AWAVAUATUSH
+00E926  H+\$8I
+00E932  X[]A\A]A^A_
+00E93E  AWAVAUATUSH
+00EA6F  ([]A\A]A^A_
+00EA7F  AVAUATUS1
+00EE61  P[]A\A]A^
+00EE6F  AWAVAUATUSH
+00F044  L;l$(L
+00F0F9  8[]A\A]A^A_
+00F109  AUATUSH
+00F158  L;d$ H
+00F20E  8[]A\A]
+00F7E1  AWAVAUATI
+00F971  Z[]A\A]A^A_
+00FA9E  AWAVAUATUSH
+00FCA3  ([]A\A]A^A_
+00FCB3  AVAUATUS1
+00FD65  []A\A]A^
+010220  /data/hen/plugin_server.prx
+01023C  /data/hen/plugin_mono.prx
+010256  /app0/sce_module/libc.prx
+010270  /data/hen/plugin_bootloader.prx
+010290  _init_env
+01029A  plugin_load
+0102A6  ScePartyDaemonMain
+0102B9  SceShellUIMain
+0102C8  /common/lib/libSceSysmodule.sprx
+0102E9  %s init env 0x%lx plugin load 0x%lx
+01030E  /data/self/
+01031A  SceShellCore
+010344  SceShellUI
+01034F  executable
+01035A  libSceVsh_aot.sprx
+01036D  app.exe.sprx
+01037A  libkernel_sys.sprx
+01038D  SceRemotePlay
+01039E  [HEN] build 0918-regmgr fw=%u setter_off=0x%08X
+0103CF  [HEN] patch_check: no offset for this firmware, skipped
+010408  [HEN] patch_check: sceRegMgrSetInt(0x%08X, %d) = 0x%08X
+010441  [HEN] np_patch_check=%d np_regmgr_hook=%d genuine_cex=%d
+01047B  system_resume_phase4
+010490  hen_resume_patches
+0104A3  Hello from KPayload: %i
+0104BC  [klog] suspending
+0104CF  klogproc
+0104D8  [klog] resumed
+0104E8  [klog] socket failed: %d
+010502  [klog] bind/listen on %d failed
+010523  [klog] listening on port %d
+010540  [klog] accepted client %d
+01055B  klogthread%d
+010568  [klog] no free client slot (max %d)
+01058D  klogsrv
+010595  /dev/klog
+01059F  [klog] failed to open /dev/klog: %d
+0105C4  [klog] kernel thread offsets not known for this firmware - klog server NOT started
+010618  system_suspend_phase3
+01062E  system_resume_phase1
+010643  [klog] server started on port %d (survives rest mode)
+0107E0  FAKEFAKEFAKEFAKE
+016380  cxml://psnotification/tex_icon_system
+0163A8  set_target_id
+0163C0  cxml://psnotification/tex_icon_system
+016400  cxml://psnotification/tex_icon_system
+016440  cxml://psnotification/tex_icon_system
+016480  cxml://psnotification/tex_icon_system
+0164C0  cxml://psnotification/tex_icon_system
+016500  cxml://psnotification/tex_icon_system
+016528  pid_chunk_scan
+016538  get_code_info
+016550  InstallShellCoreCodeForAppinfo
+016580  ; HEN per-title memory patches.
+0165A2  ; One line per patch. The section is a title id, or [all] for every title.
+0165EF  ;   <destination address> = copy <source address>
+016621  ;       Poll every half second until the dword at the source is >= 0, then copy
+016671  ;       it to the destination, once. Use this when the title produces the value
+0166C1  ;       itself but too late for its own code to act on.
+0166FB  ;   <destination address> = set <value>
+016723  ;       Write this dword to the destination immediately.
+01675E  ; Addresses are 0x-prefixed hex or plain decimal, and are absolute in the
+0167A8  ; running process. Reads and writes go through the kernel (syscall 108) against
+0167F8  ; the title's own pid, so an address that is not mapped is reported in the log
+016847  ; and skipped - it cannot crash the game.
+016873  ; Everything is logged to klog, and each applied patch raises a notification.
+0168C3  ; HEN writes this file only if it does not already exist, so your lines survive
+016913  ; every HEN run and every rebuild.
+016937  ; Grand Theft Auto V - "Loading Story Mode 90%" never finishes and the
+01697E  ; "You have not signed in" alert returns no matter what you press.
+0169C3  ; GTA V publishes its local gamer index from a boot stage that runs exactly
+016A0F  ; once, at about 17 seconds, while the index it is meant to publish only becomes
+016A60  ; valid at about 84 seconds. The stage finds both at -1, returns on its first
+016AAE  ; compare, and never runs again, so the published index stays -1 for the life of
+016AFF  ; the process. The save-game state machine gates on that index being >= 0, so it
+016B50  ; alternates between showing the sign-in alert and re-checking, forever.
+016B9B  ; Measured on device: 0.12 s after this one dword the save machine advanced,
+016BE8  ; its three worker threads appeared for the first time, and the save data
+016C32  ; mounted with the real user id.
+016C53  ;   [CUSA00419]
+016C63  ;   0x336DE58 = copy 0x331AF38
+016C84  ; GTA V is NOT listed here any more: it is in the g_fixes[] table
+016CC6  ; compiled into plugin_bootloader, so it works with no file at all.
+016D0A  ; This file is for adding a title WITHOUT a rebuild - uncomment the
+016D4E  ; two lines above as a template.
+0174F0  /libexec/ld-elf.so.1
+019221  ffffff.
+0196D2  fffff.
+01A261  ffffff.
+01A482  fffff.
+01A682  fffff.
+01A742  fffff.
+01C0EB  memset
+01C103  fclose
+01C10A  fwrite
+01C111  access
+01C118  snprintf
+01C121  printf
+01C128  strlen
+01C12F  toupper
+01C137  sceKernelGetModuleInfo
+01C14E  getpid
+01C155  vsprintf
+01C15E  memcpy
+01C165  sceKernelSendNotificationRequest
+01C186  strncpy
+01C18E  strtoull
+01C197  isprint
+01C19F  memcmp
+01C1A6  sysctl
+01C1AD  malloc
+01C1B9  strcmp
+01C1C0  sceKernelUsleep
+01C1D5  sceKernelLoadStartModule
+01C1EE  sceKernelDlsym
+01C1FD  strncmp
+01C205  libSceLibcInternal.so
+01C21B  libkernel.so
+01C560  /user/av_contents/content_tmp/%s/app_info
+01C58A  Component of game patch plugin.
+01C5AA  8b b0 88 00 00 00 44 89 f2 e8 ? ? ? ?
+01C5D0  %016lx: 
+01C5DD  [%s] (%s:%d) scanning pid %d (%lu/%lu) mem 0x%p
+01C60E  offset: %lx
+01C61B  %s load 0x%08x
+01C62B  cavePad setup at 0x%p! Size %ld
+01C64F  found data at 0x%lx 0x%lx chunk loc 0x%lx offset 0x%lx
+01C687  touch_temp
+01C696  Git Commit: 49534177d69d17609bcc09cd185c88df42fed8b5
+01C6CB  Git Branch: main
+01C6DC  Git Commit Number: 1
+01C6F1  Built: Oct 08 2026 @ 20:28:10
+01C715  (%s:%d) checking executable code, it returned %d
+01C747  e8 ? ? ? ? 48 89 df e8 ? ? ? ? 48 89 df e8 ? ? ? ? e8 ? ? ? ? 31 c0
+01C78B  codeerr: %d
+01C798  found %s at 0x%p -> 0x%lx
+01C7B3  (%s:%d) Pattern scan for
+01C7CF  returned 0x%lx
+01C7DF  ../plugin_shellcore/source/../../common/file.c
+01C80E  idx %d page_idx %d
+01C822  pPage 0x%lx size %ld bytes
+01C83E  /user/av_contents/content_tmp/%s/app_info_raw.bin
+01C870  cxml://psnotification/tex_icon_system
+01C896  free mem
+01C89F  symbol %s resolved to %lx
+01C8BD  file_exists_temp
+01C8CE  8b b0 88 00 00 00 e8 ? ? ? ?
+01C8EB  c3 66 66 66 66 66 66 2e 0f 1f 84 00 00 00 00 00
+01C91B  Notify message:
+01C938  couldn't find pattern
+01C951  pid %d
+01C959  plugin_shellcore
+01C96A  sceKernelGetModuleInfoEx 0x%08x
+01C98B  New caveInstSize: %ld
+01C9A2  Can't find chmodRootDirForBug86309 pattern!
+01C9CE  Game info will not be available to plugins.
+01C9FB  ../plugin_shellcore/source/../../common/memory.c
+01CA2C  Block size %ld is smaller than requested size %ld!
+01CA60  0f 0b 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+01CA90  (%s:%d) input %s
+01CAA2  %d %lx %lx (%lu) %x
+01CAB7  (%s:%d) returning to 0x%lx
+01CAD5  (%s:%d) Attempting to memset pid %d with length %lu is larger than maximum length %lu
+01CB2C  (%s:%d) input found 0x%p
+01CB46  pid_chunk_scan
+01CB55  illusiony
+01CB5F  (%s:%d) [%s] %s return %d
+01CB7A  Shellcore code installed for application info
+01CBA8  /user/temp/%s
+01CBB6  found symbol at 0x%p (%s) func 0x%lx
+02B5FD  d[[[[[
+02B60A  [[[[[[[[[[[[js
+02B619  [RRRR[[[[w|w
+02B62C  vv[[[[[[[[[[[
+02B6EC  @@@@AI@@@@LB@@@@@@@@ODS@@@DWC\@`@@@@@@@@@@@@@@dfnk@@jF@@DF@@[D@@
+02B800  OPENORBIS-HOMEBREW
+02B819  libkernel.prx
+02B827  libSceLibcInternal.prx
+02B83E  libkernel
+02B848  libSceLibcInternal
+02B85B  plugin_shellcore
+02B86C  /root/hen/ps4-hen-plugins/plugin_shellcore/../bin/plugins/elf/plugin_shellcore.elf
+02B8BF  8KHh+VefZDM#B#B
+02B8CF  8zTFvBIAIN8#C#C
+02B8DF  E6ao34wPw+U#B#B
+02B8EF  xeYO4u7uyJ0#C#C
+02B8FF  lbB+UlZqVG0#C#C
+02B90F  uodLYyUip20#C#C
+02B91F  MpxhMh8QFro#C#C
+02B92F  8vE6Z6VEYyk#B#B
+02B93F  eLdDw6l0-bU#C#C
+02B94F  hcuQgD53UxM#C#C
+02B95F  j4ViWNHEgww#C#C
+02B96F  TYE4irxSmko#C#C
+02B97F  kUpgrXIrz7Q#B#B
+02B98F  HoLVWNanBBc#B#B
+02B99F  jbz9I9vkqkk#C#C
+02B9AF  Q3VBxCXhUHs#C#C
+02B9BF  zl7hupSO0C0#B#B
+02B9CF  6sJWiWSRuqk#C#C
+02B9DF  5OqszGpy7Mg#C#C
+02B9EF  eGkOpTojJl4#C#C
+02B9FF  DfivPArhucg#C#C
+02BA0F  DFmMT80xcNI#B#B
+02BA1F  gQX+4GDQjpM#C#C
+02BA2F  tIhsqj0qsFE#C#C
+02BA3F  Ovb2dSJOAuE#C#C
+02BA4F  1jfXLRVzisc#B#B
+02BA5F  YQ0navp+YIc#C#C
+02BA6F  wzvqT4UqKX8#B#B
+02BA7F  LwG8g3niqwA#B#B
+02BA8F  aesyjrHVWy4#C#C
+02BA9F  uceZ3OBMwsg#A#A
+02BAAF  3V50SBwmhFg#A#A
+02BABF  1h1jaFlPtfA#A#A
+02BACF  W+BT3-RLYmY#A#A
+02BADF  ONwf1cHqObc#A#A
+02BAEF  gAjvCUHeAbE#A#A
+02BAFF  4k+5la20zT8#A#A
+02BB0F  NHx9pxHiSbU#A#A
+02BB1F  344vzzehB7M#A#A
+02BB2F  uTyttM13qVc#A#A
+02BB3F  QYt0E02im8E#A#A
+02BB4F  qGej9rktGjM#A#A
+02BB5F  SXt9gczJC6w#A#A
+02BB6F  6L+dPFtbs9I#A#A
+02BB7F  module_stop
+02BB8B  module_start
+02CE10  /libexec/ld-elf.so.1
+02DA71  ffffff.
+02DE22  fffff.
+02EC91  ffffff.
+030141  ffffff.
+0305F2  fffff.
+031362  fffff.
+031562  fffff.
+031622  fffff.
+032C92  fffff.
+033B31  ffffff.
+035562  fffff.
+035AB1  ffffff.
+035FE1  ffffff.
+036622  fffff.
+0372A2  fffff.
+038A65  memset
+038A7D  fclose
+038A84  fwrite
+038A8B  access
+038A92  snprintf
+038A9B  printf
+038AA2  strlen
+038AA9  toupper
+038AB1  malloc
+038AB8  strcpy
+038AC5  strcspn
+038ACD  memmove
+038AD5  strdup
+038ADC  strchr
+038AE3  strncpy
+038AF0  fprintf
+038AF8  strcmp
+038AFF  sceKernelGetFsSandboxRandomWord
+038B1F  getpid
+038B41  sceKernelDlsym
+038B50  strstr
+038B57  mono_get_root_domain
+038B6C  sceKernelGetModuleInfo
+038B83  strtoull
+038B8C  isprint
+038B94  memcmp
+038B9B  sysctl
+038BA2  sceKernelUsleep
+038BB2  sceKernelLoadStartModule
+038BCB  strncmp
+038BD3  mono_domain_assembly_open
+038BED  mono_assembly_get_image
+038C05  mono_class_from_name
+038C1A  mono_class_get_property_from_name
+038C3C  mono_property_get_get_method
+038C59  mono_runtime_invoke
+038C6D  mono_class_get_method_from_name
+038C8D  mono_aot_get_method
+038CA1  mono_string_new
+038CB1  mono_get_byte_class
+038CC5  mono_array_new
+038CD4  mono_array_addr_with_size
+038CEE  memcpy
+038CF5  mono_object_new
+038D05  mono_object_to_string
+038D1B  mono_string_to_utf8
+038D2F  mono_free
+038D39  mono_property_get_set_method
+038D56  getifaddrs
+038D61  inet_ntop
+038D6B  freeifaddrs
+038D77  sceRegMgrGetStr
+038D8C  pthread_cancel
+038D9B  pthread_join
+038DA8  pthread_create
+038DB7  pthread_exit
+038DC4  wcsstr
+038DCB  unlink
+038DD2  sceKernelStopUnloadModule
+038DEC  opendir
+038DF4  perror
+038DFB  readdir
+038E03  closedir
+038E0C  vsprintf
+038E15  sceKernelSendNotificationRequest
+038E36  strncat
+038E3E  mono_runtime_object_init
+038E5D  libSceLibcInternal.so
+038E73  libkernel.so
+038E80  libScePsm.so
+038E8D  libmonosgen.so
+038E9C  libSceRegMgr.so
+0396F0  Sce.PlayStation.Core.Runtime
+03970D  SceShellCore
+03971A  Path: %ls
+039724  (%s:%d) Firing add!
+039739  %016lx: 
+039742  Get_Address_of_Method: failed to open class "%s" in namespace "%s"
+039786  (%s:%d) %s exception: %s
+0397A0  [%s] (%s:%d) finish %s
+0397B8  BusyIndicator
+0397C6  SID: 0x%lx
+0397D2  /data/hen/shellui_data/external_hdd.xml
+0397FA  (%s:%d) [%s] finish
+03980F  InsertMenuItem
+03981E  createDevKitPanel
+039830  /data/hen/shellui_data/icons/hen_settings_icon.png
+039867  (%s:%d) Failed to get System.String class
+039892  InitProperty
+0398A4  [%s] (%s:%d) Fallback, create a button as default
+0398D7  Modified: %s
+0398E6  offset: %lx
+0398F3  %s load 0x%08x
+039903  cavePad setup at 0x%p! Size %ld
+039924  Failed to find get method
+03993E  (%s:%d) Constructor exception: %s
+039961  SettingsRootHandler
+039975  (%s:%d) PkgInstallerSearchDir_Original.addr 0x%lx
+0399A8  (%s:%d) Id %s Value %s Type %d
+0399C8  g_pluginAuth
+0399D5  ResetMenuItem
+0399EC  sceKernelLoadStartModuleInternalForMono
+039A14  found data at 0x%lx 0x%lx chunk loc 0x%lx offset 0x%lx
+039A4C  Get_Class: Failed to open "%s" class from "%s" Namespace.
+039A87  MemoryStream
+039A99  (%s:%d) Property "%s" not found
+039ABA  SettingElement
+039ACD  nobd_patches
+039ADA  enable_plugins
+039AE9  /data/hen/plugins/%s
+039AFE  48 8D 7D ? E8 ? ? ? ? 84 C0 75 ? 48 8D 7D ? E8 ? ? ? ? 84 C0 75 ? 48 8D 7D ? E8 ? ? ? ? 84 C0
+039B5C  touch_temp
+039B67  %s = %s
+039B74  ReadWriteLocalSettings
+039B8B  No plugins found.
+039B9D  ini: could not create key '%s' in '%s'
+039BC5  GetImage: Failed to open "%s" Image.
+039BEB  Failed to find get Instance
+039C07  System
+039C0E  OnPageActivating
+039C1F  (%s:%d) Failed to load `%s`
+039C42  mmap_patches
+039C4F  [%s] (%s:%d) Match %ls
+039C67  Visible
+039C6F  [%s] (%s:%d) p1: 0x%p
+039C86  BgftFixupThread
+039C96  (%s:%d) before fixup %ls
+039CBC  Hello from mono module
+039CDA  /app0/psm/Application/app.exe.sprx
+039D02  (%s:%d) checking executable code, it returned %d
+039D34  Get_Instance: Klass was null.
+039D52  (%s:%d) Get method for "%s" is null
+039D76  1D 0A 00 53 00 79 00 73 00 74 00 65 00 6D 00 20 00 4E 00 61 00 6D 00 65 00 3A 00 20 00
+039DCD  Sce.Vsh.ShellUI
+039DDD  OnPageDeactivating
+039DF0  LaunchPlugin
+039E00  UI_NewElementData
+039E12  codeerr: %d
+039E1F  found %s at 0x%p -> 0x%lx
+039E3A  (%s:%d) Pattern scan for
+039E56  returned 0x%lx
+039E66  (%s:%d) Failed to find %s.%s constructor.
+039E91  bf 00 01 86 02 48 be ff ff ff ff ff ff ff ff e8 ? ? ? ? 83 f8 01 0f 84 ? ? ? ?
+039EE0  (%s:%d) pkg_new_element 0x%lx
+039EFF  12:34:56:78:ab:cd
+039F11  Path: %s
+039F1A  Author: %s
+039F25  Description: %s
+039F3D  Sce.Vsh.ShellUI.TopMenu
+039F55  /data/hen/shellui_data/icons
+039F72  idx %d page_idx %d
+039F86  pPage 0x%lx size %ld bytes
+039FA2  No Root_Domain
+039FB1  (%s:%d) Invalid arguments.
+039FCD  disable_aslr
+039FDA  Failed to resolve %s.%s!
+039FF3  Settings menu will not be patched.
+03A017  String
+03A01E  SystemAreaPluginBase
+03A033  UploadBgftFixup
+03A046  [%s] (%s:%d) ini_section %s
+03A068  (%s:%d) id %ls
+03A078  System.Reflection
+03A08A  (%s:%d) UIManager 0x%p
+03A0A2  Sce.Vsh.ShellUI.AppSystem
+03A0BC  Instance
+03A0C5  /data/hen/shellui_data/hen_settings.xml
+03A0ED  55 48 8B EC 48 83 EC ? 4C 89 7D ? 4C 8B FF 33 C0 48 89 45 ? 48 89 45 ? 48 89 45 ? 49 8B 47 38 48 8B F5 48 83 C6 ? 48 8B F8 83 38 00
+03A171  Sce.Vsh.Orbis.Bgft.BgftWrapper::_DownloadRegisterTaskByStorageEx
+03A1B2  %s (%s)
+03A1C6  function
+03A1CF  id_np_patch_check
+03A1E1  ButtonElementData
+03A1F3  ini: could not create section '%s' in '%s' - all following keys will be lost
+03A241  createDevKitPanel 0x%p
+03A259  free mem
+03A262  symbol %s resolved to %lx
+03A27D  [%s] (%s:%d) Failed to Create new object
+03A2A7  Confirm
+03A2AF  (%s:%d) `%s` not in [%s] of `%s` (opened=%d, exists=%d) - showing shipped default `%s`, writing nothing
+03A318  [%s] (%s:%d) msg->str: %ls
+03A337  cxml://psnotification/tex_icon_system
+03A35D  SecondTitle
+03A369  ../plugin_mono/source/lib.cc
+03A386  Get_Address_of_Method: failed to find method "%s" in class "%s"
+03A3C7  LiveAreaConfig
+03A3D9  (%s:%d) Unload result 0x%08x
+03A3F7  (%s:%d) kill(getpid(), SIGKILL) %d
+03A41B  Enabled
+03A423  hen_settings.xml
+03A434  (%s:%d) pHook 0x%lx
+03A449  ReadResourceStream
+03A45C  (%s:%d) path %ls
+03A46E  (%s:%d) ResetMenuItem 0x%p
+03A491  [%s] (%s:%d) Klass pointer is null.
+03A4B6  setImage
+03A4BF  (%s:%d) pkg_new_element_original.addr 0x%lx
+03A4EC  [%s] (%s:%d) enter
+03A500  [%s] (%s:%d) sent reset!
+03A51A  initial_focus_to="psn">
+03A534  /../data/pkg
+03A544  /dev/console
+03A551  ../plugin_mono/source/../../common/memory.c
+03A57D  GetImage: Failed to open "%s" assembly.
+03A5A6  Exception occurred while opening file %s
+03A5D0  g_pluginName
+03A5DD  file_exists_temp
+03A5EE  OnCheckVisible
+03A5FD  Sce.Vsh.ShellUI.Settings.Core
+03A61B  PS4 HEN Version: %s
+03A635  plugin_mono
+03A641  /data/hen/plugins
+03A653  Could not find File.Open method
+03A674  (%s:%d) Set method for "%s" is null
+03A699  Concat
+03A6A0  OnPreCreate
+03A6AE  (%s:%d) Id %s Value %s (read %s) Type %d
+03A6D8  [%s] (%s:%d) [HEN] forcing %ls to Manual
+03A702  NewOnPageDeactivating
+03A718  ../plugin_mono/source/../../common/file.c
+03A742  c3 66 66 66 66 66 66 2e 0f 1f 84 00 00 00 00 00
+03A772  OnPressed
+03A77C  ../plugin_mono/source/shellui_patch/debug_settings.c
+03A7B1  g_pluginVersion
+03A7C1  hen_settings
+03A7CE  NewTopMenuPluginGetString
+03A7E8  UIManager
+03A7F2  ToggleSwitchElementData
+03A80A  Diagnostics
+03A816  sceKernelLoadStartModuleInternalForMono_Hook
+03A84C  couldn't find pattern
+03A865  pid %d
+03A86D  System.IO
+03A877  (%s:%d) Property "%s" not found
+03A897  info, "45 85 e4 78 ? 48 8d 7d ? e8 ? ? ? ? 4c 89 f7 48 89 c6", 9, (uintptr_t)EventProxyCStr, 0
+03A8F6  OnPress
+03A8FE  NewElementData
+03A90D  MessageElementData
+03A920  [%s] (%s:%d) g_PluginsFoundMsg %s
+03A943  Notify message:
+03A957  (%s:%d) after fixup %ls
+03A970  pssettings:play?mode=settings&function=%s
+03A99C  Mono_New_Object
+03A9AC  SystemAreaIconPSPlus
+03A9C1  id_loading
+03A9CC  [%s] ; %s
+03A9D7  [%s] (%s:%d) app_exe: 0x%p
+03A9F3  sceKernelGetModuleInfoEx 0x%08x
+03AA14  New caveInstSize: %ld
+03AA2B  Failed to find Instance property
+03AA4C  ../plugin_mono/source/mono.c
+03AA69  49:57:73:11:90:92
+03AA7B  [%s] (%s:%d) ini_path %s
+03AA95  block_updates
+03AAA3  [%s] (%s:%d) Id %ls
+03AABA  Block size %ld is smaller than requested size %ld!
+03AAEE  /%s/common/lib/mscorlib.dll
+03AB0A  GetString
+03AB14  (%s:%d) refusing to write `%s` = `%s`: `%s` exists but did not load - saving would erase it
+03AB71  upload_prx
+03AB7C  SettingPage
+03AB88  opendir
+03AB90  UI_RequestReset
+03ABA0  NewStartSettingsPage
+03ABB8   HEN Settings
+03ABC6  %s (%ls)
+03ABD2  <link id="sandbox" title="Sandbox" file="Sandbox/sandbox.xml" />
+03AC15  Description
+03AC21  Warning: Could not open file '%s'. Creating new INI structure.
+03AC61  Demonstrate usage of CXX in module. Based from OpenOrbis `library_example`
+03ACAC  AreaManager
+03ACBE  (%s:%d) Failed to find System.String::Concat(string, string)
+03ACFC  (%s:%d) Exception: %s
+03AD13  45 85 e4 78 ? 48 8d 7d ? e8 ? ? ? ? 4c 89 f7 48 89 c6
+03AD49  info, "44 89 ff 48 89 c6 4c 89 e2 48 89 c3 c6 00 00 e8 ? ? ? ? 41 89 c7 85 c0 74 ? c6 03 00", 15, (uintptr_t)RegMgrStr, 0
+03ADC3  /data/hen/plugins.ini
+03ADDB  (%s:%d) Id %s Value %s
+03ADF3  Git Commit: 49534177d69d17609bcc09cd185c88df42fed8b5
+03AE28  Git Branch: main
+03AE39  Git Commit Number: 1
+03AE4E  Built: Oct 13 2026 @ 10:48:18
+03AE6C  sceKernelGetHwSerialNumber
+03AE87  0f 0b 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+03AEB7  (%s:%d) input %s
+03AEC9  44 89 ff 48 89 c6 4c 89 e2 48 89 c3 c6 00 00 e8 ? ? ? ? 41 89 c7 85 c0 74 ? c6 03 00
+03AF1E  Sce.Vsh.ShellUI.Settings.PkgInstaller
+03AF44  ../plugin_mono/source/shellui_patch/settings_menu.c
+03AF78  g_pluginDesc
+03AF85  [%s] (%s:%d) SettingsApp_GetItem: 0x%p
+03AFAD  (%s:%d) [%s] enter
+03AFC1  (%s:%d) path %ls ret 0x%p
+03AFDC  %d %lx %lx (%lu) %x
+03AFF1  ../plugin_mono/source/shellui_patch/devkit_info.c
+03B023  SettingsHandler
+03B033  SearchDir
+03B03D  (%s:%d) SeachDir 0x%lx
+03B055  /data/hen/hen.ini
+03B067  file:///user/data/hen/shellui_data/icons/hen_settings_icon.png
+03B0A6  initial_focus_to="hen_settings">
+03B0C9  (%s:%d) InsertMenuItem 0x%p
+03B0E6  /app0/psm/Application/app.exe
+03B104  /%s/common/lib/Sce.PlayStation.Core.dll
+03B12C  CheckRunningOnMainThread
+03B145  (%s:%d) returning to 0x%lx
+03B161  (%s:%d) Failed to allocate mono stream! Buffer 0x%p Size %u
+03B19E  Mono_File_Stream
+03B1AF  (%s:%d) Failed to find %s method.
+03B1D2  (%s:%d) system_name_str 0x%lx
+03B1F1  TopMenuPlugin
+03B1FF  (%s:%d) str_len_le1 %d
+03B217  ElementData
+03B225  (%s:%d) Attempting to memset pid %d with length %lu is larger than maximum length %lu
+03B27C  (%s:%d) input found 0x%p
+03B296  Failed to allocate string for %s
+03B2B8  createOfflinePanel
+03B2CB  sceKernelGetDebugMenuModeForRcmgr
+03B2EF     "hostname": "%s",
+03B304     "hwaddr": "%s",
+03B317     "ipaddr": "%s"
+03B32C  %s = %s ; %s
+03B33A  INI File: %s
+03B34D  Sce.Vsh.ShellUI.Settings.SettingsRoot
+03B373  (%s:%d) [%s] already patched
+03B391  SearchJob
+03B39B  skip_patches
+03B3AD  (%s:%d) ctor 0x%lx
+03B3C1  illusiony
+03B3CB  /data/hen/shellui_data
+03B3E2  (%s:%d) Null class or property name
+03B407  get_Item
+03B410  getifaddrs
+03B41B  exploit_fixes
+03B42F  NewOnCheckVisible
+03B441  Sce.Vsh.ShellUI.src.Sce.Vsh.ShellUI.Settings.Plugins.PkgInstaller.data.pkginstaller.xml
+03B499  (%s:%d) Firing reset with id %s
+03B4BA  BootAndAdd
+03B4C5  (%s:%d) [%s] %s return %d
+03B4E0  /data/hen
+03B4EA  PageDefault
+03B4F6  Unknown
+03B502  ../plugin_mono/source/shellui_mono.c
+03B527  /user/temp/%s
+03B535  found symbol at 0x%p (%s) func 0x%lx
+03B55B  (%s:%d) Failed to find %s class.
+03B57D  SettingsApplication
+03B591  StartSettingsPage
+03B5A3  sceKernelGetUtokenStoreModeForRcmgr
+03B5CC  Unable to open `/data/hen/plugins`.
+03B5F2  <link id="hen_settings" title="
+03B614   HEN Settings" file="hen_settings.xml" icon="file:///data/hen/shellui_data/icons/hen_settings_icon.png" />
+03B681  BootHelper
+03B690  <?xml version="1.0" encoding="utf-8" ?>
+03B6B8  <system_settings version="1.0" plugin="settings_root_plugin">
+03B6F6    <setting_list id="id_hen_settings" title="
+03B725   HEN Settings" initial_focus_to="id_game_package_installer_hdd">
+03B766      <setting_list id="payload_options" title="
+03B797   Payload Options (Restart Required)" initial_focus_to="settings_exploit_fixes">
+03B7E7        <!-- The IDs must match ini keys! -->
+03B813        <toggle_switch id="exploit_fixes" title="Enable exploit fixes" description="Attempts to repatch bad/missing patches that should have been made by the exploit.&#xa;This helps ensure system stability after the initial jailbreak process." value="0"/>
+03B911        <toggle_switch id="mmap_patches" title="Enable memory mapping patches" description="Enable memory mapping patches for decrypting binary files.&#xa;These patches allow the system to properly handle encrypted executables and libraries." value="0"/>
+03BA0E        <toggle_switch id="block_updates" title="Block firmware updates" description="Block console firmware updates by unmounting the `/update` partition.&#xa;This prevents accidental firmware updates that could patch the exploits." value="0" confirm="Are you sure you want to disable this setting? Disabling might lead to accidental updates." confirm_phrase="Yes,No" />
+03BB80        <toggle_switch id="disable_aslr" title="Disable userland ASLR" description="Disable userland ASLR (Address Space Layout Randomization).&#xa;Disabling it can improve compatibility with homebrew applications, debuggers, and cheats." value="0"/>
+03BC79        <toggle_switch id="nobd_patches" title="Enable NoBD patches" description="NoBD (No Blu-ray Drive) patches - allows system updates without a working Blu-ray drive." value="0"/>
+03BD2F      <list id="target_id" title="Target ID spoofer" description="Changes the console's reported Target ID for development or region-specific functionality.">
+03BDCC        <list_item id="target_id_0x00" title="None" value="0"/>
+03BE0A        <list_item id="target_id_0x80" title="Diagnostic" value="0x80"/>
+03BE51        <list_item id="target_id_0x81" title="Devkit" value="0x81"/>
+03BE94        <list_item id="target_id_0x82" title="Testkit" value="0x82"/>
+03BED8        <list_item id="target_id_0x83" title="Japan" value="0x83"/>
+03BF1A        <list_item id="target_id_0x84" title="USA" value="0x84"/>
+03BF5A        <list_item id="target_id_0x85" title="Europe" value="0x85"/>
+03BF9D        <list_item id="target_id_0x86" title="Korea" value="0x86"/>
+03BFDF        <list_item id="target_id_0x87" title="United Kingdom" value="0x87"/>
+03C02A        <list_item id="target_id_0x88" title="Mexico" value="0x88"/>
+03C06D        <list_item id="target_id_0x89" title="Australia &amp; New Zealand" value="0x89"/>
+03C0C5        <list_item id="target_id_0x8A" title="South Asia" value="0x8A"/>
+03C10C        <list_item id="target_id_0x8B" title="Taiwan" value="0x8B"/>
+03C14F        <list_item id="target_id_0x8C" title="Russia" value="0x8C"/>
+03C192        <list_item id="target_id_0x8D" title="China" value="0x8D"/>
+03C1D4        <list_item id="target_id_0x8E" title="Hong Kong" value="0x8E"/>
+03C21A        <list_item id="target_id_0x8F" title="Brazil" value="0x8F"/>
+03C25D        <list_item id="target_id_0xA0" title="Kratos (Arcade Cabinet)" value="0xA0"/>
+03C2B1      </list>
+03C2BD        <toggle_switch id="skip_patches" title="Skip userland patches" description="Skip applying SceShellCore, SceShellUI, and RemotePlay patches.&#xa;Useful for testkit users." value="0" confirm="Are you sure you want to enable this? Enabling this will not allow homebrew apps to launch." confirm_phrase="Yes,No"/>
+03C3F8        <toggle_switch id="upload_prx" title="Write HEN plugin files to HDD" description="Write the default HEN plugin PRX files to the console's hard drive.&#xa;Enabling this is recommended for first-time setup." value="0"/>
+03C4D8        <toggle_switch id="enable_plugins" title="Enable plugin system" description="Enable HEN plugin file loading and execution system.&#xa;This feature activates the plugin subsystem that allows loading of additional PRX modules to extend HEN's capabilities.&#xa;Such as this extended settings menu."  confirm="Are you sure you want to disable this setting? Disabling this will not allow the following features:&#xa;
+03C67C   HEN Settings Menu&#xa;FTP Server&#xa;Kernel Log Server&#xa;Plugins load for apps" confirm_phrase="Yes,No" value="0"/>
+03C6F3      </setting_list>
+03C707      <link id="id_plugin_manager" title="Plugin Manager" description="Manages plugins installed under `/data/hen/plugins`.&#xa;Plugins will be loaded on game (BigApp) launch.&#xa;Currently only supports enabling from `all` section for now." file="HEN/data/PluginManager.xml" />
+03C81C      <link id="id_game_package_installer_hdd" title="Install Package from Hard Disk" description="Place package files into /data/pkg.&#xa;Recursive path not supported." file="PkgInstaller/data/pkginstaller_hdd.xml" />
+03C8F5      <link id="id_game_package_installer_usb" title="Install Package from USB Storage" description="Place package files into root of USB Storage.&#xa;Recursive path not supported." file="PkgInstaller/data/pkginstaller_usb.xml" />
+03C9DA      <button id="id_restart_shellui" title="Restart ShellUI" description="Restarts ShellUI."/>
+03CA38    </setting_list>
+03CA4A  </system_settings>
+03D0E0  {"rhn$8"
+03D22A  o<\Tod0
+03D756  /Ec|*O
+03D82F  :.0}j|
+03D94A  5>>~,\n
+03DC78  System.IO
+03DC82  StreamReader
+03DC8F  ReadToEnd
+03DCC0  /data/hen/version.txt
+03DCE0  /data/hen/plugin_mono_reload.prx
+03DD01  plugin_load
+03DD0D  Assembly
+03DD20  GetManifestResourceStream
+03DD40  <?xml version="1.0" encoding="utf-8" ?>
+03DD68  <system_settings version="1.0" plugin="settings_root_plugin">
+03DDA6    <setting_list id="id_plugin_manager" title="Plugins Manager">
+03DDE6    <message id="id_loading" title="msg_wait" busyindicator="true"/>
+03DE29    </setting_list>
+03DE3B  </system_settings>
+03DE57  /mnt/..
+04CF1D  d[[[[[
+04CF2A  [[[[[[[[[[[[js
+04CF39  [RRRR[[[[w|w
+04CF4C  vv[[[[[[[[[[[
+04D00C  @@@@AI@@@@LB@@@@@@@@ODS@@@DWC\@`@@@@@@@@@@@@@@dfnk@@jF@@DF@@[D@@
+04D120  OPENORBIS-HOMEBREW
+04D139  libkernel.prx
+04D147  libSceLibcInternal.prx
+04D15E  libScePsm.prx
+04D16C  libmonosgen.prx
+04D17C  libSceRegMgr.prx
+04D18D  libkernel
+04D197  libSceLibcInternal
+04D1AA  libScePsm
+04D1B4  libmonosgen
+04D1C0  libSceRegMgr
+04D1CD  plugin_mono
+04D1D9  /root/hen/ps4-hen-plugins/plugin_mono/../bin/plugins/elf/plugin_mono.elf
+04D222  8zTFvBIAIN8#C#C
+04D232  E6ao34wPw+U#B#B
+04D242  xeYO4u7uyJ0#C#C
+04D252  lbB+UlZqVG0#C#C
+04D262  uodLYyUip20#C#C
+04D272  MpxhMh8QFro#C#C
+04D282  8vE6Z6VEYyk#B#B
+04D292  eLdDw6l0-bU#C#C
+04D2A2  hcuQgD53UxM#C#C
+04D2B2  j4ViWNHEgww#C#C
+04D2C2  TYE4irxSmko#C#C
+04D2D2  gQX+4GDQjpM#C#C
+04D2E2  kiZSXIWd9vg#C#C
+04D2F2  KdP-nULpuGw#C#C
+04D302  q0F6yS-rCms#C#C
+04D312  +P6FRGH4LfA#C#C
+04D322  g7zzzLDYGw0#C#C
+04D332  ob5xAW4ln-0#C#C
+04D342  6sJWiWSRuqk#C#C
+04D352  tIhsqj0qsFE#C#C
+04D362  fffwELXNVFA#C#C
+04D372  Ovb2dSJOAuE#C#C
+04D382  JGfTMBOdUJo#B#B
+04D392  HoLVWNanBBc#B#B
+04D3A2  JGMio+21L4c#B#B
+04D3B2  YQ0navp+YIc#C#C
+04D3C2  wuCroIGjt2g#B#B
+04D3D2  wdUufa9g-D8#B#B
+04D3E2  bY-PO6JhzhQ#B#B
+04D3F2  LwG8g3niqwA#B#B
+04D402  viiwFMaNamA#C#C
+04D412  5a8b+s6HtaA#E#E
+04D422  kUpgrXIrz7Q#B#B
+04D432  5OqszGpy7Mg#C#C
+04D442  eGkOpTojJl4#C#C
+04D452  DfivPArhucg#C#C
+04D462  DFmMT80xcNI#B#B
+04D472  1jfXLRVzisc#B#B
+04D482  wzvqT4UqKX8#B#B
+04D492  aesyjrHVWy4#C#C
+04D4A2  dCeihPtadCM#E#E
+04D4B2  xP4EC4Sp9GI#E#E
+04D4C2  bzxTZSnnB38#E#E
+04D4D2  KK8Cr0wE81M#E#E
+04D4E2  uzLsJUMjvLY#E#E
+04D4F2  pre9BjkyDhs#E#E
+04D502  H5IByLixeaI#E#E
+04D512  6t5G5dYpMVg#E#E
+04D522  pXv-WCokNsY#E#E
+04D532  v0GdXLN1MyE#E#E
+04D542  t8fZIYwdZUw#E#E
+04D552  vIftfz9WmKw#E#E
+04D562  Q3VBxCXhUHs#C#C
+04D572  8qk62JS2dG0#E#E
+04D582  rX4rdDndd1I#E#E
+04D592  An+I+fbFDzU#E#E
+04D5A2  7EU3HpgxcvY#E#E
+04D5B2  BhrEyM1kGW8#E#E
+04D5C2  j-gWL6wDros#C#C
+04D5D2  5jRCs2axtr4#B#B
+04D5E2  N2OjwJJGjeQ#C#C
+04D5F2  CTplLrrndUg#F#F
+04D602  W0xkN0+ZkCE#B#B
+04D612  0D4-FVvEikw#B#B
+04D622  h9CcP3J0oVM#B#B
+04D632  OxhIB8LB-PQ#B#B
+04D642  FJrT5LuUBAU#B#B
+04D652  WDpobjImAb4#C#C
+04D662  VAzswvTOCzI#B#B
+04D672  QKd0qM58Qes#B#B
+04D682  ay3uROQAc5A#C#C
+04D692  EMutwaQ34Jo#C#C
+04D6A2  lybyyKtP54c#C#C
+04D6B2  XepdqehVYe4#C#C
+04D6C2  jbz9I9vkqkk#C#C
+04D6D2  zl7hupSO0C0#B#B
+04D6E2  kHg45qPC6f0#C#C
+04D6F2  M0xRdNUa-ks#E#E
+04D702  8KHh+VefZDM#B#B
+04D712  uceZ3OBMwsg#A#A
+04D722  3V50SBwmhFg#A#A
+04D732  ONwf1cHqObc#A#A
+04D742  1h1jaFlPtfA#A#A
+04D752  W+BT3-RLYmY#A#A
+04D762  NHx9pxHiSbU#A#A
+04D772  344vzzehB7M#A#A
+04D782  gAjvCUHeAbE#A#A
+04D792  4k+5la20zT8#A#A
+04D7A2  uTyttM13qVc#A#A
+04D7B2  QYt0E02im8E#A#A
+04D7C2  qGej9rktGjM#A#A
+04D7D2  SXt9gczJC6w#A#A
+04D7E2  6L+dPFtbs9I#A#A
+04D7F2  module_stop
+04D7FE  module_start
+04F680  /libexec/ld-elf.so.1
+04FF92  fffff.
+050F11  ffffff.
+0542F1  ffffff.
+054C31  ffffff.
+056405  memcpy
+056412  fclose
+056419  remove
+056420  memset
+056427  vsprintf
+056430  printf
+056437  sceKernelSendNotificationRequest
+056458  pthread_create
+05646D  getsockname
+05647F  socket
+056497  listen
+05649E  strerror_r
+0564A9  strncpy
+0564B1  vsnprintf
+0564BB  strlen
+0564C8  strstr
+0564CF  strtol
+0564DC  snprintf
+0564EA  opendir
+0564F2  readdir
+0564FA  localtime_s
+056506  strftime
+05650F  closedir
+056518  connect
+056520  accept
+05652D  sscanf
+05653E  strerror
+056552  rename
+05655F  ftruncate
+056578  getifaddrs
+056583  signal
+05658A  strncmp
+056592  inet_ntop
+05659C  freeifaddrs
+0565A8  setsockopt
+0565B3  strcpy
+0565BF  pthread_exit
+0565CC  getpid
+0565D3  strncat
+0565DB  calloc
+0565E2  realloc
+0565EA  strchr
+0565F1  strcmp
+0565F8  malloc
+056605  strtok_r
+056613  munmap
+05661A  perror
+056621  select
+056628  unlink
+05663A  localtime
+056644  fwrite
+05664B  fflush
+056652  usleep
+056659  socketpair
+056664  __error
+05666C  libSceLibcInternal.so
+056682  libkernel.so
+057530  226 File deleted
+05754D  binloader: payload reached the %d-byte limit, refused
+057586  200 OK
+05758F  226 Directory created
+0575A7  Serving FTP
+0575B3  on %s:%d (%s)
+0575C1  Compiled on %s %s
+0575DF  /user/.jailbreak
+0575F0  226 Transfer completed
+057609  226 command not supported
+057630  %b %d %H:%M
+05763C  %hhu,%hhu,%hhu,%hhu,%hhu,%hhu
+05765A  221 Goodbye
+057668  550 %s
+057671  realloc
+05767E  binloader: payload returned %d
+0576A2  200 Type set to %c
+0576B7  230 User logged in
+0576CC  Unknown error
+0576DE  Failed to jailbreak process!
+0576FB  FTP will not start.
+057710  501 Usage: MKD <DIRNAME>
+05772B  226 Data transfer complete
+05774E  binloader: that is an ELF, not a flat payload - refused. Send the .bin, whose first byte is the 0xE9 of crt0's jmp
+0577C2  klog sources
+0577D2  /user/temp/k
+0577F5  binloader: connection carried no data
+05781D  10:48:17
+057826  501 Usage: PORT <addr>
+05783F  501 Usage: RMD <DIRNAME>
+05785A  ../plugin_server/source/ftp/ftp.c
+057885  plugin_example
+057899  binloader
+0578A3  501 Usage: CHMOD <MODE> <PATH>
+0578CE  501 Usage: RNTO <PATH>
+0578E7  FTP server was compiled at %s %s
+057909  /dev/klog
+057913  /dev/deci_stderr
+057924  cxml://psnotification/tex_icon_system
+05794A  501 Usage: RNFR <PATH>
+057963  501 Usage: STOR <FILENAME>
+057980  501 Invalid argument to TYPE
+05799F  listen
+0579B0  binloader: payload too large, refused
+0579D6  /user/data/klog_%s.txt
+0579ED  fopen /user/data/klog
+057A06  200 NOOP OK
+057A14  550 Not a file
+057A25  %s:%d:%s: %s
+057A36  binloader: cannot allocate the %d-byte receive buffer
+057A75  binloader: cannot map executable memory
+057A9D  binloader: pthread_create failed
+057ABF  /%s/%s/%s
+057AC9  350 REST OK
+057AD7  502 Command not implemented
+057AFA  malloc
+057B01  /dev/console
+057B0E  226 Directory deleted
+057B26  Server killed
+057B34  socket
+057B3F  binloader: running %zu bytes at %p
+057B63  Started log file
+057B78  Git Commit: 49534177d69d17609bcc09cd185c88df42fed8b5
+057BAD  Git Branch: main
+057BBE  Git Commit Number: 1
+057BD3  Built: Oct 13 2026 @ 10:48:17
+057BF1  257 "%s"
+057BFC  502 Command not recognized
+057C19  Serving klog
+057C26  on %s:%d (%s)
+057C34  klog: every source is gone, restarting
+057C5C  Notify message:
+057C83  501 Usage: DELE <FILENAME>
+057CA0  501 Usage: APPE <FILENAME>
+057CCB  binloader: mmap rwx failed (%s) - are HEN's mmap patches on?
+057D09  Payload accepted
+057D1A  %zu bytes
+057D24  select
+057D2C  --[%s]--
+057D36  /dev/deci_coredump
+057D49  220-Welcome to ftpsrv.elf running on pid %d, compiled at %s %s
+057D8A  binloader: %s not readable - defaulting to enabled
+057DBE  501 Usage: REST <OFFSET>
+057DD9  10:48:18
+057DE9  /user/temp/sk
+057DFC  Demonstrate usage of CXX in module. Based from OpenOrbis `library_example`
+057E47  213 %lu
+057E51  setsockopt
+057E61  binloader: disabled in hen.ini - not started
+057E8F  klog: open %s failed (%s)
+057EAA  Oct 13 2026
+057EBB  %Y%m%d_%H%M%S
+057EC9  227 Entering Passive Mode (%hhu,%hhu,%hhu,%hhu,%hhu,%hhu).
+057F06  150 Opening data transfer
+057F2C  binloader: listening on %d (send the raw .bin and close)
+057F66  /data/hen/hen.ini
+057F78  /dev/deci_stdout
+057F89  550 No such directory
+057FA1  %s %lu %lu %lu %llu %s %s
+057FBD  226 Path renamed
+057FD0  501 Usage: SIZE <FILENAME>
+057FED  accept
+057FFE  Payload loader on port %d
+058018  Socket server was compiled at %s %s
+05803F  250 OK
+058048  226 Transfer complete
+058060  220 Service is ready
+05807C  binloader: WARNING first byte is 0x%02X, not the 0xE9 the SDK's crt0 emits; running it anyway
+0580E1  illusiony
+0580EB  350 Awaiting new name
+058103  215 UNIX Type: L8
+058117  getifaddrs
+058127  no log source could be opened
+058145  klog: sources [ %s]
+05815A  Saved file
+058169  501 Usage: CWD <PATH>
+058181  200 PORT command successful.
+0581A0  501 Usage: RETR <PATH>
+0581B9  binloader: send the .bin, not the .elf
+0581E0  klog: %s read failed (%s), dropping
+063E80  OPENORBIS-HOMEBREW
+063E99  libkernel.prx
+063EA7  libSceLibcInternal.prx
+063EBE  libkernel
+063EC8  libSceLibcInternal
+063EDB  plugin_server
+063EE9  /root/hen/ps4-hen-plugins/plugin_server/../bin/plugins/elf/plugin_server.elf
+063F36  Q3VBxCXhUHs#C#C
+063F46  xeYO4u7uyJ0#C#C
+063F56  uodLYyUip20#C#C
+063F66  MZO7FXyAPU8#C#C
+063F76  8zTFvBIAIN8#C#C
+063F86  jbz9I9vkqkk#C#C
+063F96  hcuQgD53UxM#C#C
+063FA6  zl7hupSO0C0#B#B
+063FB6  OxhIB8LB-PQ#B#B
+063FC6  0wu33hunNdE#B#B
+063FD6  RenI1lL1WFk#B#B
+063FE6  bY-PO6JhzhQ#B#B
+063FF6  TU-d9PfIHPM#B#B
+064006  K1S8oc61xiM#B#B
+064016  jogUIsOV3-U#B#B
+064026  KuOmgKoqCdY#B#B
+064036  pxnCmagrtao#B#B
+064046  RBcs3uut1TA#C#C
+064056  6sJWiWSRuqk#C#C
+064066  Q2V+iqvjgC0#C#C
+064076  j4ViWNHEgww#C#C
+064086  FN4gaPmuFV8#B#B
+064096  viiwFMaNamA#C#C
+0640A6  mXlxhmLNMPg#C#C
+0640B6  z0dtnPxYgtg#B#B
+0640C6  eLdDw6l0-bU#C#C
+0640D6  E6ao34wPw+U#B#B
+0640E6  ay3uROQAc5A#C#C
+0640F6  lybyyKtP54c#C#C
+064106  fiiNDnNBKVY#C#C
+064116  Av3zjWi64Kw#C#C
+064126  XepdqehVYe4#C#C
+064136  XVL8So3QJUk#B#B
+064146  3e+4Iv7IJ8U#B#B
+064156  JGMio+21L4c#B#B
+064166  1Pk0qZQGeWo#C#C
+064176  +my9jdHCMIQ#C#C
+064186  wuCroIGjt2g#B#B
+064196  RIa6GnWp+iU#C#C
+0641A6  AqBioC2vF3I#B#B
+0641B6  c7ZnT7V1B98#B#B
+0641C6  NN01qLRhiqU#B#B
+0641D6  Oy6IpwgtYOk#B#B
+0641E6  ih4CD9-gghM#B#B
+0641F6  Ez8xjo9UF4E#B#B
+064206  YQ0navp+YIc#C#C
+064216  uMei1W9uyNo#C#C
+064226  j-gWL6wDros#C#C
+064236  VADc3MNQ3cM#B#B
+064246  aesyjrHVWy4#C#C
+064256  5jRCs2axtr4#B#B
+064266  N2OjwJJGjeQ#C#C
+064276  fFxGkxF2bVo#B#B
+064286  kiZSXIWd9vg#C#C
+064296  tIhsqj0qsFE#C#C
+0642A6  FJrT5LuUBAU#B#B
+0642B6  HoLVWNanBBc#B#B
+0642C6  kHg45qPC6f0#C#C
+0642D6  2X5agFjKxMc#C#C
+0642E6  Y7aJ1uydPMo#C#C
+0642F6  ob5xAW4ln-0#C#C
+064306  Ovb2dSJOAuE#C#C
+064316  gQX+4GDQjpM#C#C
+064326  lbB+UlZqVG0#C#C
+064336  enqPGLfmVNU#C#C
+064346  BPE9s9vQQXo#B#B
+064356  UqDGjXA5yUM#B#B
+064366  EMutwaQ34Jo#C#C
+064376  T8fER+tIGgk#B#B
+064386  VAzswvTOCzI#B#B
+064396  8nY19bKoiZk#B#B
+0643A6  wLlFkwG9UcQ#C#C
+0643B6  efhK-YSUYYQ#C#C
+0643C6  MpxhMh8QFro#C#C
+0643D6  MUjC4lbHrK4#C#C
+0643E6  QcteRwbsnV0#B#B
+0643F6  MZb0GKT3mo8#B#B
+064406  9BcDykPmo1I#B#B
+064416  IgsxbUtxwro#A#A
+064426  rDR8BZAQ1Qk#A#A
+064436  KJ-iRE1APdU#A#A
+064446  uceZ3OBMwsg#A#A
+064456  3V50SBwmhFg#A#A
+064466  1h1jaFlPtfA#A#A
+064476  W+BT3-RLYmY#A#A
+064486  ONwf1cHqObc#A#A
+064496  ArhJ8egVeAM#A#A
+0644A6  78uRub8Gj0s#A#A
+0644B6  DtSqQwBhfAQ#A#A
+0644C6  zJCD5qboOc8#A#A
+0644D6  Pfp8i65gseI#A#A
+0644E6  nnAmkd8e83k#A#A
+0644F6  es16MsMRFa8#A#A
+064506  IYb9RVh-Maw#A#A
+064516  yKcn-Kr5pBU#A#A
+064526  roBvY12Tst0#A#A
+064536  jVfI3eOd+mg#A#A
+064546  gAjvCUHeAbE#A#A
+064556  4k+5la20zT8#A#A
+064566  NHx9pxHiSbU#A#A
+064576  344vzzehB7M#A#A
+064586  uTyttM13qVc#A#A
+064596  QYt0E02im8E#A#A
+0645A6  qGej9rktGjM#A#A
+0645B6  SXt9gczJC6w#A#A
+0645C6  6L+dPFtbs9I#A#A
+0645D6  module_stop
+0645E2  module_start
+066A30  /libexec/ld-elf.so.1
+067211  ffffff.
+0675C2  fffff.
+06A261  ffffff.
+06AE62  fffff.
+06B5FB  printf
+06B602  malloc
+06B609  strlen
+06B610  strcpy
+06B61D  strcspn
+06B625  memmove
+06B62D  strdup
+06B634  strchr
+06B63B  strncpy
+06B648  fclose
+06B64F  fprintf
+06B657  strcmp
+06B65E  memset
+06B670  fwrite
+06B677  access
+06B67E  snprintf
+06B687  toupper
+06B68F  getpid
+06B696  strncasecmp
+06B6A2  vsprintf
+06B6AB  memcpy
+06B6B2  sceKernelSendNotificationRequest
+06B6D3  sceKernelLoadStartModule
+06B6EC  sceKernelDlsym
+06B6FB  sceKernelStopUnloadModule
+06B715  scePthreadCreate
+06B726  sceKernelUsleep
+06B73C  libSceLibcInternal.so
+06B752  libkernel.so
+06BC44  HEN plugins
+06BC53  ini_load returned NULL
+06BC6A  (%s:%d)   dlsym plugin_load=%p plugin_unload=%p
+06BC9B  (%s:%d)   copy  0x%llX <- 0x%llX  queued
+06BCC5  Modified: %s
+06BCDD  HEN plugins
+06BCEC  NOT READABLE - nothing can load
+06BD0C  (%s:%d) ---- HEN title patches ----
+06BD31  (%s:%d) ---- %d copy patch(es) timed out after %d s: the source never became valid ----
+06BD8A  %s = %s
+06BD93  touch_temp
+06BD9E  /system/common/lib/libSceSysmodule.sprx
+06BDC6  /system/common/lib/libSceVideoOut.sprx
+06BDED  (%s:%d)   bad   `%s` = `%s`: verb must be copy or set
+06BE24  ini: could not create key '%s' in '%s'
+06BE4C  (%s:%d)   (this section has no keys)
+06BE77  (%s:%d) titlefix: %s unreadable, no fix applied
+06BEA9  Plugin loader.
+06BEB8  /system/common/lib/libScePngDec.sprx
+06BEDD  (%s:%d) titlefix %s: 0x%llX read rc=%d
+06BF05  plugin_unload
+06BF13  /system/common/lib/libSceNet.sprx
+06BF35  /system/common/lib/libSceCommonDialog.sprx
+06BF60  (%s:%d)   authlog: syscall 109/11 -> %ld (the kernel payload's syscall hooks are not installed)
+06BFC1  (%s:%d) ---- no patches file, nothing to apply ----
+06BFF6  (%s:%d)   copy  0x%llX <- 0x%llX  already %d, nothing to do
+06C033  (%s:%d) titlefix: %s matched, pid %d (appinfo says %d), watching 0x%llX -> 0x%llX
+06C089  (%s:%d) ini   %s
+06C09B  !! PID Mismatch !!
+06C0AE  From disk %d
+06C0BB  is this file exists?
+06C0D1  /system/common/lib/libSceHttp.sprx
+06C0F4  hen_tpatch
+06C103  (%s:%d)   copy  0x%llX <- 0x%llX  src unreadable (rc=%d) - giving up on this one
+06C155  ini: could not create section '%s' in '%s' - all following keys will be lost
+06C1A3  Git Commit: 49534177d69d17609bcc09cd185c88df42fed8b5
+06C1D8  Git Branch: main
+06C1E9  Git Commit Number: 1
+06C1FE  Built: Oct 14 2026 @ 19:44:52
+06C21C  cxml://psnotification/tex_icon_system
+06C246  HEN plugins read=%d
+06C25A  title `%s`
+06C265  %d sec (%d match) %d key %d on %d LOADED
+06C28E  preload not run
+06C29E  (%s:%d) Unload result 0x%08x
+06C2BC  (%s:%d) ini   %s  stat=%d size=%llu opened=%d
+06C2EB  (%s:%d)   bad   set value `%s`
+06C312  (%s:%d)   key   `%s` = `%s` -> %s
+06C33A  /system/common/lib/libSceImeDialog.sprx
+06C362  /data/hen/patches.ini
+06C378  ../plugin_loader/source/titlefix.c
+06C39E  /av_contents/content_tmp/app_info
+06C3C0  ENABLED
+06C3C8  HEN plugins read=%d
+06C3DC  title `%s`
+06C3E7  %d sec (%d match) %d key %d on %d LOADED
+06C410  preload %d/%d
+06C41E  plugin_load
+06C42A  (%s:%d)   bad   `%s` is not an address
+06C452  (%s:%d) ---- patches: %d sec (%d match) %d key, %d set, %d waiting, %d bad ----
+06C4A3  file_exists_temp
+06C4B4  plugin_loader
+06C4C2  (%s:%d) ini   stat=%d size=%llu opened=%d%s
+06C4EF  HEN plugin
+06C4FD  load res 0x%08x
+06C50D  /system/common/lib/libSceMsgDialog.sprx
+06C53D  (%s:%d) titlefix %s: the value never became valid
+06C570     <-- did NOT load
+06C584  (%s:%d)   bad   copy source `%s`
+06C5A6  skipped
+06C5AE  Notify message:
+06C5C2  (%s:%d)   authlog: %u auth call(s) since boot, last %u, for %s
+06C602  HEN titlefix: could not start its thread
+06C62D  ../plugin_loader/source/../../common/file.c
+06C65F  /system/common/lib/libSceAudioOut.sprx
+06C686  (%s:%d)   bad   more than %d copy patches
+06C6B1  [%s] ; %s
+06C6BC  (%s:%d) ---- HEN plugin loader ----
+06C6E1  (%s:%d)     auth[%u] seq=%u magic=0x%08x key=0x%x format=%d hdr=%u result=%d%s
+06C731  (%s:%d)   set   0x%llX = %lld  rc=%d read=%d reads %d
+06C768  henTitleFix
+06C776  /system/common/lib/libSceSsl.sprx
+06C798  (%s:%d) titlefix: syscall 108 keeps failing (rc=%ld), falling back to direct access
+06C7ED  Warning: Could not open file '%s'. Creating new INI structure.
+06C82D  /data/hen/plugins.ini
+06C843  (%s:%d) ---- read=%d  %d sec (%d match)  %d key  %d on  %d LOADED  preload %s ----
+06C89A  (%s:%d)   copy  0x%llX <- 0x%llX  at %d.%ds: was %d, wrote %d (rc=%d), reads %d
+06C8EB  (%s:%d)   file  stat=%d size=%llu  %s%s
+06C914     <-- accepted
+06C924  HEN patches
+06C930  title `%s`
+06C93B  %d key, %d set, %d waiting, %d bad
+06C95E  (%s:%d) titlefix %s: scePthreadCreate failed
+06C98E  /system/common/lib/libSceUserService.sprx
+06C9BA  (%s:%d) sec   [%s]  all=%d title=%d -> %s
+06C9E5  (%s:%d) load res 0x%08x for %s
+06CA05  (%s:%d)   preload[%02d] 0x%08x  %s%s
+06CA2B  (%s:%d) scePthreadCreate failed - %d copy patch(es) will not be applied
+06CA74  CUSA00419
+06CA7E  %s = %s ; %s
+06CA8C  INI File: %s
+06CA9A  !! PID Mismatch !!
+06CAAD  From disk %d from syscall %d
+06CACB  enabled
+06CAD3  /system/common/lib/libSceNetCtl.sprx
+06CAF8  HEN patches
+06CB04  could not start its thread
+06CB1F  (%s:%d) titlefix %s: already %d at %d.%ds, nothing to do
+06CB59  illusiony
+06CB63  not run
+06CB6B  see above
+06CB75     <-- NOT PRESENT at this path
+06CB95  /system/common/lib/libSceSystemService.sprx
+06CBC1  applied
+06CBC9  WRITE FAILED
+06CBD6  (%s:%d) [%s] %s return %d
+06CBF1  ../plugin_loader/source/lib.cpp
+06CC15  /user/temp/%s
+06CC23     <-- the file is NOT at this path
+06CC47  (%s:%d) pid %d (current %d)
+06CC63  m_titleid %s
+06CC70  m_category %s
+06CC7E  m_appver %s
+06CC8B  /system/common/lib/libScePad.sprx
+06CCAD  HEN patch
+06CCB7  0x%llX <- %d
+06CCC7  (%s:%d) titlefix %s: at %d.%ds wrote %d to 0x%llX (rc=%d), reads %d
+07AB20  OPENORBIS-HOMEBREW
+07AB39  libkernel.prx
+07AB47  libSceLibcInternal.prx
+07AB5E  libkernel
+07AB68  libSceLibcInternal
+07AB7B  plugin_loader
+07AB89  /root/hen/ps4-hen-plugins/plugin_loader/../bin/plugins/elf/plugin_loader.elf
+07ABD6  xeYO4u7uyJ0#C#C
+07ABE6  hcuQgD53UxM#C#C
+07ABF6  gQX+4GDQjpM#C#C
+07AC06  j4ViWNHEgww#C#C
+07AC16  kiZSXIWd9vg#C#C
+07AC26  KdP-nULpuGw#C#C
+07AC36  q0F6yS-rCms#C#C
+07AC46  +P6FRGH4LfA#C#C
+07AC56  g7zzzLDYGw0#C#C
+07AC66  ob5xAW4ln-0#C#C
+07AC76  6sJWiWSRuqk#C#C
+07AC86  tIhsqj0qsFE#C#C
+07AC96  uodLYyUip20#C#C
+07ACA6  fffwELXNVFA#C#C
+07ACB6  Ovb2dSJOAuE#C#C
+07ACC6  8zTFvBIAIN8#C#C
+07ACD6  E6ao34wPw+U#B#B
+07ACE6  lbB+UlZqVG0#C#C
+07ACF6  MpxhMh8QFro#C#C
+07AD06  8vE6Z6VEYyk#B#B
+07AD16  eLdDw6l0-bU#C#C
+07AD26  TYE4irxSmko#C#C
+07AD36  HoLVWNanBBc#B#B
+07AD46  pXvbDfchu6k#C#C
+07AD56  jbz9I9vkqkk#C#C
+07AD66  Q3VBxCXhUHs#C#C
+07AD76  zl7hupSO0C0#B#B
+07AD86  wzvqT4UqKX8#B#B
+07AD96  LwG8g3niqwA#B#B
+07ADA6  QKd0qM58Qes#B#B
+07ADB6  6UgtwV+0zb4#B#B
+07ADC6  1jfXLRVzisc#B#B
+07ADD6  8KHh+VefZDM#B#B
+07ADE6  uceZ3OBMwsg#A#A
+07ADF6  -ogSa91YeZg#A#A
+07AE06  3V50SBwmhFg#A#A
+07AE16  1h1jaFlPtfA#A#A
+07AE26  W+BT3-RLYmY#A#A
+07AE36  ONwf1cHqObc#A#A
+07AE46  NHx9pxHiSbU#A#A
+07AE56  344vzzehB7M#A#A
+07AE66  gAjvCUHeAbE#A#A
+07AE76  4k+5la20zT8#A#A
+07AE86  uTyttM13qVc#A#A
+07AE96  QYt0E02im8E#A#A
+07AEA6  qGej9rktGjM#A#A
+07AEB6  SXt9gczJC6w#A#A
+07AEC6  6L+dPFtbs9I#A#A
+07AED6  module_stop
+07AEE2  module_start
+07C400  /libexec/ld-elf.so.1
+07CB11  ffffff.
+07D451  ffffff.
+07DF35  printf
+07DF3C  sceKernelLoadStartModule
+07DF55  sceKernelDlsym
+07DF64  sceKernelStopUnloadModule
+07DF83  memset
+07DF8A  vsprintf
+07DF93  memcpy
+07DF9A  sceKernelSendNotificationRequest
+07DFBB  socketpair
+07DFD1  libSceLibcInternal.so
+07DFE7  libkernel.so
+07E180  Bootloader plugin.
+07E193  ../plugin_bootloader/source/main.c
+07E1B6  Git Commit: 49534177d69d17609bcc09cd185c88df42fed8b5
+07E1EB  Git Branch: main
+07E1FC  Git Commit Number: 1
+07E211  Built: Oct 14 2026 @ 19:44:13
+07E231  bootloader
+07E23C  Failed to resolve
+07E251  from module
+07E261  (%s:%d) %s Plugin Started.
+07E27D  Failed to load loader module
+07E29D  return code 0x%08x
+07E2B1  (%s:%d) %s
+07E2BD  (%s:%d) Plugin Author(s): %s
+07E2DB  cxml://psnotification/tex_icon_system
+07E301  (%s:%d) Unload result 0x%08x
+07E31F  /dev/console
+07E32C  Notify message:
+07E340  illusiony
+07E350  /data/hen/plugin_loader.prx
+07E36C  plugin_load
+07E378  plugin_unload
+088540  OPENORBIS-HOMEBREW
+088559  libkernel.prx
+088567  libSceLibcInternal.prx
+08857E  libkernel
+088588  libSceLibcInternal
+08859B  plugin_bootloader
+0885AD  /root/hen/ps4-hen-plugins/plugin_bootloader/../bin/plugins/elf/plugin_bootloader.elf
+088602  hcuQgD53UxM#C#C
+088612  wzvqT4UqKX8#B#B
+088622  LwG8g3niqwA#B#B
+088632  QKd0qM58Qes#B#B
+088642  wdUufa9g-D8#B#B
+088652  8zTFvBIAIN8#C#C
+088662  jbz9I9vkqkk#C#C
+088672  Q3VBxCXhUHs#C#C
+088682  zl7hupSO0C0#B#B
+088692  MZb0GKT3mo8#B#B
+0886A2  AqBioC2vF3I#B#B
+0886B2  FN4gaPmuFV8#B#B
+0886C2  uceZ3OBMwsg#A#A
+0886D2  aRCXazn-BY0#A#A
+0886E2  es16MsMRFa8#A#A
+0886F2  3V50SBwmhFg#A#A
+088702  ONwf1cHqObc#A#A
+088712  W+BT3-RLYmY#A#A
+088722  1h1jaFlPtfA#A#A
+088732  78uRub8Gj0s#A#A
+088742  DtSqQwBhfAQ#A#A
+088752  IgsxbUtxwro#A#A
+088762  rDR8BZAQ1Qk#A#A
+088772  zJCD5qboOc8#A#A
+088782  Pfp8i65gseI#A#A
+088792  nnAmkd8e83k#A#A
+0887A2  KJ-iRE1APdU#A#A
+0887B2  IYb9RVh-Maw#A#A
+0887C2  yKcn-Kr5pBU#A#A
+0887D2  roBvY12Tst0#A#A
+0887E2  jVfI3eOd+mg#A#A
+0887F2  uTyttM13qVc#A#A
+088802  QYt0E02im8E#A#A
+088812  qGej9rktGjM#A#A
+088822  SXt9gczJC6w#A#A
+088832  6L+dPFtbs9I#A#A
+088842  module_stop
+08884E  module_start
+0891F0  kpayload_no_bd
+089200  kpayload_target_id
+089218  kpayload_aslr
+089228  kpayload_mmap
+089240  kpayload_jailbreak
+08940F  /data/hen/plugin_shellcore.prx
+08942E  plugin_load

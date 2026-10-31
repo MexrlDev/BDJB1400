@@ -1,0 +1,5 @@
+file size:           562240
+entry:               0x4AAB
+data region (5..entry): 19110 bytes
+code region (entry..end): 543125 bytes
+data entropy:        6.38 bits/byte (8.0=random, <4=structured)

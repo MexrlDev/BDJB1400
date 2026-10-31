@@ -1,0 +1,241 @@
+==========================================
+  SOURCE_CODE FULL AUDIT
+  C:\Users\DevPc\Desktop\JB\source_code
+==========================================
+
+TOTAL FILES: 166
+TOTAL BYTES: 6492179
+
+=== FULL FILE LISTING ===
+    234304  assets\BDMV\AUXDATA\00000.otf
+     36992  assets\BDMV\AUXDATA\00001.otf
+     40308  assets\BDMV\AUXDATA\00002.otf
+       614  assets\BDMV\AUXDATA\dvb.fontindex
+       120  assets\BDMV\BACKUP\INDEX.BDM
+       120  assets\BDMV\BACKUP\index.bdmv
+      7402  assets\BDMV\BACKUP\MOVIEOBJ.BDM
+      7402  assets\BDMV\BACKUP\MovieObject.bdmv
+       164  assets\BDMV\BDJO\00000.bdjo
+      1136  assets\BDMV\CLIPINF\00000.clpi
+       526  assets\BDMV\index.bdmv
+    192403  assets\BDMV\JAR\00000.jar
+      7402  assets\BDMV\MovieObject.bdmv
+       170  assets\BDMV\PLAYLIST\00000.mpls
+   3975168  assets\BDMV\STREAM\00000.m2ts
+    562240  assets\bonk\hen.bin
+       184  assets\bonk\local\guards.bin
+        40  assets\bonk\local\marker-sites.bin
+      5338  assets\bonk\local\rules.bin
+       168  assets\bonk\local\schedule.bin
+       794  assets\bonk\local\shapes.bin
+      1528  assets\bonk\local\template-hashes.bin
+       678  assets\bonk\local\templates\cmd-0002.bin
+        54  assets\bonk\local\templates\cmd-0004.bin
+        63  assets\bonk\local\templates\cmd-0005.bin
+        72  assets\bonk\local\templates\cmd-0006.bin
+        72  assets\bonk\local\templates\cmd-0007.bin
+       142  assets\bonk\local\templates\cmd-0008.bin
+       326  assets\bonk\local\templates\cmd-0009.bin
+       922  assets\bonk\local\templates\cmd-0010.bin
+      1484  assets\bonk\local\templates\cmd-0011.bin
+       704  assets\bonk\local\templates\cmd-0012.bin
+       326  assets\bonk\local\templates\cmd-0014.bin
+       650  assets\bonk\local\templates\cmd-0015.bin
+       326  assets\bonk\local\templates\cmd-0016.bin
+       536  assets\bonk\local\templates\cmd-0017.bin
+       326  assets\bonk\local\templates\cmd-0018.bin
+      1622  assets\bonk\local\templates\cmd-0019.bin
+       506  assets\bonk\local\templates\cmd-0020.bin
+       648  assets\bonk\local\templates\cmd-0021.bin
+      1889  assets\bonk\local\templates\cmd-0022.bin
+       210  assets\bonk\local\templates\cmd-0024.bin
+      1224  assets\bonk\local\templates\cmd-0025.bin
+       212  assets\bonk\local\templates\cmd-0026.bin
+        56  assets\bonk\local\templates\cmd-0027.bin
+      3242  assets\bonk\local\templates\cmd-0028.bin
+       250  assets\bonk\local\templates\cmd-0029.bin
+       128  assets\bonk\local\templates\cmd-0030.bin
+       170  assets\bonk\local\templates\cmd-0031.bin
+       433  assets\bonk\local\templates\cmd-0032.bin
+       193  assets\bonk\local\templates\cmd-0034.bin
+       687  assets\bonk\local\templates\cmd-0035.bin
+       664  assets\bonk\local\templates\cmd-0036.bin
+       688  assets\bonk\local\templates\cmd-0037.bin
+       740  assets\bonk\local\templates\cmd-0038.bin
+       777  assets\bonk\local\templates\cmd-0039.bin
+       695  assets\bonk\local\templates\cmd-0040.bin
+       728  assets\bonk\local\templates\cmd-0041.bin
+       579  assets\bonk\local\templates\cmd-0042.bin
+       106  assets\bonk\local\templates\cmd-0043.bin
+       192  assets\bonk\local\templates\cmd-0044.bin
+        20  assets\bonk\local\templates\cmd-0046.bin
+       656  assets\bonk\local\write-sites.bin
+       665  assets\CERTIFICATE\app.discroot.crt
+       665  assets\CERTIFICATE\BACKUP\app.discroot.crt
+       665  assets\CERTIFICATE\BACKUP\bu.discroot.crt
+       636  assets\CERTIFICATE\BACKUP\id.bdmv
+       665  assets\CERTIFICATE\bu.discroot.crt
+        89  assets\CERTIFICATE\id.bdmv
+       564  assets\NOTICE.txt
+      1626  assets\x\offline\AXZXkk.class
+       813  assets\x\offline\EkIKZR.class
+     56859  assets\x\offline\Hx1400.class
+      2931  assets\x\offline\J196rR.class
+       320  bd-j\resources\bluray.InitXlet.perm
+      5825  bd-j\resources\META-INF\MANIFEST.MF
+      1708  bd-j\resources\META-INF\SIG-BD00.RSA
+      5901  bd-j\resources\META-INF\SIG-BD00.SF
+     41911  bd-j\src\org\bdj\Boot.java
+      1645  bd-j\src\org\bdj\Cfg.java
+     29727  bd-j\src\org\bdj\InitXlet.java
+      6074  bd-j\src\org\bdj\LocalResultLedger.java
+     35703  bd-j\src\org\bdj\OfflineRenderer.java
+      8986  bd-j\src\org\bdj\Screen.java
+      4592  offline\AXZXkk.java
+      2421  offline\EkIKZR.java
+     89113  offline\Hx1400.java
+      5092  offline\J196rR.java
+     27922  README.md
+      1121  README.parts\01-intro.md
+      1212  README.parts\02-quickref.md
+       983  README.parts\03a-whatis.md
+      1121  README.parts\03b-layout.md
+       868  README.parts\04a-arch.md
+      1375  README.parts\04b-bdj.md
+       897  README.parts\05a-sandbox.md
+       607  README.parts\05b-jni.md
+       814  README.parts\06a-vm-opcodes.md
+       561  README.parts\06b-vm-opcodes.md
+       763  README.parts\06c-vm-opcodes.md
+      1077  README.parts\07a-cmds.md
+      1400  README.parts\07b-cmds.md
+       977  README.parts\08-metadata.md
+       882  README.parts\09a-ptable.md
+      1488  README.parts\09b-ptable.md
+      1006  README.parts\10a-exploit.md
+      2211  README.parts\10b-exploit.md
+      2421  README.parts\11-henbin-demo.md
+      2851  README.parts\12-security.md
+      2025  README.parts\13-verify.md
+      1328  README.parts\14-credits.md
+        72  reference\analysis\00-setup.log
+       545  reference\analysis\10-hen-header.txt
+     31802  reference\analysis\11-hen-entry-disasm.txt
+    342603  reference\analysis\12-hen-full-disasm.txt
+       200  reference\analysis\13-hen-stats.txt
+      1550  reference\analysis\20-cfg-usage.txt
+      7228  reference\analysis\21-initxlet-loading.txt
+      6708  reference\analysis\22-initxlet-trigger.txt
+      4578  reference\analysis\23-bootexec-definition.txt
+      2726  reference\analysis\24-boot-callsite.txt
+     28414  reference\analysis\25-InitXlet-FULL.java
+     40606  reference\analysis\26-Boot-FULL.java
+       342  reference\analysis\27-Cfg-FULL.java
+     39452  reference\analysis\30-bootexec-full.txt
+      6512  reference\analysis\31-bootrun-full.txt
+      9826  reference\analysis\32-bootio-full.txt
+      1104  reference\analysis\33-run-io-callers.txt
+      9798  reference\analysis\34-initxlet-setup-block.txt
+      2726  reference\analysis\35-boot-callsite.txt
+      1906  reference\analysis\36-bootexec-opcodes.txt
+     24908  reference\analysis\37-bootexec-cases-5plus.txt
+      3316  reference\analysis\38-bootexec-dynamic-calls.txt
+      2766  reference\analysis\39-bootexec-opcodes-FULL.txt
+      4496  reference\analysis\40-EP-context-line149.txt
+      6026  reference\analysis\40-EP-context-line443.txt
+      3706  reference\analysis\40-EP-context-line947.txt
+       558  reference\analysis\40-string-literals.txt
+     64880  reference\analysis\41-boot-methods.txt
+       596  reference\analysis\41-template-strings.txt
+      1422  reference\analysis\42-initxlet-boot-calls.txt
+      6374  reference\analysis\43-http-sweep.txt
+      1122  reference\analysis\44-boot-entry-calls.txt
+      1150  reference\analysis\50-cmd-0043-hex.txt
+      2026  reference\analysis\51-cmd-0011-hex.txt
+       660  reference\analysis\52-permissions.txt
+     11698  reference\analysis\53-manifest.txt
+     38226  reference\analysis\60-hen-dataregion.txt
+      1568  reference\analysis\61-hen-strings-hits.txt
+     63605  reference\analysis\62-hen-strings-all.txt
+     21020  reference\analysis\63b-hen-rodata-full.txt
+     10509  reference\analysis\63-hen-rodata-zone.txt
+     11927  reference\analysis\64-hen-initfuncs.txt
+      4804  reference\analysis\65-hen-entry-w-strings.txt
+       482  reference\analysis\66-hen-key-strings.txt
+       108  reference\analysis\67-hen-offset-tables.txt
+     68299  reference\analysis\80-hx1400-structure.txt
+      8246  reference\analysis\90-FINAL-ANALYSIS.txt
+     28512  reference\analysis\91-P-table-and-corrections.txt
+      6189  reference\analysis\92-FINAL-CORRECTED.txt
+     48885  reference\analysis\93-P-array-hunt.txt
+      3475  reference\analysis\94-P-source-hunt.txt
+     18846  reference\analysis\95-cmd-decoder.txt
+      7274  reference\analysis\96-cmd43-and-array-dump.txt
+      4863  reference\analysis\97-henurl-and-P-final.txt
+     11314  reference\analysis\98-FINAL-COMPLETE.txt
+
+=== DIRECTORY SUMMARY ===
+assets                                           1 files    4 dirs        564 B
+bd-j                                             0 files    2 dirs            B
+build                                            0 files    0 dirs            B
+docs                                             0 files    0 dirs            B
+offline                                          4 files    0 dirs     101218 B
+README.parts                                    22 files    0 dirs      27988 B
+reference                                        0 files    1 dirs            B
+tools                                            0 files    0 dirs            B
+assets\BDMV                                      2 files    7 dirs       7928 B
+assets\bonk                                      1 files    1 dirs     562240 B
+assets\CERTIFICATE                               3 files    1 dirs       1419 B
+assets\x                                         0 files    1 dirs            B
+assets\BDMV\AUXDATA                              4 files    0 dirs     312218 B
+assets\BDMV\BACKUP                               4 files    0 dirs      15044 B
+assets\BDMV\BDJO                                 1 files    0 dirs        164 B
+assets\BDMV\CLIPINF                              1 files    0 dirs       1136 B
+assets\BDMV\JAR                                  1 files    0 dirs     192403 B
+assets\BDMV\PLAYLIST                             1 files    0 dirs        170 B
+assets\BDMV\STREAM                               1 files    0 dirs    3975168 B
+assets\bonk\local                                7 files    1 dirs       8708 B
+assets\bonk\local\templates                     40 files    0 dirs      23340 B
+assets\CERTIFICATE\BACKUP                        3 files    0 dirs       1966 B
+assets\x\offline                                 4 files    0 dirs      62229 B
+bd-j\resources                                   1 files    1 dirs        320 B
+bd-j\src                                         0 files    1 dirs            B
+bd-j\resources\META-INF                          3 files    0 dirs      13434 B
+bd-j\src\org                                     0 files    1 dirs            B
+bd-j\src\org\bdj                                 6 files    0 dirs     124046 B
+reference\analysis                              55 files    0 dirs    1032554 B
+
+=== HASH VERIFICATION ===
+hen.bin        MATCH
+Hx1400.class   MATCH
+EkIKZR.class   MATCH
+AXZXkk.class   MATCH
+J196rR.class   MATCH
+
+=== ASSETS vs EXTRACTED ===
+Assets:   74
+Extracted: 75
+Only in extracted:
+  BDMV\JAR\org\bdj\bluray.InitXlet.perm
+
+=== DECOMPILED SOURCE HEADERS ===
+bd-j classes:
+  Boot.java                     41911 B  header: System.Object[]
+  Cfg.java                       1645 B  header: System.Object[]
+  InitXlet.java                 29727 B  header: System.Object[]
+  LocalResultLedger.java         6074 B  header: System.Object[]
+  OfflineRenderer.java          35703 B  header: System.Object[]
+  Screen.java                    8986 B  header: System.Object[]
+offline classes:
+  AXZXkk.java         4592 B  header: System.Object[]
+  EkIKZR.java         2421 B  header: System.Object[]
+  Hx1400.java        89113 B  header: System.Object[]
+  J196rR.java         5092 B  header: System.Object[]
+
+=== README ===
+Size:  27922 B
+Lines: 498
+First: # Bonk HEN 14.00 - Complete Source Reconstruction
+Last:  
+
+=== END AUDIT ===

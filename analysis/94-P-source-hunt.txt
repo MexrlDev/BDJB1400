@@ -1,0 +1,95 @@
+======================================================================
+  A. OfflineRenderer → Hx1400 field writes
+======================================================================
+
+======================================================================
+  B. Scan cmd-NNNN.bin for 248-byte payload (31 u64s)
+======================================================================
+
+======================================================================
+  C. cmd-NNNN.bin sizes >= 300 bytes (candidates for large array build)
+======================================================================
+cmd-0028.bin       3242 bytes
+cmd-0022.bin       1889 bytes
+cmd-0019.bin       1622 bytes
+cmd-0011.bin       1484 bytes
+cmd-0025.bin       1224 bytes
+cmd-0010.bin       922 bytes
+cmd-0039.bin       777 bytes
+cmd-0038.bin       740 bytes
+cmd-0041.bin       728 bytes
+cmd-0012.bin       704 bytes
+cmd-0040.bin       695 bytes
+cmd-0037.bin       688 bytes
+cmd-0035.bin       687 bytes
+cmd-0002.bin       678 bytes
+cmd-0036.bin       664 bytes
+cmd-0015.bin       650 bytes
+cmd-0021.bin       648 bytes
+cmd-0042.bin       579 bytes
+cmd-0017.bin       536 bytes
+cmd-0020.bin       506 bytes
+cmd-0032.bin       433 bytes
+cmd-0009.bin       326 bytes
+cmd-0018.bin       326 bytes
+cmd-0016.bin       326 bytes
+cmd-0014.bin       326 bytes
+
+======================================================================
+  D. Shape → template mapping (from schedule.bin)
+======================================================================
+  step  0: shape 2 → 4
+  step  1: shape 4 → 5
+  step  2: shape 5 → 6
+  step  3: shape 6 → 7
+  step  4: shape 7 → 8
+  step  5: shape 8 → 9
+  step  6: shape 9 → 10
+  step  7: shape 10 → 11
+  step  8: shape 11 → 12
+  step  9: shape 12 → 14
+  step 10: shape 14 → 15
+  step 11: shape 15 → 16
+  step 12: shape 16 → 17
+  step 13: shape 17 → 18
+  step 14: shape 18 → 19
+  step 15: shape 19 → 20
+  step 16: shape 20 → 21
+  step 17: shape 21 → 22
+  step 18: shape 22 → 24
+  step 19: shape 24 → 25
+  step 20: shape 25 → 26
+  step 21: shape 26 → 27
+  step 22: shape 27 → 28
+  step 23: shape 28 → 29
+  step 24: shape 29 → 30
+  step 25: shape 30 → 31
+  step 26: shape 31 → 32
+  step 27: shape 32 → 34
+  step 28: shape 34 → 35
+  step 29: shape 35 → 36
+  step 30: shape 36 → 37
+  step 31: shape 37 → 38
+  step 32: shape 38 → 39
+  step 33: shape 39 → 40
+  step 34: shape 40 → 41
+  step 35: shape 41 → 42
+  step 36: shape 42 → 43
+  step 37: shape 43 → 44
+  step 38: shape 44 → 46
+  step 39: shape 46 → 65535
+
+======================================================================
+  E. guards.bin — kernel guard signatures
+======================================================================
+  guards count: 10
+  @0x008: 00 00 00 00 00 00 00 00 FF FF FF FF FF FF FC E0
+  @0x018: 00 00 00 00 00 00 2E 98 00 00 00 00 00 00 01 80
+  @0x028: 00 00 00 00 00 00 DC E0 00 00 00 00 00 00 05 A0
+  @0x038: 00 00 00 00 00 00 30 00 00 00 00 00 00 00 71 20
+  @0x048: 00 00 00 00 00 01 3C 70 00 00 00 00 00 01 A7 70
+  @0x058: 85 31 7B F0 9E 59 B2 BF 4A 54 B3 74 1C 15 BB E9
+  @0x068: C8 37 CC E3 33 D5 84 B6 35 90 CA 8F DB EE 59 E1
+  @0x078: 74 A0 00 51 91 91 41 8D 3C 86 16 8E 53 43 9A 2D
+  @0x088: FE A2 0C C2 17 83 B2 45 F8 9F 2E E2 1E A7 D1 B6
+  @0x098: 7A 76 8A 15 3B CE 99 61 70 11 6F AF 3C 51 EA EC

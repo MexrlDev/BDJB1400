@@ -1,0 +1,87 @@
+==========================================
+  SOURCE_CODE FINAL AUDIT
+  C:\Users\DevPc\Desktop\JB\source_code
+==========================================
+
+=== TOP-LEVEL DIRECTORIES ===
+  assets           74 files
+  bd-j             10 files
+  build             1 files
+  docs              7 files
+  offline           4 files
+  README.parts     22 files
+  reference        55 files
+  tools             6 files
+  README.md          28001 B
+
+=== DIRECTORY SUMMARY ===
+  assets                                      1 files         564 B
+  assets\BDMV                                 2 files        7928 B
+  assets\BDMV\AUXDATA                         4 files      312218 B
+  assets\BDMV\BACKUP                          4 files       15044 B
+  assets\BDMV\BDJO                            1 files         164 B
+  assets\BDMV\CLIPINF                         1 files        1136 B
+  assets\BDMV\JAR                             1 files      192403 B
+  assets\BDMV\PLAYLIST                        1 files         170 B
+  assets\BDMV\STREAM                          1 files     3975168 B
+  assets\bonk                                 1 files      562240 B
+  assets\bonk\local                           7 files        8708 B
+  assets\bonk\local\templates                40 files       23340 B
+  assets\CERTIFICATE                          3 files        1419 B
+  assets\CERTIFICATE\BACKUP                   3 files        1966 B
+  assets\x\offline                            4 files       62229 B
+  bd-j\resources                              1 files         320 B
+  bd-j\resources\META-INF                     3 files       13434 B
+  bd-j\src\org\bdj                            6 files      124046 B
+  build                                       1 files        1429 B
+  docs                                        7 files        7023 B
+  offline                                     4 files      101218 B
+  README.parts                               22 files       27988 B
+  reference\analysis                         55 files     1032554 B
+  tools                                       4 files        6567 B
+  tools\__pycache__                           2 files        7623 B
+
+=== docs/ (should be 7 files) ===
+  COMMAND_SEQUENCE.md              1169 B
+  EXPLOIT_CHAIN.md                  948 B
+  HASHES.md                         819 B
+  METADATA_FORMATS.md               872 B
+  P_ARRAY.md                       1054 B
+  PHONE_HOME_ANALYSIS.md            771 B
+  VM_OPCODES.md                    1390 B
+
+=== tools/ (should be 4 files) ===
+  decode_cmd.py                    3259 B
+  disasm_hen.py                    1224 B
+  extract_iso.ps1                   970 B
+  verify_hashes.ps1                1114 B
+
+=== build/ ===
+  build.ps1                        1429 B
+
+=== HASH VERIFICATION ===
+  hen.bin        MATCH
+  Hx1400.class   MATCH
+  EkIKZR.class   MATCH
+  AXZXkk.class   MATCH
+  J196rR.class   MATCH
+
+=== TOOL SYNTAX CHECKS ===
+  decode_cmd.py OK
+  disasm_hen.py OK
+  verify_hashes.ps1 OK
+  extract_iso.ps1 OK
+  build.ps1 OK
+
+=== README.md ===
+  Size:  28001 B
+  Lines: 499
+  First: # Bonk HEN 14.00 - Complete Source Reconstruction
+  Last:  **End of README.md** - see docs/ and reference/analysis/ for full details.
+  Sections present: 20 / 20
+
+=== TOTALS ===
+  Files: 180
+  Bytes: 6514900
+
+=== END AUDIT ===
